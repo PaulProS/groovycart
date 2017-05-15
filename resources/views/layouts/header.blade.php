@@ -213,9 +213,14 @@
                     <li><a href="contact.html">Contact</a></li>
                     @if (Route::has('login'))
                         @if (Auth::check())
+                            @if(Auth::user()->role)
+                                @if(Auth::user()->role->name == "administrator")
+                                    <li><a href="{{route('admin.index')}}">Dashboard</a></li>
+                                @endif
+                            @endif
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    {{ title_case(Auth::user()->name) }} <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
