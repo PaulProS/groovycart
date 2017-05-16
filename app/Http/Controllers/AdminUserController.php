@@ -15,12 +15,13 @@ class AdminUserController extends Controller
     public function index()
     {
         //
+        $users = User::all();
 
-        return view('admin.index');
+        return view('admin.users.index', compact('users'));
 
     }
 
-    /**
+    /*
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -28,6 +29,7 @@ class AdminUserController extends Controller
     public function create()
     {
         //
+        return view('admin.users.create');
     }
 
     /**
@@ -39,6 +41,13 @@ class AdminUserController extends Controller
     public function store(Request $request)
     {
         //
+        $input = $request->all();
+
+        $input['password'] = bcrypt($request->password);
+        User::create($input);
+
+        return redirect(route('users.index'));
+
     }
 
     /**
@@ -52,7 +61,7 @@ class AdminUserController extends Controller
         //
         $user = User::findOrFail($id);
 
-        return view('admin.profile', compact('user'));
+        return view('admin.users.profile', compact('user'));
     }
 
     /**
@@ -64,6 +73,10 @@ class AdminUserController extends Controller
     public function edit($id)
     {
         //
+        $user = User::findOrFail($id);
+
+        return view('admin.users.edit', compact('user'));
+
     }
 
     /**
@@ -76,6 +89,13 @@ class AdminUserController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $user = User::findOrFail($id);
+
+        $input = $request->all();
+
+        $user->update($input);
+
+        return redirect(route('users.index'));
     }
 
     /**
@@ -87,5 +107,10 @@ class AdminUserController extends Controller
     public function destroy($id)
     {
         //
+
+        User::findOrFail($id)->delete();
+
+
+        return redirect(route('users.index'));
     }
 }

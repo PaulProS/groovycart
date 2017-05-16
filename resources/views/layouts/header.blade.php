@@ -215,7 +215,7 @@
                         @if (Auth::check())
                             @if(Auth::user()->role)
                                 @if(Auth::user()->role->name == "administrator")
-                                    <li><a href="{{route('admin.index')}}">Dashboard</a></li>
+                                    <li><a href="/admin">Dashboard</a></li>
                                 @endif
                             @endif
                             <li class="dropdown">

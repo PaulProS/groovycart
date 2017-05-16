@@ -1,20 +1,15 @@
 @extends('layouts.admin')
 
 @section('content')
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <h1>
-            Profile
-            <small>For administrative purpose only</small>
-        </h1>
-        <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-            <li class="active">Here</li>
-        </ol>
-    </section>
 
     <section class="content">
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                <h3 class="box-title">Edit User</h3>
+            </div>
+            <!-- /.box-header -->
 
+        </div>
         <div class="row">
             <div class="col-md-3">
 
@@ -23,9 +18,9 @@
                     <div class="box-body box-profile">
                         <img class="profile-user-img img-responsive img-circle" src="{{ asset("/bower_components/adminlte/dist/img/user4-128x128.jpg")}}" alt="User profile picture">
 
-                        <h3 class="profile-username text-center">{{title_case(Auth::user()->name)}}</h3>
+                        <h3 class="profile-username text-center">{{title_case($user->name)}}</h3>
 
-                        <p class="text-muted text-center">{{title_case(Auth::user()->role->name)}}</p>
+                        <p class="text-muted text-center">{{$user->role ? title_case($user->role->name) : 'No Role'}}</p>
 
                     </div>
                     <!-- /.box-body -->
@@ -42,7 +37,7 @@
 
                         <strong><i class="fa fa-map-marker margin-r-5"></i> Address</strong>
 
-                        <p class="text-muted">{{title_case(Auth::user()->address)}}</p>
+                        <p class="text-muted">{{title_case($user->address)}}</p>
 
 
                     </div>
@@ -59,35 +54,37 @@
                     </ul>
                     <div class="tab-content">
                         <div class="active tab-pane" id="activity">
-                            <form class="form-horizontal">
-                                <div class="form-group">
-                                    <label for="inputName" class="col-sm-2 control-label">Name</label>
 
+                            {!! Form::model($user, ['method'=>'PATCH', 'action' => ['AdminUserController@update', $user->id], 'files' => true, 'class' => 'form-horizontal']) !!}
+                                <div class="form-group">
+                                    {!! Form::label('name', 'Name', ['class' => 'col-sm-2 control-label']) !!}
                                     <div class="col-sm-10">
-                                        <input type="email" class="form-control" id="inputName" placeholder="{{$user->name}}">
+                                        {!! Form::text('name', null, ['class'=>'form-control']) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+                                    {!! Form::label('email', 'Email', ['class' => 'col-sm-2 control-label']) !!}
 
                                     <div class="col-sm-10">
-                                        <input type="email" class="form-control" id="inputEmail" placeholder="{{$user->email}}">
+                                        {!! Form::email('email', null, ['class'=>'form-control']) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputExperience" class="col-sm-2 control-label">Address</label>
+                                    {!! Form::label('address', 'Address', ['class' => 'col-sm-2 control-label']) !!}
 
                                     <div class="col-sm-10">
-                                        <textarea class="form-control" id="inputExperience" placeholder="{{$user->address}}"></textarea>
+                                        {!! Form::textarea('address',null , ['class'=>'form-control', 'rows' => 3]) !!}
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <div class="col-sm-offset-2 col-sm-10">
-                                        <button type="submit" class="btn btn-danger">Update</button>
+                                        {!! Form::submit('Update', ['class' => 'btn btn-primary']) !!}
                                     </div>
                                 </div>
-                            </form>                        </div>
+                            {!! Form::close() !!}
+
+                        </div>
 
                         <!-- /.tab-pane -->
 

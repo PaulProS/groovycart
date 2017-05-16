@@ -31,7 +31,7 @@
         <ul class="sidebar-menu">
             <li class="header">Operations</li>
             <!-- Optionally, you can add icons to the links -->
-            <li class="active"><a href="{{route('admin.index')}}"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+            <li class="active"><a href="/admin"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
             <li class="treeview">
                 <a href="#"><i class="fa fa-users"></i> <span>Users</span>
                     <span class="pull-right-container">
@@ -39,8 +39,8 @@
             </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="#"><i class="fa fa-circle-o"></i>Add New User</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i>View Users</a></li>
+                    <li><a href="{{route('users.create')}}"><i class="fa fa-circle-o"></i>Add New User</a></li>
+                    <li><a href="{{route('users.index')}}"><i class="fa fa-circle-o"></i>View Users</a></li>
                 </ul>
             </li>
         </ul>
