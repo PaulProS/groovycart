@@ -16,7 +16,7 @@
                 <!-- Profile Image -->
                 <div class="box box-primary">
                     <div class="box-body box-profile">
-                        <img class="profile-user-img img-responsive img-circle" src="{{ asset("/bower_components/adminlte/dist/img/user4-128x128.jpg")}}" alt="User profile picture">
+                        <img class="profile-user-img img-responsive img-circle" src="../images/{{$user->photo ? $user->photo->photo : "No Photo"}}" alt="User profile picture">
 
                         <h3 class="profile-username text-center">{{title_case($user->name)}}</h3>
 

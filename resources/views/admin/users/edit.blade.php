@@ -79,6 +79,17 @@
 
                                 <div class="form-group">
                                     <div class="col-sm-offset-2 col-sm-10">
+
+                                    {!! Form::file('photo') !!}
+
+                                        <p class="help-block">Choose a profile picture</p>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
                                         {!! Form::submit('Update', ['class' => 'btn btn-primary']) !!}
                                     </div>
                                 </div>

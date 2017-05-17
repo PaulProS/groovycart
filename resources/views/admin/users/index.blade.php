@@ -24,6 +24,7 @@
                         <table class="table table-hover">
                             <tr>
                                 <th>ID</th>
+                                <th></th>
                                 <th>User</th>
                                 <th>Email</th>
                                 <th>Created</th>
@@ -35,6 +36,7 @@
 
                                 <tr>
                                     <td>{{$user->id}}</td>
+                                    <td><img height="25" src="../images/{{$user->photo ? $user->photo->photo : "No Photo"}}" alt=""></td>
                                     <td>{{title_case($user->name)}}</td>
                                     <td>{{$user->email}}</td>
                                     <td>{{ Carbon\Carbon::parse($user->created_at)->format('d-m-Y') }}</td>
