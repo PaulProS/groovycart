@@ -2,7 +2,6 @@
 
 @section('content')
 
-    <section class="content">
         <div class="box box-primary">
             <div class="box-header with-border">
                 <h3 class="box-title">Edit User</h3>
@@ -16,7 +15,7 @@
                 <!-- Profile Image -->
                 <div class="box box-primary">
                     <div class="box-body box-profile">
-                        <img class="profile-user-img img-responsive img-circle" src="{{ asset("/bower_components/adminlte/dist/img/user4-128x128.jpg")}}" alt="User profile picture">
+                        <img class="profile-user-img img-responsive img-circle" src="{{$user->photo ? $user->photo->photo : "http://placehold.it/400X400"}}" alt="User profile picture">
 
                         <h3 class="profile-username text-center">{{title_case($user->name)}}</h3>
 
@@ -73,8 +72,23 @@
                                     {!! Form::label('address', 'Address', ['class' => 'col-sm-2 control-label']) !!}
 
                                     <div class="col-sm-10">
-                                        {!! Form::textarea('address',null , ['class'=>'form-control', 'rows' => 3]) !!}
+                                        {!! Form::textarea('address',null , ['class'=>'form-control', 'rows' => 2]) !!}
                                     </div>
+                                </div>
+
+                                <div class="form-group">
+                                    {!! Form::label('role_id', 'Role', ['class' => 'col-sm-2 control-label']) !!}
+
+                                    <div class="col-sm-3">
+                                        {!! Form::select('role_id', $roles , null, ['class'=>'form-control']) !!}
+                                    </div>
+
+                                    {!! Form::label('is_active', 'Status', ['class' => 'col-sm-2 control-label']) !!}
+
+                                    <div class="col-sm-3">
+                                        {!! Form::select('is_active', [1 => 'Active', 0 => 'Not Active'] , null, ['class'=>'form-control']) !!}
+                                    </div>
+
                                 </div>
 
                                 <div class="form-group">
@@ -110,7 +124,5 @@
             </div>
             <!-- /.col -->
         </div>
-        <!-- /.row -->
 
-    </section>
 @stop

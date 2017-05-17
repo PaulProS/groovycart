@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Photo;
+use App\Role;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -30,7 +31,9 @@ class AdminUserController extends Controller
     public function create()
     {
         //
-        return view('admin.users.create');
+        $roles = Role::pluck('name', 'id');
+
+        return view('admin.users.create', compact('roles'));
     }
 
     /**
@@ -87,8 +90,9 @@ class AdminUserController extends Controller
     {
         //
         $user = User::findOrFail($id);
+        $roles = Role::pluck('name', 'id');
 
-        return view('admin.users.edit', compact('user'));
+        return view('admin.users.edit', compact('user', 'roles'));
 
     }
 
@@ -118,6 +122,10 @@ class AdminUserController extends Controller
 //
 //        }
 
+        if($user->photo_id){
+            unlink(public_path() . $user->photo->photo);
+        }
+
         if($file = $request->file('photo')){
 
             $name = time() . $file->getClientOriginalName();
@@ -146,7 +154,10 @@ class AdminUserController extends Controller
 
         $user = User::findOrFail($id);
 
-        unlink(public_path() . '\images/' . $user->photo->photo);
+        if($user->photo){
+            unlink(public_path() . $user->photo->photo);
+        }
+
 
         $user->delete();
 

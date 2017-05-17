@@ -2,11 +2,9 @@
 
 @section('content')
 
-    <section>
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="box">
-                    <div class="box-header">
+
+                <div class="box box-primary">
+                    <div class="box-header with-border">
                         <h3 class="box-title">Users List</h3>
 
                         <div class="box-tools">
@@ -26,6 +24,7 @@
                                 <th>ID</th>
                                 <th></th>
                                 <th>User</th>
+                                <th>Role</th>
                                 <th>Email</th>
                                 <th>Created</th>
                                 <th>Last Updated</th>
@@ -36,8 +35,9 @@
 
                                 <tr>
                                     <td>{{$user->id}}</td>
-                                    <td><img height="25" src="../images/{{$user->photo ? $user->photo->photo : "No Photo"}}" alt=""></td>
+                                    <td><img height="25" src="{{$user->photo ? $user->photo->photo : "http://placehold.it/400X400"}}" alt=""></td>
                                     <td>{{title_case($user->name)}}</td>
+                                    <td>{{title_case($user->role->name)}}</td>
                                     <td>{{$user->email}}</td>
                                     <td>{{ Carbon\Carbon::parse($user->created_at)->format('d-m-Y') }}</td>
                                     <td>{{ Carbon\Carbon::parse($user->updated_at)->format('d-m-Y') }}</td>
@@ -55,10 +55,5 @@
 
                         </table>
                     </div>
-                    <!-- /.box-body -->
-                </div>
-                <!-- /.box -->
-            </div>
         </div>
-    </section>
 @stop

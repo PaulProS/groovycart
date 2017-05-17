@@ -6,7 +6,7 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="../images/{{$user->photo ? $user->photo->photo : "No Photo"}}" class="img-circle" alt="User Image">
+                <img src="{{Auth::user()->photo ? Auth::user()->photo->photo : "http://placehold.it/400X400"}}" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
                 <p>{{title_case(Auth::user()->name)}}</p>
