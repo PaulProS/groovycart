@@ -3,11 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Category;
-use App\Photo;
-use App\Product;
 use Illuminate\Http\Request;
 
-class AdminProductsController extends Controller
+class AdminCategoriesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,11 +14,10 @@ class AdminProductsController extends Controller
      */
     public function index()
     {
+        //
+        $categories = Category::all();
 
-        $products = Product::all();
-
-        return view('admin.products.index', compact('products'));
-
+        return view('admin.categories.index', compact('categories'));
     }
 
     /**
@@ -31,10 +28,6 @@ class AdminProductsController extends Controller
     public function create()
     {
         //
-        $categories = Category::pluck('name', 'id');
-
-        return view('admin.products.create', compact('categories'));
-
     }
 
     /**
@@ -48,20 +41,10 @@ class AdminProductsController extends Controller
         //
         $input = $request->all();
 
-        if($file = $request->file('photo')){
+        Category::create($input);
 
-            $name = time() . $file->getClientOriginalName();
+        return redirect(route('categories.index'));
 
-            $file->move('images', $name);
-
-            $photo = Photo::create(['photo' => $name]);
-
-            $input['photo_id'] = $photo->id;
-
-        }
-        Product::create($input);
-
-        return redirect(route('products.index'));
     }
 
     /**
@@ -84,12 +67,9 @@ class AdminProductsController extends Controller
     public function edit($id)
     {
         //
-        $product = Product::findOrFail($id);
+        $category = Category::findOrfail($id);
 
-        $categories = Category::pluck('name', 'id');
-
-        return view('admin.products.edit', compact('product', 'categories'));
-
+        return view('admin.categories.edit', compact('category'));
     }
 
     /**
@@ -102,30 +82,13 @@ class AdminProductsController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $product = Product::findOrFail($id);
-
         $input = $request->all();
 
-        if($file = $request->file('photo')){
+        $category = Category::findOrFail($id);
 
-            if($product->photo_id){
-                unlink(public_path() . $product->photo->photo);
-            }
+        $category->update($input);
 
-            $name = time() . $file->getClientOriginalName();
-
-            $file->move('images', $name);
-
-            $photo = Photo::create(['photo' => $name]);
-
-            $input['photo_id'] = $photo->id;
-
-        }
-
-        $product->update($input);
-
-        return redirect(route('products.index'));
-
+        return redirect(route('categories.index'));
     }
 
     /**
@@ -137,8 +100,8 @@ class AdminProductsController extends Controller
     public function destroy($id)
     {
         //
-        Product::findOrfail($id)->delete();
+        Category::findOrFail($id)->delete();
 
-        return redirect(route('products.index'));
+        return redirect(route('categories.index'));
     }
 }

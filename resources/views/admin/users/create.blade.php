@@ -3,7 +3,7 @@
 @section('content')
      <div class="box box-primary">
             <div class="box-header with-border">
-                <h3 class="box-title">Add New User</h3>
+                <h3 class="box-title">Create New User</h3>
             </div>
             <!-- /.box-header -->
 
@@ -14,19 +14,19 @@
                 <div class="form-group">
                     {!! Form::label('name', 'Name', ['class' => 'col-sm-2 control-label']) !!}
                     <div class="col-sm-10">
-                        {!! Form::text('name', null, ['class'=>'form-control', 'placeholder' => 'Enter Name']) !!}
+                        {!! Form::text('name', null, ['class'=>'form-control', 'placeholder' => 'Enter Name', 'required']) !!}
                     </div>
                 </div>
                 <div class="form-group">
                     {!! Form::label('email', 'Email', ['class' => 'col-sm-2 control-label']) !!}
                     <div class="col-sm-10">
-                        {!! Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'Enter Email']) !!}
+                        {!! Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'Enter Email', 'required']) !!}
                     </div>
                 </div>
                 <div class="form-group">
                     {!! Form::label('password', 'Password', ['class' => 'col-sm-2 control-label']) !!}
                     <div class="col-sm-10">
-                        {!! Form::password('password', ['class' => 'form-control', 'placeholder' => 'Enter password']) !!}
+                        {!! Form::password('password', ['class' => 'form-control', 'placeholder' => 'Enter password', 'required']) !!}
                     </div>
                 </div>
                 <div class="form-group">
@@ -49,7 +49,7 @@
                 </div>
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                        {!! Form::submit('Add', ['class' => 'btn btn-primary']) !!}
+                        {!! Form::submit('Create', ['class' => 'btn btn-primary']) !!}
                     </div>
                 </div>
                 {!! Form::close() !!}
