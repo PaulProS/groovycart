@@ -38,7 +38,7 @@
                         <td>{{$product->id}}</td>
                         <td><img height="25" src="{{$product->photo ? $product->photo->photo : "http://placehold.it/400X400"}}" alt=""></td>
                         <td>{{$product->title}}</td>
-                        <td>{{$product->category ? $product->category->name : ""}}</td>
+                        <td>{{$product->category ? $product->category->name : "Uncategorised"}}</td>
                         <td>{{$product->description}}</td>
                         <td>{{ Carbon\Carbon::parse($product->created_at)->format('d-m-Y') }}</td>
                         <td>{{ Carbon\Carbon::parse($product->updated_at)->format('d-m-Y') }}</td>

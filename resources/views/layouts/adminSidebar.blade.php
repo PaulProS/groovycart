@@ -47,6 +47,7 @@
             <li>
                 <a href="{{route('categories.index')}}"><i class="fa fa-th-list"></i>Categories</a>
             </li>
+
         </ul>
         <!-- /.sidebar-menu -->
     </section>

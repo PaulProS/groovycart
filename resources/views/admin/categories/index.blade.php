@@ -23,9 +23,16 @@
                 <div class="box-body box-profile">
                     {!! Form::open(['action' => ['AdminCategoriesController@store'], 'class' => 'form-horizontal']) !!}
                     <div class="form-group">
-                        {!! Form::label('name', 'Name', ['class' => 'col-sm-2 control-label']) !!}
+                        {!! Form::label('name', 'New', ['class' => 'col-sm-2 control-label']) !!}
                         <div class="col-sm-10">
                             {!! Form::text('name', null, ['class'=>'form-control']) !!}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {!! Form::label('parent_id', 'In', ['class' => 'col-sm-2 control-label']) !!}
+                        <div class="col-sm-10">
+                            {!! Form::select('parent_id',['' => 'Choose Category'] + $selectParent, null , ['class'=>'form-control']) !!}
                         </div>
                     </div>
 
@@ -39,6 +46,7 @@
                 </div>
             </div>
         </div>
+
 
         <div class="col-md-9">
             <div class="nav-tabs-custom">
@@ -54,6 +62,7 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Name</th>
+                                    <th>Parent</th>
                                     <th>Created At</th>
                                     <th>Last Updated</th>
                                 </tr>
@@ -62,6 +71,7 @@
                                     <tr>
                                         <td>{{$category->id}}</td>
                                         <td>{{$category->name}}</td>
+                                        <td>{{$category->parent ? $category->parent->name : ""}}</td>
                                         <td>{{ Carbon\Carbon::parse($category->created_at)->format('d-m-Y') }}</td>
                                         <td>{{ Carbon\Carbon::parse($category->updated_at)->format('d-m-Y') }}</td>
 

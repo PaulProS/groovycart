@@ -86,7 +86,7 @@ class AdminProductsController extends Controller
         //
         $product = Product::findOrFail($id);
 
-        $categories = Category::pluck('name', 'id');
+        $categories = Category::pluck('name', 'id')->all();
 
         return view('admin.products.edit', compact('product', 'categories'));
 
