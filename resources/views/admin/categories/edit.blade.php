@@ -23,13 +23,13 @@
                     <div class="form-group">
                         {!! Form::label('parent_id', 'In', ['class' => 'col-sm-2 control-label']) !!}
                         <div class="col-sm-10">
-                            {!! Form::select('parent_id',$selectParent, null , ['class'=>'form-control']) !!}
+                            {!! Form::select('parent_id',['' => 'UnAssign'] + $selectParent, null , ['class'=>'form-control']) !!}
                         </div>
                     </div>
 
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                            {!! Form::submit('Create Category', ['class' => 'btn btn-primary']) !!}
+                            {!! Form::submit('Update', ['class' => 'btn btn-primary']) !!}
                         </div>
                     </div>
                     {!! Form::close() !!}

@@ -19,7 +19,9 @@ class AdminCategoriesController extends Controller
 
         $selectParent = Category::pluck('name', 'id')->all();
 
-        return view('admin.categories.index', compact('categories','selectParent'));
+        $parentCategories = Category::where('parent_id', '=', null)->get();
+
+        return view('admin.categories.index', compact('categories','selectParent', 'parentCategories'));
     }
 
     /**
@@ -71,7 +73,7 @@ class AdminCategoriesController extends Controller
         //
         $category = Category::findOrfail($id);
 
-        $selectParent = Category::pluck('name', 'id');
+        $selectParent = Category::pluck('name', 'id')->all();
 
         return view('admin.categories.edit', compact('category', 'selectParent'));
     }

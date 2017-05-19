@@ -45,6 +45,34 @@
 
                 </div>
             </div>
+
+            <section class="sidebar">
+                <ul class="sidebar-menu">
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-share"></i> <span>Categories Tree</span>
+                            <span class="pull-right-container">
+                              <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            @foreach($parentCategories as $category)
+                                <li><a href="#">{{$category->name}}
+                                        <span class="pull-right-container">
+                                      <i class="fa fa-angle-left pull-right"></i>
+                                    </span>
+                                    </a>
+                                    @if(count($category->children))
+                                            @include('admin.categories.manageChild',['children' => $category->children])
+                                    @endif
+                                </li>
+                            @endforeach
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+
         </div>
 
 
