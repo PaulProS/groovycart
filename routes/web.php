@@ -28,6 +28,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/admin', 'HomeController@index')->name('home');
 
+Route::get('/about', function(){
+
+    return view('about');
+
+});
 
 Route::group(['middleware' => 'admin'], function (){
 

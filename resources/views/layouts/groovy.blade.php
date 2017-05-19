@@ -183,7 +183,11 @@
 
 <!-- //Custom-JavaScript-File-Links -->
 
-
+<!-- Countdown-Timer-JavaScript-File-Links -->
+<script type="text/javascript" src="js/moment.js"></script>
+<script type="text/javascript" src="js/moment-timezone-with-data.js"></script>
+<script type="text/javascript" src="js/timer.js"></script>
+<!-- //Countdown-Timer-JavaScript-File-Links -->
 
 <!-- Bootstrap-JavaScript --> <script src="js/bootstrap.js"></script>
 

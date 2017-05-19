@@ -5,10 +5,11 @@
 
     <div class="box box-primary">
         <div class="box-header with-border">
-            <h3 class="box-title">Products List</h3>
+            <a href="{{route('products.create')}}"><i class="fa fa-plus-square"></i>Create New Product</a>
 
             <div class="box-tools">
                 <div class="input-group input-group-sm" style="width: 150px;">
+
                     <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
 
                     <div class="input-group-btn">

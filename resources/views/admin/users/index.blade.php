@@ -5,7 +5,7 @@
 
                 <div class="box box-primary">
                     <div class="box-header with-border">
-                        <h3 class="box-title">Users List</h3>
+                        <a href="{{route('users.create')}}"><i class="fa fa-user-plus"></i>Create New User</a>
 
                         <div class="box-tools">
                             <div class="input-group input-group-sm" style="width: 150px;">
