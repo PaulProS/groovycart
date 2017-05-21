@@ -13,11 +13,45 @@ class UserProductsController extends Controller
 
         $products = Product::all();
 
-        //Get parent category of product
+        foreach ($products as $product){
 
-        $parentCategories = Category::where('parent_id', '=', null)->get();
+            if($parentId = $product->category->parent_id){
 
-        return view('allProducts', compact('products','parentCategories'));
+                $upperParent = Category::findOrFail($parentId);
+
+                if($secondUpper = $upperParent->parent_id){
+
+                    $secondUpper = Category::findOrFail($secondUpper);
+
+                    if($thirdUpper = $secondUpper->parent_id){
+
+                        $thirdUpper = Category::findOrFail($thirdUpper);
+
+                        echo "Parent : " . $thirdUpper->name;
+
+                    }
+                    echo "</br>";
+
+                    echo "Parent : " . $secondUpper->name;
+                }
+
+                echo "</br>";
+
+                echo "Parent : " . $upperParent->name;
+
+            }
+
+            echo "</br>";
+
+            echo $product->category->name;
+
+        }
+
+        return;
+
+//        $parentCategories = Category::where('parent_id', '=', null)->get();
+//
+//        return view('allProducts', compact('products','parentCategories'));
     }
 
 }
