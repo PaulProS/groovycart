@@ -49,7 +49,7 @@
             <section class="sidebar">
                 <ul class="sidebar-menu">
                     <li class="treeview">
-                        <a href="#">
+                        <a href="#" style="background-color: #000000">
                             <i class="fa fa-share"></i> <span>Categories Tree</span>
                             <span class="pull-right-container">
                               <i class="fa fa-angle-left pull-right"></i>

@@ -18,161 +18,48 @@
             </div>
             <div id="bs-megadropdown-tabs" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle w3-agile hyper" data-toggle="dropdown"><span> MEN </span></a>
-                        <ul class="dropdown-menu aits-w3 multi multi1">
-                            <div class="row">
 
-                                <div class="col-sm-3 w3layouts-nav-agile w3layouts-mens-nav-agileits w3layouts-mens-nav-agileits-1">
-                                    <ul class="multi-column-dropdown">
-                                        <li class="heading">FEATURED</li>
-                                        <li><a href="mens.html"><i class="fa fa-angle-right" aria-hidden="true"></i>New Arrivals</a></li>
-                                        <li><a href="mens.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Online Only</a></li>
-                                        <li><a href="mens.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Brands</a></li>
-                                        <li><a href="mens.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Clearance Sale</a></li>
-                                        <li><a href="mens.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Discount Store</a></li>
-                                        <li><a href="mens.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Editor's Pick</a></li>
-                                    </ul>
+                        @foreach($parentCategories as $parent)
+                        <li class="dropdown">
+                            <a href="" class="dropdown-toggle w3-agile hyper" data-toggle="dropdown"><span>{{strtoupper($parent->name)}}</span></a>
+                            <ul class="dropdown-menu aits-w3 multi multi1">
+                                <div class="row">
+
+                                    <div class="col-sm-3 w3layouts-nav-agile w3layouts-mens-nav-agileits w3layouts-mens-nav-agileits-1">
+                                        <ul class="multi-column-dropdown">
+                                            <li class="heading">FEATURED</li>
+                                            <li><a href="mens.html"><i class="fa fa-angle-right" aria-hidden="true"></i>New Arrivals</a></li>
+                                            <li><a href="mens.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Online Only</a></li>
+                                            <li><a href="mens.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Brands</a></li>
+                                            <li><a href="mens.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Clearance Sale</a></li>
+                                            <li><a href="mens.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Discount Store</a></li>
+                                            <li><a href="mens.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Editor's Pick</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-sm-3 w3layouts-nav-agile w3layouts-mens-nav-agileits w3layouts-mens-nav-agileits-2">
+                                        <p>TORSO</p>
+                                        <a href="mens.html"><img src="images/men-nav-1.jpg" alt="Groovy Apparel"></a>
+                                    </div>
+
+                                    <div class="col-sm-3 w3layouts-nav-agile w3layouts-mens-nav-agileits w3layouts-mens-nav-agileits-3">
+                                        <p>LEGS</p>
+                                        <a href="mens.html"><img src="images/men-nav-2.jpg" alt="Groovy Apparel"></a>
+                                    </div>
+
+                                    <div class="col-sm-3 w3layouts-nav-agile w3layouts-mens-nav-agileits w3layouts-mens-nav-agileits-4">
+                                        <p>ACCESSORIES</p>
+                                        <a href="mens_accessories.html"><img src="images/men-nav-3.jpg" alt="Groovy Apparel"></a>
+                                    </div>
+
+                                    <div class="clearfix"></div>
+                                    <p class="promo">Use Promo Code <span>#CFFGTY56</span> and take 30% off the products. <a href="#">Details</a></p>
                                 </div>
+                            </ul>
+                        </li>
 
-                                <div class="col-sm-3 w3layouts-nav-agile w3layouts-mens-nav-agileits w3layouts-mens-nav-agileits-2">
-                                    <p>TORSO</p>
-                                    <a href="mens.html"><img src="images/men-nav-1.jpg" alt="Groovy Apparel"></a>
-                                </div>
+                        @endforeach
 
-                                <div class="col-sm-3 w3layouts-nav-agile w3layouts-mens-nav-agileits w3layouts-mens-nav-agileits-3">
-                                    <p>LEGS</p>
-                                    <a href="mens.html"><img src="images/men-nav-2.jpg" alt="Groovy Apparel"></a>
-                                </div>
-
-                                <div class="col-sm-3 w3layouts-nav-agile w3layouts-mens-nav-agileits w3layouts-mens-nav-agileits-4">
-                                    <p>ACCESSORIES</p>
-                                    <a href="mens_accessories.html"><img src="images/men-nav-3.jpg" alt="Groovy Apparel"></a>
-                                </div>
-
-                                <div class="clearfix"></div>
-                                <p class="promo">Use Promo Code <span>#CFFGTY56</span> and take 30% off the products. <a href="#">Details</a></p>
-                            </div>
-
-                        </ul>
-                    </li>
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle hyper" data-toggle="dropdown"><span> WOMEN </span></a>
-                        <ul class="dropdown-menu multi multi2">
-                            <div class="row">
-
-                                <div class="col-sm-3 w3layouts-nav-agile w3layouts-womens-nav-agileits w3layouts-womens-nav-agileits-1">
-                                    <ul class="multi-column-dropdown">
-                                        <li class="heading">FEATURED</li>
-                                        <li><a href="womens.html"><i class="fa fa-angle-right" aria-hidden="true"></i>New Arrivals</a></li>
-                                        <li><a href="womens.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Online Only</a></li>
-                                        <li><a href="womens.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Brands</a></li>
-                                        <li><a href="womens.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Clearance Sale</a></li>
-                                        <li><a href="womens.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Discount Store</a></li>
-                                        <li><a href="womens.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Editor's Pick</a></li>
-                                    </ul>
-                                </div>
-
-                                <div class="col-sm-3 w3layouts-nav-agile w3layouts-womens-nav-agileits w3layouts-womens-nav-agileits-2">
-                                    <p>TOP</p>
-                                    <a href="womens.html"><img src="images/women-nav-1.jpg" alt="Groovy Apparel"></a>
-                                </div>
-
-                                <div class="col-sm-3 w3layouts-nav-agile w3layouts-womens-nav-agileits w3layouts-womens-nav-agileits-3">
-                                    <p>LEGS</p>
-                                    <a href="womens.html"><img src="images/women-nav-2.jpg" alt="Groovy Apparel"></a>
-                                </div>
-
-                                <div class="col-sm-3 w3layouts-nav-agile w3layouts-womens-nav-agileits w3layouts-womens-nav-agileits-4">
-                                    <p>ACCESSORIES</p>
-                                    <a href="womens_accessories.html"><img src="images/women-nav-3.jpg" alt="Groovy Apparel"></a>
-                                </div>
-
-                                <div class="clearfix"></div>
-                                <p class="promo">Use Promo Code <span>#CFFGTY56</span> and take 30% off the products. <a href="#">Details</a></p>
-                            </div>
-
-                        </ul>
-                    </li>
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle hyper" data-toggle="dropdown"><span> ACCESSORIES </span></a>
-                        <ul class="dropdown-menu multi multi3">
-                            <div class="row">
-
-                                <div class="col-sm-3 w3layouts-nav-agile w3layouts-acc-nav-agileits w3layouts-acc-nav-agileits-1">
-                                    <ul class="multi-column-dropdown">
-                                        <li class="heading">FEATURED</li>
-                                        <li><a href="mens_accessories.html"><i class="fa fa-angle-right" aria-hidden="true"></i>New Arrivals</a></li>
-                                        <li><a href="mens_accessories.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Online Only</a></li>
-                                        <li><a href="mens_accessories.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Brands</a></li>
-                                        <li><a href="mens_accessories.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Clearance Sale</a></li>
-                                        <li><a href="mens_accessories.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Discount Store</a></li>
-                                        <li><a href="mens_accessories.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Editor's Pick</a></li>
-                                    </ul>
-                                </div>
-
-                                <div class="col-sm-3 w3layouts-nav-agile w3layouts-acc-nav-agileits w3layouts-acc-nav-agileits-2">
-                                    <p>MEN</p>
-                                    <a href="mens_accessories.html"><img src="images/other-nav-1.jpg" alt="Groovy Apparel"></a>
-                                </div>
-
-                                <div class="col-sm-3 w3layouts-nav-agile w3layouts-acc-nav-agileits w3layouts-acc-nav-agileits-3">
-                                    <p>WOMEN</p>
-                                    <a href="womens_accessories.html"><img src="images/other-nav-2.jpg" alt="Groovy Apparel"></a>
-                                </div>
-
-                                <div class="col-sm-3 w3layouts-nav-agile w3layouts-acc-nav-agileits w3layouts-acc-nav-agileits-4">
-                                    <p>ACCESSORIES</p>
-                                    <a href="mens_accessories.html"><img src="images/other-nav-3.jpg" alt="Groovy Apparel"></a>
-                                </div>
-
-                                <div class="clearfix"></div>
-                                <p class="promo">Use Promo Code <span>#CFFGTY56</span> and take 30% off the products. <a href="#">Details</a></p>
-                            </div>
-
-                        </ul>
-                    </li>
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle hyper" data-toggle="dropdown"><span> HOTLIST </span></a>
-                        <ul class="dropdown-menu multi multi4">
-                            <div class="row">
-
-                                <div class="col-sm-3 w3layouts-nav-agile w3layouts-hot-nav-agileits w3layouts-hot-nav-agileits-1">
-                                    <ul class="multi-column-dropdown">
-                                        <li class="heading">FEATURED</li>
-                                        <li><a href="womens_accessories.html"><i class="fa fa-angle-right" aria-hidden="true"></i>New Arrivals</a></li>
-                                        <li><a href="womens_accessories.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Online Only</a></li>
-                                        <li><a href="womens_accessories.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Brands</a></li>
-                                        <li><a href="womens_accessories.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Clearance Sale</a></li>
-                                        <li><a href="womens_accessories.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Discount Store</a></li>
-                                        <li><a href="womens_accessories.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Editor's Pick</a></li>
-                                    </ul>
-                                </div>
-
-                                <div class="col-sm-3 w3layouts-nav-agile w3layouts-hot-nav-agileits w3layouts-hot-nav-agileits-2">
-                                    <p>MEN</p>
-                                    <a href="mens.html"><img src="images/other-nav-1.jpg" alt="Groovy Apparel"></a>
-                                </div>
-
-                                <div class="col-sm-3 w3layouts-nav-agile w3layouts-hot-nav-agileits w3layouts-hot-nav-agileits-3">
-                                    <p>WOMEN</p>
-                                    <a href="womens.html"><img src="images/other-nav-2.jpg" alt="Groovy Apparel"></a>
-                                </div>
-
-                                <div class="col-sm-3 w3layouts-nav-agile w3layouts-hot-nav-agileits w3layouts-hot-nav-agileits-4">
-                                    <p>ACCESSORIES</p>
-                                    <a href="mens_accessories.html"><img src="images/other-nav-3.jpg" alt="Groovy Apparel"></a>
-                                </div>
-
-                                <div class="clearfix"></div>
-                                <p class="promo">Use Promo Code <span>#CFFGTY56</span> and take 30% off the products. <a href="#">Details</a></p>
-                            </div>
-
-                        </ul>
-                    </li>
                     <li><a href="/about">ABOUT</a></li>
                     <li class="wthreesearch">
                         <form action="#" method="post">

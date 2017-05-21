@@ -15,11 +15,14 @@
 //    return view('welcome');
 //});
 
+use App\Category;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('index');
+    $parentCategories = Category::where('parent_id', '=', null)->get();
+
+    return view('index', compact('parentCategories'));
 });
 
 Auth::routes();
