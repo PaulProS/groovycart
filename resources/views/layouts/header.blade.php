@@ -21,19 +21,19 @@
 
                         @foreach($parentCategories as $parent)
                         <li class="dropdown">
-                            <a href="" class="dropdown-toggle w3-agile hyper" data-toggle="dropdown"><span>{{strtoupper($parent->name)}}</span></a>
+                            <a href="/" class="dropdown-toggle w3-agile hyper" data-toggle="dropdown"><span>{{strtoupper($parent->name)}}</span></a>
                             <ul class="dropdown-menu aits-w3 multi multi1">
                                 <div class="row">
 
                                     <div class="col-sm-3 w3layouts-nav-agile w3layouts-mens-nav-agileits w3layouts-mens-nav-agileits-1">
                                         <ul class="multi-column-dropdown">
                                             <li class="heading">FEATURED</li>
-                                            <li><a href="mens.html"><i class="fa fa-angle-right" aria-hidden="true"></i>New Arrivals</a></li>
-                                            <li><a href="mens.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Online Only</a></li>
-                                            <li><a href="mens.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Brands</a></li>
-                                            <li><a href="mens.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Clearance Sale</a></li>
-                                            <li><a href="mens.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Discount Store</a></li>
-                                            <li><a href="mens.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Editor's Pick</a></li>
+                                            <li><a href="/allproducts"><i class="fa fa-angle-right" aria-hidden="true"></i>New Arrivals</a></li>
+                                            <li><a href="/allproducts"><i class="fa fa-angle-right" aria-hidden="true"></i>Online Only</a></li>
+                                            <li><a href="/allproducts"><i class="fa fa-angle-right" aria-hidden="true"></i>Brands</a></li>
+                                            <li><a href="/allproducts"><i class="fa fa-angle-right" aria-hidden="true"></i>Clearance Sale</a></li>
+                                            <li><a href="/allproducts"><i class="fa fa-angle-right" aria-hidden="true"></i>Discount Store</a></li>
+                                            <li><a href="/allproducts"><i class="fa fa-angle-right" aria-hidden="true"></i>Editor's Pick</a></li>
                                         </ul>
                                     </div>
 

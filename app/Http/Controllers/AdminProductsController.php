@@ -137,7 +137,15 @@ class AdminProductsController extends Controller
     public function destroy($id)
     {
         //
-        Product::findOrfail($id)->delete();
+
+        $product = Product::findOrFail($id);
+
+        if($product->photo){
+            unlink(public_path() . $product->photo->photo);
+        }
+
+
+        $product->delete();
 
         return redirect(route('products.index'));
     }
