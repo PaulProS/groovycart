@@ -28,28 +28,28 @@
                                     <div class="col-sm-3 w3layouts-nav-agile w3layouts-mens-nav-agileits w3layouts-mens-nav-agileits-1">
                                         <ul class="multi-column-dropdown">
                                             <li class="heading">FEATURED</li>
-                                            <li><a href="/allproducts"><i class="fa fa-angle-right" aria-hidden="true"></i>New Arrivals</a></li>
-                                            <li><a href="/allproducts"><i class="fa fa-angle-right" aria-hidden="true"></i>Online Only</a></li>
-                                            <li><a href="/allproducts"><i class="fa fa-angle-right" aria-hidden="true"></i>Brands</a></li>
-                                            <li><a href="/allproducts"><i class="fa fa-angle-right" aria-hidden="true"></i>Clearance Sale</a></li>
-                                            <li><a href="/allproducts"><i class="fa fa-angle-right" aria-hidden="true"></i>Discount Store</a></li>
-                                            <li><a href="/allproducts"><i class="fa fa-angle-right" aria-hidden="true"></i>Editor's Pick</a></li>
+                                            <li><a href="{{route('store', $parent->id)}}"><i class="fa fa-angle-right" aria-hidden="true"></i>New Arrivals</a></li>
+                                            <li><a href="{{route('store', $parent->id)}}"><i class="fa fa-angle-right" aria-hidden="true"></i>Online Only</a></li>
+                                            <li><a href="{{route('store', $parent->id)}}"><i class="fa fa-angle-right" aria-hidden="true"></i>Brands</a></li>
+                                            <li><a href="{{route('store', $parent->id)}}"><i class="fa fa-angle-right" aria-hidden="true"></i>Clearance Sale</a></li>
+                                            <li><a href="{{route('store', $parent->id)}}"><i class="fa fa-angle-right" aria-hidden="true"></i>Discount Store</a></li>
+                                            <li><a href="{{route('store', $parent->id)}}"><i class="fa fa-angle-right" aria-hidden="true"></i>Editor's Pick</a></li>
                                         </ul>
                                     </div>
 
                                     <div class="col-sm-3 w3layouts-nav-agile w3layouts-mens-nav-agileits w3layouts-mens-nav-agileits-2">
                                         <p>TORSO</p>
-                                        <a href="mens.html"><img src="images/men-nav-1.jpg" alt="Groovy Apparel"></a>
+                                        <a href="mens.html"><img src="/images/men-nav-1.jpg" alt="Groovy Apparel"></a>
                                     </div>
 
                                     <div class="col-sm-3 w3layouts-nav-agile w3layouts-mens-nav-agileits w3layouts-mens-nav-agileits-3">
                                         <p>LEGS</p>
-                                        <a href="mens.html"><img src="images/men-nav-2.jpg" alt="Groovy Apparel"></a>
+                                        <a href="mens.html"><img src="/images/men-nav-2.jpg" alt="Groovy Apparel"></a>
                                     </div>
 
                                     <div class="col-sm-3 w3layouts-nav-agile w3layouts-mens-nav-agileits w3layouts-mens-nav-agileits-4">
                                         <p>ACCESSORIES</p>
-                                        <a href="mens_accessories.html"><img src="images/men-nav-3.jpg" alt="Groovy Apparel"></a>
+                                        <a href="mens_accessories.html"><img src="/images/men-nav-3.jpg" alt="Groovy Apparel"></a>
                                     </div>
 
                                     <div class="clearfix"></div>

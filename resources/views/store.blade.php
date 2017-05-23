@@ -6,7 +6,7 @@
 
     <!-- Banner -->
     <div class="agileheader-banner w3mensaits">
-        <img src="images/mens-banner.jpg" alt="Groovy Apparel">
+        <img src="/images/mens-banner.jpg" alt="Groovy Apparel">
     </div>
     <!-- //Banner -->
 
@@ -29,7 +29,7 @@
                             <div class="cbp-pgitem a3ls">
                                 <div class="cbp-pgitem-flip">
                                     <img height="300" src="{{$product->photo ? $product->photo->photo : ""}}" alt="Groovy Apparel">
-                                    <img src="images/1-back.jpg" alt="Groovy Apparel">
+                                    <img src="/images/1-back.jpg" alt="Groovy Apparel">
                                 </div>
                             </div>
                         </a>

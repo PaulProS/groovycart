@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -29,6 +30,9 @@ class HomeController extends Controller
                 return view('admin.index');
             }
         }
-        return view('home');
+
+        $parentCategories = Category::where('parent_id', '=', null)->get();
+
+        return view('home', compact('parentCategories'));
     }
 }

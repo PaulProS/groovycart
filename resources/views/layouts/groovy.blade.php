@@ -21,9 +21,9 @@
     <!-- //Meta-Tags -->
 
     <!-- Custom-StyleSheet-Links -->
-    <!-- Bootstrap-CSS -->	   <link rel="stylesheet" href="css/bootstrap.css"					type="text/css" media="all">
-    <!-- Index-Page-CSS -->	   <link rel="stylesheet" href="css/style.css"						type="text/css" media="all">
-    <!-- Header-Slider-CSS --> <link rel="stylesheet" href="css/fluid_dg.css" id="fluid_dg-css" type="text/css" media="all">
+    <!-- Bootstrap-CSS -->	   <link rel="stylesheet" href="/css/bootstrap.css"					type="text/css" media="all">
+    <!-- Index-Page-CSS -->	   <link rel="stylesheet" href="/css/style.css"						type="text/css" media="all">
+    <!-- Header-Slider-CSS --> <link rel="stylesheet" href="/css/fluid_dg.css" id="fluid_dg-css" type="text/css" media="all">
     <!-- //Custom-StyleSheet-Links -->
 
     <!-- Fonts -->
@@ -33,13 +33,13 @@
     <!-- //Fonts -->
 
     <!-- Font-Awesome-File-Links -->
-    <!-- CSS --> <link rel="stylesheet" href="css/font-awesome.css" 		 type="text/css" media="all">
-    <!-- TTF --> <link rel="stylesheet" href="fonts/fontawesome-webfont.ttf" type="text/css" media="all">
+    <!-- CSS --> <link rel="stylesheet" href="/css/font-awesome.css" 		 type="text/css" media="all">
+    <!-- TTF --> <link rel="stylesheet" href="/fonts/fontawesome-webfont.ttf" type="text/css" media="all">
     <!-- //Font-Awesome-File-Links -->
 
-    <!-- Supportive-Modernizr-JavaScript --><script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <!-- Supportive-Modernizr-JavaScript --><script src="/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
-    <!-- Default-JavaScript --><script src="js/jquery-2.2.3.js"></script>
+    <!-- Default-JavaScript --><script src="/js/jquery-2.2.3.js"></script>
 
 </head>
 <!-- //Head -->
@@ -85,12 +85,12 @@
 
 <!-- Custom-JavaScript-File-Links -->
 
-<!-- Default-JavaScript --><script src="js/jquery-2.2.3.js"></script>
-<script src="js/modernizr.custom.js"></script>
+<!-- Default-JavaScript --><script src="/js/jquery-2.2.3.js"></script>
+<script src="/js/modernizr.custom.js"></script>
 <!-- Custom-JavaScript-File-Links -->
 
 <!-- cart-js -->
-<script src="js/minicart.js"></script>
+<script src="/js/minicart.js"></script>
 <script>
     w3l.render();
 
@@ -109,8 +109,8 @@
 <!-- Shopping-Cart-JavaScript -->
 
 <!-- Header-Slider-JavaScript-Files -->
-<script type='text/javascript' src='js/jquery.easing.1.3.js'></script>
-<script type='text/javascript' src='js/fluid_dg.min.js'></script>
+<script type='text/javascript' src='/js/jquery.easing.1.3.js'></script>
+<script type='text/javascript' src='/js/fluid_dg.min.js'></script>
 <script>jQuery(document).ready(function(){
         jQuery(function(){
             jQuery('#fluid_dg_wrap_4').fluid_dg({
@@ -147,7 +147,7 @@
 <!-- //Dropdown-Menu-JavaScript -->
 
 <!-- Pricing-Popup-Box-JavaScript -->
-<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+<script src="/js/jquery.magnific-popup.js" type="text/javascript"></script>
 <script>
     $(document).ready(function() {
         $('.popup-with-zoom-anim').magnificPopup({
@@ -166,7 +166,7 @@
 <!-- //Pricing-Popup-Box-JavaScript -->
 
 <!-- Model-Slider-JavaScript-Files -->
-<script src="js/jquery.film_roll.js"></script>
+<script src="/js/jquery.film_roll.js"></script>
 <script>
     (function() {
         jQuery(function() {
@@ -184,12 +184,12 @@
 <!-- //Custom-JavaScript-File-Links -->
 
 <!-- Countdown-Timer-JavaScript-File-Links -->
-<script type="text/javascript" src="js/moment.js"></script>
-<script type="text/javascript" src="js/moment-timezone-with-data.js"></script>
-<script type="text/javascript" src="js/timer.js"></script>
+<script type="text/javascript" src="/js/moment.js"></script>
+<script type="text/javascript" src="/js/moment-timezone-with-data.js"></script>
+<script type="text/javascript" src="/js/timer.js"></script>
 <!-- //Countdown-Timer-JavaScript-File-Links -->
 
-<!-- Bootstrap-JavaScript --> <script src="js/bootstrap.js"></script>
+<!-- Bootstrap-JavaScript --> <script src="/js/bootstrap.js"></script>
 
 </body>
 <!-- //Body -->

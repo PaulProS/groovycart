@@ -14,7 +14,7 @@ class Category extends Model
 
     ];
 
-    
+
     public function parent(){
 
         return $this->belongsTo('App\Category');
@@ -28,4 +28,7 @@ class Category extends Model
 
     }
 
+    public function products(){
+        return $this->belongsToMany('App\Category');
+    }
 }

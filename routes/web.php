@@ -38,9 +38,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/admin', 'HomeController@index')->name('home');
+Route::get('/admin', 'HomeController@index')->name('admin');
 
-Route::get('/allproducts', 'UserProductsController@allProducts')->name('allproducts');
+Route::get('/store/{id}', 'ProductsController@category')->name('store');
+
 
 Route::group(['middleware' => 'admin'], function (){
 
