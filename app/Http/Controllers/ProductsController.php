@@ -14,16 +14,15 @@ class ProductsController extends Controller
         global $catIds;
 
         if(count(Category::where('parent_id', $id)->get())){
-
-            $child = Category::where('parent_id', $id)->get();
-            $catIds[] = $child[0]->id;
-            $this->category($child[0]->id);
+            $cats = Category::where('parent_id', $id)->get();
+            foreach ($cats as $child){
+                $catIds[] = $child->id;
+                $this->category($child->id);
+            }
         }
 
         $products = Product::whereIn('category_id', $catIds)->get();
-
         $parentCategories = Category::where('parent_id', '=', null)->get();
-
         return view('store', compact('products','parentCategories'));
     }
 
