@@ -24,6 +24,8 @@
     <!-- Bootstrap-CSS -->	   <link rel="stylesheet" href="/css/bootstrap.css"					type="text/css" media="all">
     <!-- Index-Page-CSS -->	   <link rel="stylesheet" href="/css/style.css"						type="text/css" media="all">
     <!-- Header-Slider-CSS --> <link rel="stylesheet" href="/css/fluid_dg.css" id="fluid_dg-css" type="text/css" media="all">
+    <!-- FlexSlider-CSS -->	<link rel="stylesheet" href="/css/flexslider.css" type="text/css" media="all">
+
     <!-- //Custom-StyleSheet-Links -->
 
     <!-- Fonts -->
@@ -190,6 +192,66 @@
 <!-- //Countdown-Timer-JavaScript-File-Links -->
 
 <!-- Bootstrap-JavaScript --> <script src="/js/bootstrap.js"></script>
+
+
+<!-- Custom-JavaScript-File-Links -->
+
+<!-- Default-JavaScript --><script src="/js/jquery-2.2.3.js"></script>
+<script src="/js/modernizr.custom.js"></script>
+<!-- Custom-JavaScript-File-Links -->
+
+<!-- cart-js -->
+<script src="/js/minicart.js"></script>
+<script>
+    w3l.render();
+
+    w3l.cart.on('w3agile_checkout', function (evt) {
+        var items, len, i;
+
+        if (this.subtotal() > 0) {
+            items = this.items();
+
+            for (i = 0, len = items.length; i < len; i++) {
+            }
+        }
+    });
+</script>
+<!-- //cart-js -->
+
+<!-- Popup-Box-JavaScript -->
+<script src="/js/jquery.magnific-popup.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function() {
+        $('.popup-with-zoom-anim').magnificPopup({
+            type: 'inline',
+            fixedContentPos: false,
+            fixedBgPos: true,
+            overflowY: 'auto',
+            closeBtnInside: true,
+            preloader: false,
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-zoom-in'
+        });
+    });
+</script>
+<!-- //Popup-Box-JavaScript -->
+
+<!-- FlexSlider-JavaScript -->
+<script defer src="/js/jquery.flexslider.js"></script>
+<script>
+    $(window).load(function() {
+        $('.flexslider').flexslider({
+            animation: "slide",
+            controlNav: "thumbnails"
+        });
+    });
+</script>
+<!-- //FlexSlider-JavaScript -->
+
+<!-- ImageZoom-JavaScript --><script src="/js/imagezoom.js"></script>
+
+<!-- //Custom-JavaScript-File-Links -->
 
 </body>
 <!-- //Body -->

@@ -11,6 +11,7 @@ class ProductsController extends Controller
 
     public function category($id){
 
+
         global $catIds;
 
         if(count(Category::where('parent_id', $id)->get())){
@@ -26,4 +27,13 @@ class ProductsController extends Controller
         return view('store', compact('products','parentCategories'));
     }
 
+
+    public function viewProduct($id){
+
+        $product = Product::findOrFail($id);
+
+        $parentCategories = Category::where('parent_id', '=', null)->get();
+
+        return view('single', compact('product','parentCategories'));
+    }
 }

@@ -34,14 +34,10 @@ Route::get('/about', function(){
 
 });
 
-Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
-
 Route::get('/admin', 'HomeController@index')->name('admin');
-
 Route::get('/store/{id}', 'ProductsController@category')->name('store');
-
+Route::get('/product/{id}', 'ProductsController@viewProduct')->name('product');
 
 Route::group(['middleware' => 'admin'], function (){
 
@@ -52,5 +48,8 @@ Route::group(['middleware' => 'admin'], function (){
     Route::resource('admin/categories', 'AdminCategoriesController');
 
 });
+
+Auth::routes();
+
 
 
