@@ -19,46 +19,51 @@
             <div id="bs-megadropdown-tabs" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
 
-                        @foreach($parentCategories as $parent)
-                        <li class="dropdown">
-                            <a href="/" class="dropdown-toggle w3-agile hyper" data-toggle="dropdown"><span>{{strtoupper($parent->name)}}</span></a>
-                            <ul class="dropdown-menu aits-w3 multi multi1">
-                                <div class="row">
+                    <?php $i = 0; ?>
 
-                                    <div class="col-sm-3 w3layouts-nav-agile w3layouts-mens-nav-agileits w3layouts-mens-nav-agileits-1">
-                                        <ul class="multi-column-dropdown">
-                                            <li class="heading">FEATURED</li>
-                                            <li><a href="{{route('store', $parent->id)}}"><i class="fa fa-angle-right" aria-hidden="true"></i>New Arrivals</a></li>
-                                            <li><a href="{{route('store', $parent->id)}}"><i class="fa fa-angle-right" aria-hidden="true"></i>Online Only</a></li>
-                                            <li><a href="{{route('store', $parent->id)}}"><i class="fa fa-angle-right" aria-hidden="true"></i>Brands</a></li>
-                                            <li><a href="{{route('store', $parent->id)}}"><i class="fa fa-angle-right" aria-hidden="true"></i>Clearance Sale</a></li>
-                                            <li><a href="{{route('store', $parent->id)}}"><i class="fa fa-angle-right" aria-hidden="true"></i>Discount Store</a></li>
-                                            <li><a href="{{route('store', $parent->id)}}"><i class="fa fa-angle-right" aria-hidden="true"></i>Editor's Pick</a></li>
-                                        </ul>
-                                    </div>
+                    @foreach($parentCategories as $parent)
+                    <li class="dropdown">
+                        <a href="/" class="dropdown-toggle w3-agile hyper" data-toggle="dropdown"><span>{{strtoupper($parent->name)}}</span></a>
 
-                                    <div class="col-sm-3 w3layouts-nav-agile w3layouts-mens-nav-agileits w3layouts-mens-nav-agileits-2">
-                                        <p>TORSO</p>
-                                        <a href="mens.html"><img src="/images/men-nav-1.jpg" alt="Groovy Apparel"></a>
-                                    </div>
+                        <?php $i++; ?>
 
-                                    <div class="col-sm-3 w3layouts-nav-agile w3layouts-mens-nav-agileits w3layouts-mens-nav-agileits-3">
-                                        <p>LEGS</p>
-                                        <a href="mens.html"><img src="/images/men-nav-2.jpg" alt="Groovy Apparel"></a>
-                                    </div>
+                        <ul class="dropdown-menu aits-w3 multi multi{{$i}}">
+                            <div class="row">
 
-                                    <div class="col-sm-3 w3layouts-nav-agile w3layouts-mens-nav-agileits w3layouts-mens-nav-agileits-4">
-                                        <p>ACCESSORIES</p>
-                                        <a href="mens_accessories.html"><img src="/images/men-nav-3.jpg" alt="Groovy Apparel"></a>
-                                    </div>
-
-                                    <div class="clearfix"></div>
-                                    <p class="promo">Use Promo Code <span>#CFFGTY56</span> and take 30% off the products. <a href="#">Details</a></p>
+                                <div class="col-sm-3 w3layouts-nav-agile w3layouts-mens-nav-agileits w3layouts-mens-nav-agileits-1">
+                                    <ul class="multi-column-dropdown">
+                                        <li class="heading">FEATURED</li>
+                                        <li><a href="{{route('store', $parent->id)}}"><i class="fa fa-angle-right" aria-hidden="true"></i>New Arrivals</a></li>
+                                        <li><a href="{{route('store', $parent->id)}}"><i class="fa fa-angle-right" aria-hidden="true"></i>Online Only</a></li>
+                                        <li><a href="{{route('store', $parent->id)}}"><i class="fa fa-angle-right" aria-hidden="true"></i>Brands</a></li>
+                                        <li><a href="{{route('store', $parent->id)}}"><i class="fa fa-angle-right" aria-hidden="true"></i>Clearance Sale</a></li>
+                                        <li><a href="{{route('store', $parent->id)}}"><i class="fa fa-angle-right" aria-hidden="true"></i>Discount Store</a></li>
+                                        <li><a href="{{route('store', $parent->id)}}"><i class="fa fa-angle-right" aria-hidden="true"></i>Editor's Pick</a></li>
+                                    </ul>
                                 </div>
-                            </ul>
-                        </li>
 
-                        @endforeach
+                                <div class="col-sm-3 w3layouts-nav-agile w3layouts-mens-nav-agileits w3layouts-mens-nav-agileits-2">
+                                    <p>TORSO</p>
+                                    <a href="mens.html"><img src="/images/men-nav-1.jpg" alt="Groovy Apparel"></a>
+                                </div>
+
+                                <div class="col-sm-3 w3layouts-nav-agile w3layouts-mens-nav-agileits w3layouts-mens-nav-agileits-3">
+                                    <p>LEGS</p>
+                                    <a href="mens.html"><img src="/images/men-nav-2.jpg" alt="Groovy Apparel"></a>
+                                </div>
+
+                                <div class="col-sm-3 w3layouts-nav-agile w3layouts-mens-nav-agileits w3layouts-mens-nav-agileits-4">
+                                    <p>ACCESSORIES</p>
+                                    <a href="mens_accessories.html"><img src="/images/men-nav-3.jpg" alt="Groovy Apparel"></a>
+                                </div>
+
+                                <div class="clearfix"></div>
+                                <p class="promo">Use Promo Code <span>#CFFGTY56</span> and take 30% off the products. <a href="#">Details</a></p>
+                            </div>
+                        </ul>
+                    </li>
+
+                    @endforeach
 
                     <li><a href="/about">ABOUT</a></li>
                     <li class="wthreesearch">
