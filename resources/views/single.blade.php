@@ -43,8 +43,8 @@
                             </div>
                             <div class="single-price">
                                 <ul>
-                                    <li>$67.5 <small>10% Off</small></li>
-                                    <li><del>$75</del></li>
+                                    <li>${{$product->price}} <small>10% Off</small></li>
+                                    <li><del>${{$product->price + 10}}</del></li>
                                     <li>Ends on: Nov,15th</li>
                                     <li><a href="#"><i class="fa fa-gift" aria-hidden="true"></i>Apply Coupon</a></li>
                                 </ul>

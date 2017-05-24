@@ -16,16 +16,16 @@
     <!-- Model-Slider -->
     <div class="agilemodel-slider">
         <div id='film_roll_1'>
-            <div><img src="images/model_slide-1.jpg" alt="Groovy Apparel"></div>
-            <div><img src="images/model_slide-2.jpg" alt="Groovy Apparel"></div>
-            <div><img src="images/model_slide-3.jpg" alt="Groovy Apparel"></div>
-            <div><img src="images/model_slide-4.jpg" alt="Groovy Apparel"></div>
-            <div><img src="images/model_slide-5.jpg" alt="Groovy Apparel"></div>
-            <div><img src="images/model_slide-6.jpg" alt="Groovy Apparel"></div>
-            <div><img src="images/model_slide-7.jpg" alt="Groovy Apparel"></div>
-            <div><img src="images/model_slide-8.jpg" alt="Groovy Apparel"></div>
-            <div><img src="images/model_slide-9.jpg" alt="Groovy Apparel"></div>
-            <div><img src="images/model_slide-10.jpg" alt="Groovy Apparel"></div>
+            <div><img src="/images/model_slide-1.jpg" alt="Groovy Apparel"></div>
+            <div><img src="/images/model_slide-2.jpg" alt="Groovy Apparel"></div>
+            <div><img src="/images/model_slide-3.jpg" alt="Groovy Apparel"></div>
+            <div><img src="/images/model_slide-4.jpg" alt="Groovy Apparel"></div>
+            <div><img src="/images/model_slide-5.jpg" alt="Groovy Apparel"></div>
+            <div><img src="/images/model_slide-6.jpg" alt="Groovy Apparel"></div>
+            <div><img src="/images/model_slide-7.jpg" alt="Groovy Apparel"></div>
+            <div><img src="/images/model_slide-8.jpg" alt="Groovy Apparel"></div>
+            <div><img src="/images/model_slide-9.jpg" alt="Groovy Apparel"></div>
+            <div><img src="/images/model_slide-10.jpg" alt="Groovy Apparel"></div>
         </div>
     </div>
     <!-- //Model-Slider -->
@@ -40,7 +40,7 @@
                 <div class="col-md-6 wthreehome-latest-grid wthreehome-latest-grid1">
                     <div class="grid">
                         <figure class="effect-apollo">
-                            <img src="images/home-latest-1.jpg" alt="Groovy Apparel">
+                            <img src="/images/home-latest-1.jpg" alt="Groovy Apparel">
                             <figcaption></figcaption>
                         </figure>
                     </div>
@@ -51,7 +51,7 @@
                 <div class="col-md-6 wthreehome-latest-grid wthreehome-latest-grid2">
                     <div class="grid">
                         <figure class="effect-apollo">
-                            <img src="images/home-latest-2.jpg" alt="Groovy Apparel">
+                            <img src="/images/home-latest-2.jpg" alt="Groovy Apparel">
                             <figcaption></figcaption>
                         </figure>
                     </div>
@@ -62,7 +62,7 @@
                 <div class="col-md-6 wthreehome-latest-grid wthreehome-latest-grid3">
                     <div class="grid">
                         <figure class="effect-apollo">
-                            <img src="images/home-latest-3.jpg" alt="Groovy Apparel">
+                            <img src="/images/home-latest-3.jpg" alt="Groovy Apparel">
                             <figcaption></figcaption>
                         </figure>
                     </div>
@@ -73,7 +73,7 @@
                 <div class="col-md-6 wthreehome-latest-grid wthreehome-latest-grid4">
                     <div class="grid">
                         <figure class="effect-apollo">
-                            <img src="images/home-latest-4.jpg" alt="Groovy Apparel">
+                            <img src="/images/home-latest-4.jpg" alt="Groovy Apparel">
                             <figcaption></figcaption>
                         </figure>
                     </div>
@@ -108,7 +108,7 @@
     <div class="wthreedenim-coll">
         <div class="style-grids">
             <div class="col-md-6 style-grid style-grid-1">
-                <img src="images/style-1.jpg" alt="Groovy Apparel">
+                <img src="/images/style-1.jpg" alt="Groovy Apparel">
                 <div class="style-grid-1-text">
                     <h3>DENIM JEANS</h3>
                     <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur.</p>
@@ -119,14 +119,14 @@
             </div>
             <div class="col-md-6 style-grid style-grid-2">
                 <div class="style-image-1">
-                    <img src="images/style-2.jpg" alt="Groovy Apparel">
+                    <img src="/images/style-2.jpg" alt="Groovy Apparel">
                     <div class="style-grid-2-text">
                         <h3>WATER REPELLENT</h3>
                         <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.</p>
                     </div>
                 </div>
                 <div class="style-image-2">
-                    <img src="images/style-3.jpg" alt="Groovy Apparel">
+                    <img src="/images/style-3.jpg" alt="Groovy Apparel">
                     <div class="style-grid-2-text">
                         <h3>STITCHED TO PERFECTION</h3>
                         <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.</p>
@@ -163,7 +163,7 @@
                 <div class="col-md-6 agileshoppinggrid agileshoppinggrid1">
                     <div class="grid">
                         <figure class="effect-apollo">
-                            <img src="images/mens.jpg" alt="Groovy Apparel">
+                            <img src="/images/mens.jpg" alt="Groovy Apparel">
                             <figcaption></figcaption>
                         </figure>
                     </div>
@@ -171,7 +171,7 @@
                 <div class="col-md-6 agileshoppinggrid agileshoppinggrid2">
                     <div class="grid">
                         <figure class="effect-apollo">
-                            <img src="images/womens.jpg" alt="Groovy Apparel">
+                            <img src="/images/womens.jpg" alt="Groovy Apparel">
                             <figcaption></figcaption>
                         </figure>
                     </div>
