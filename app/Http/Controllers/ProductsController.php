@@ -13,11 +13,11 @@ class ProductsController extends Controller
 
 
         global $catIds;
+        $catIds[] = (int) $id;
 
         if(count(Category::where('parent_id', $id)->get())){
             $cats = Category::where('parent_id', $id)->get();
             foreach ($cats as $child){
-                $catIds[] = $child->id;
                 $this->category($child->id);
             }
         }

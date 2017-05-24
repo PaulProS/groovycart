@@ -21,10 +21,10 @@
     <!-- //Meta-Tags -->
 
     <!-- Custom-StyleSheet-Links -->
-    <!-- Bootstrap-CSS -->	   <link rel="stylesheet" href="{{ asset("/css/bootstrap.css")}}" type="text/css" media="all">
-    <!-- Index-Page-CSS -->	   <link rel="stylesheet" href="{{ asset("/css/style.css")}}"						type="text/css" media="all">
-    <!-- Header-Slider-CSS --> <link rel="stylesheet" href="{{ asset("/css/fluid_dg.css")}}" id="fluid_dg-css" type="text/css" media="all">
-    <!-- FlexSlider-CSS -->	<link rel="stylesheet" href="{{ asset("/css/flexslider.css")}}" type="text/css" media="all">
+    <!-- Bootstrap-CSS -->	   <link rel="stylesheet" href="{{asset("css/bootstrap.css")}}"	type="text/css" media="all">
+    <!-- Index-Page-CSS -->	   <link rel="stylesheet" href="{{asset("css/style.css")}}"	type="text/css" media="all">
+    <!-- Header-Slider-CSS --> <link rel="stylesheet" href="{{asset("css/fluid_dg.css")}}" id="fluid_dg-css" type="text/css" media="all">
+    <!-- FlexSlider-CSS -->	<link rel="stylesheet" href="{{asset("css/flexslider.css")}}" type="text/css" media="all">
 
     <!-- //Custom-StyleSheet-Links -->
 
@@ -35,13 +35,13 @@
     <!-- //Fonts -->
 
     <!-- Font-Awesome-File-Links -->
-    <!-- CSS --> <link rel="stylesheet" href="{{ asset("/css/font-awesome.css")}}" 		 type="text/css" media="all">
-    <!-- TTF --> <link rel="stylesheet" href="{{ asset("/fonts/fontawesome-webfont.ttf")}}" type="text/css" media="all">
+    <!-- CSS --> <link rel="stylesheet" href="{{asset("css/font-awesome.css")}}" type="text/css" media="all">
+    <!-- TTF --> <link rel="stylesheet" href="{{asset("fonts/fontawesome-webfont.ttf")}}" type="text/css" media="all">
     <!-- //Font-Awesome-File-Links -->
 
-    <!-- Supportive-Modernizr-JavaScript --><script src="{{ asset("/js/modernizr-2.6.2-respond-1.1.0.min.js")}}"></script>
+    <!-- Supportive-Modernizr-JavaScript --><script src="{{asset("js/modernizr-2.6.2-respond-1.1.0.min.js")}}"></script>
 
-    <!-- Default-JavaScript --><script src="{{ asset("/js/jquery-2.2.3.js")}}"></script>
+    <!-- Default-JavaScript --><script src="{{asset("js/jquery-2.2.3.js")}}"></script>
 
 </head>
 <!-- //Head -->
@@ -83,16 +83,14 @@
 </div>
 <!-- //Copyright -->
 
-
-
 <!-- Custom-JavaScript-File-Links -->
 
-<!-- Default-JavaScript --><script src="{{ asset("/js/jquery-2.2.3.js")}}"></script>
-<script src="{{ asset("/js/modernizr.custom.js")}}"></script>
+<!-- Default-JavaScript --><script src="{{asset("js/jquery-2.2.3.js")}}"></script>
+<script src="{{asset("js/modernizr.custom.js")}}"></script>
 <!-- Custom-JavaScript-File-Links -->
 
 <!-- cart-js -->
-<script src="{{ asset("/js/minicart.js")}}"></script>
+<script src="{{asset("js/minicart.js")}}"></script>
 <script>
     w3l.render();
 
@@ -111,8 +109,8 @@
 <!-- Shopping-Cart-JavaScript -->
 
 <!-- Header-Slider-JavaScript-Files -->
-<script type='text/javascript' src='{{ asset("/js/jquery.easing.1.3.js")}}'></script>
-<script type='text/javascript' src='{{ asset("/js/fluid_dg.min.js")}}'></script>
+<script type='text/javascript' src='{{asset("js/jquery.easing.1.3.js")}}'></script>
+<script type='text/javascript' src='{{asset("js/fluid_dg.min.js")}}'></script>
 <script>jQuery(document).ready(function(){
         jQuery(function(){
             jQuery('#fluid_dg_wrap_4').fluid_dg({
@@ -124,7 +122,7 @@
                 opacityOnGrid: false,
                 imagePath: '',
                 time: 4000,
-                transPeriod: 2000
+                transPeriod: 2000,
             });
         });
     })
@@ -149,7 +147,7 @@
 <!-- //Dropdown-Menu-JavaScript -->
 
 <!-- Pricing-Popup-Box-JavaScript -->
-<script src="{{ asset("/js/jquery.magnific-popup.js")}}" type="text/javascript"></script>
+<script src="{{asset("js/jquery.magnific-popup.js")}}" type="text/javascript"></script>
 <script>
     $(document).ready(function() {
         $('.popup-with-zoom-anim').magnificPopup({
@@ -168,7 +166,7 @@
 <!-- //Pricing-Popup-Box-JavaScript -->
 
 <!-- Model-Slider-JavaScript-Files -->
-<script src="{{ asset("/js/jquery.film_roll.js")}}"></script>
+<script src="{{asset("js/jquery.film_roll.js")}}"></script>
 <script>
     (function() {
         jQuery(function() {
@@ -185,60 +183,16 @@
 
 <!-- //Custom-JavaScript-File-Links -->
 
+<!-- Bootstrap-JavaScript --> <script src="{{asset("js/bootstrap.js")}}"></script>
+
 <!-- Countdown-Timer-JavaScript-File-Links -->
-<script type="text/javascript" src="{{ asset("/js/moment.js")}}"></script>
-<script type="text/javascript" src="{{ asset("/js/moment-timezone-with-data.js")}}"></script>
-<script type="text/javascript" src="{{ asset("/js/timer.js")}}"></script>
+<script type="text/javascript" src="{{asset("js/moment.js")}}"></script>
+<script type="text/javascript" src="{{asset("js/moment-timezone-with-data.js")}}"></script>
+<script type="text/javascript" src="{{asset("js/timer.js")}}"></script>
 <!-- //Countdown-Timer-JavaScript-File-Links -->
 
-<!-- Bootstrap-JavaScript --> <script src="{{ asset("/js/bootstrap.js")}}"></script>
-
-
-<!-- Custom-JavaScript-File-Links -->
-
-<!-- Default-JavaScript --><script src="{{ asset("/js/jquery-2.2.3.js")}}"></script>
-<script src="{{ asset("/js/modernizr.custom.js")}}"></script>
-<!-- Custom-JavaScript-File-Links -->
-
-<!-- cart-js -->
-<script src="{{ asset("/js/minicart.js")}}"></script>
-<script>
-    w3l.render();
-
-    w3l.cart.on('w3agile_checkout', function (evt) {
-        var items, len, i;
-
-        if (this.subtotal() > 0) {
-            items = this.items();
-
-            for (i = 0, len = items.length; i < len; i++) {
-            }
-        }
-    });
-</script>
-<!-- //cart-js -->
-
-<!-- Popup-Box-JavaScript -->
-<script src="{{ asset("/js/jquery.magnific-popup.js")}}" type="text/javascript"></script>
-<script>
-    $(document).ready(function() {
-        $('.popup-with-zoom-anim').magnificPopup({
-            type: 'inline',
-            fixedContentPos: false,
-            fixedBgPos: true,
-            overflowY: 'auto',
-            closeBtnInside: true,
-            preloader: false,
-            midClick: true,
-            removalDelay: 300,
-            mainClass: 'my-mfp-zoom-in'
-        });
-    });
-</script>
-<!-- //Popup-Box-JavaScript -->
-
 <!-- FlexSlider-JavaScript -->
-<script defer src="{{ asset("/js/jquery.flexslider.js")}}"></script>
+<script defer src="{{asset("js/jquery.flexslider.js")}}"></script>
 <script>
     $(window).load(function() {
         $('.flexslider').flexslider({
@@ -249,9 +203,8 @@
 </script>
 <!-- //FlexSlider-JavaScript -->
 
-<!-- ImageZoom-JavaScript --><script src="{{ asset("/js/imagezoom.js")}}"></script>
+<!-- ImageZoom-JavaScript --><script src="{{asset("js/imagezoom.js")}}"></script>
 
-<!-- //Custom-JavaScript-File-Links -->
 
 </body>
 <!-- //Body -->
