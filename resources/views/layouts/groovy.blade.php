@@ -43,6 +43,8 @@
 
     <!-- Default-JavaScript --><script src="{{asset("js/jquery-2.2.3.js")}}"></script>
 
+
+
 </head>
 <!-- //Head -->
 

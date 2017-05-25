@@ -2,6 +2,10 @@
 
 @section('content')
 
+    <!-- Heading -->
+    <h1 class="w3wthreeheadingaits">RESULTS : {{strtoupper($keyword)}}</h1>
+    <!-- //Heading -->
+
     <!-- Men's-Product-Display -->
     <div class="wthreeproductdisplay">
         <div id="cbp-pgcontainer" class="cbp-pgcontainer">
@@ -50,7 +54,7 @@
                         <a href="{{asset("mens_single.html")}}">
                             <div class="cbp-pginfo w3layouts">
                                 <h3>{{$product->title}}</h3>
-                                <span class="cbp-pgprice">$25</span>
+                                <span class="cbp-pgprice">{{$product->price}}</span>
                             </div>
                         </a>
                     </li>

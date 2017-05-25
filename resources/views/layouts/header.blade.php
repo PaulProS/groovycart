@@ -94,20 +94,18 @@
     <div class="agileheader-topbar">
         <div class="container">
             <div class="col-md-6 agileheader-topbar-grid agileheader-topbar-grid1">
-                <p>Free shipping on orders over $150. <a href="payment.html">Details</a></p>
+                <p>Free shipping on orders over $150. <a href="">Details</a></p>
             </div>
             <div class="col-md-6 agileheader-topbar-grid agileheader-topbar-grid2">
                 <ul>
-                    <li><a href="stores.html">Store Locator</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="codes.html">Codes</a></li>
-                    <li><a href="icons.html">Icons</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="/locations">Store Locator</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/contact">Contact</a></li>
                     @if (Route::has('login'))
                         @if (Auth::check())
                             @if(Auth::user()->role)
                                 @if(Auth::user()->role->name == "administrator")
-                                    <li><a href="/admin">Dashboard</a></li>
+                                    <li><a href="{{route('admin')}}">Dashboard</a></li>
                                 @endif
                             @endif
                             <li class="dropdown">

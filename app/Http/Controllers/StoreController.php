@@ -42,6 +42,6 @@ class StoreController extends Controller
         $keyword = Input::get('keyword');
         $products = Product::where('title', 'LIKE', '%'.$keyword.'%')->get();
         $parentCategories = Category::where('parent_id', '=', null)->get();
-        return view('search',  compact('products', 'parentCategories'));
+        return view('search',  compact('products', 'parentCategories', 'keyword'));
     }
 }
