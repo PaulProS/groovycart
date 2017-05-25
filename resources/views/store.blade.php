@@ -2,20 +2,22 @@
 
 @section('content')
 
-
-
     <!-- Banner -->
-    <div class="agileheader-banner w3mensaits">
-        <img src="/images/mens-banner.jpg" alt="Groovy Apparel">
-    </div>
+    @if($mainCat->name == 'Men')
+        <div class="agileheader-banner w3mensaits">
+            <img src="{{asset("/images/mens-banner.jpg")}}" alt="Groovy Apparel">
+        </div>
+    @endif
+    @if($mainCat->name == 'Women')
+        <div class="agileheader-banner w3mensaits">
+            <img src="{{asset("/images/womens-banner.jpg")}}" alt="Groovy Apparel">
+        </div>
+    @endif
     <!-- //Banner -->
 
-
     <!-- Heading -->
-    <h1 class="w3wthreeheadingaits">MEN'S CLOTHING</h1>
+    <h1 class="w3wthreeheadingaits">{{strtoupper($mainCat->name)}}</h1>
     <!-- //Heading -->
-
-
 
     <!-- Men's-Product-Display -->
     <div class="wthreeproductdisplay">
@@ -29,7 +31,7 @@
                             <div class="cbp-pgitem a3ls">
                                 <div class="cbp-pgitem-flip">
                                     <img height="300" src="{{$product->photo ? $product->photo->photo : ""}}" alt="Groovy Apparel">
-                                    <img src="/images/1-back.jpg" alt="Groovy Apparel">
+                                    <img src="{{asset("/images/1-back.jpg")}}" alt="Groovy Apparel">
                                 </div>
                             </div>
                         </a>
@@ -62,7 +64,7 @@
                             </li>
                         </ul>
                     </div>
-                    <a href="mens_single.html">
+                    <a href="{{asset("mens_single.html")}}">
                         <div class="cbp-pginfo w3layouts">
                             <h3>{{$product->title}}</h3>
                             <span class="cbp-pgprice">$25</span>

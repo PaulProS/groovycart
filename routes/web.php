@@ -31,8 +31,10 @@ Route::get('/about', function(){
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin', 'HomeController@index')->name('admin');
-Route::get('/store/{id}', 'ProductsController@category')->name('store');
-Route::get('/product/{id}', 'ProductsController@viewProduct')->name('product');
+Route::get('/store/{id}', 'StoreController@category')->name('store');
+Route::get('/product/{id}', 'StoreController@viewProduct')->name('product');
+Route::get('/search', 'StoreController@getSearch')->name('search');
+
 
 Route::group(['middleware' => 'admin'], function (){
     Route::resource('admin/users', 'AdminUserController');

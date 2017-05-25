@@ -67,12 +67,12 @@
 
                     <li><a href="/about">ABOUT</a></li>
                     <li class="wthreesearch">
-                        <form action="#" method="post">
-                            <input type="search" name="Search" placeholder="Search for a Product" required="">
-                            <button type="submit" class="btn btn-default search" aria-label="Left Align">
-                                <i class="fa fa-search" aria-hidden="true"></i>
-                            </button>
-                        </form>
+                        {!! Form::open(['url'=>'/search', 'method'=>'GET'])  !!}
+                        <input type="search" name="keyword" placeholder="Search for a Product" required="">
+                        <button type="submit" class="btn btn-default search" aria-label="Left Align">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                        {!! Form::close() !!}
                     </li>
                     <li class="wthreecartaits wthreecartaits2 cart cart box_1">
                         <form action="#" method="post" class="last">
