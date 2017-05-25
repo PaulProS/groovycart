@@ -35,18 +35,10 @@
             <!-- Optionally, you can add icons to the links -->
             <li class="active"><a href="/admin"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
 
-
-            <li>
-                <a href="{{route('users.index')}}"><i class="fa fa-users"></i>Users</a>
-            </li>
-
-            <li>
-                    <a href="{{route('products.index')}}"><i class="fa fa-th-list"></i>Products</a>
-            </li>
-
-            <li>
-                <a href="{{route('categories.index')}}"><i class="fa fa-th-list"></i>Categories</a>
-            </li>
+            <li><a href="{{route('users.index')}}"><i class="fa fa-users"></i>Users</a></li>
+            <li><a href="{{route('products.index')}}"><i class="fa fa-th-list"></i>Products</a></li>
+            <li><a href="{{route('categories.index')}}"><i class="fa fa-th-list"></i>Categories</a></li>
+            <li><a href="{{route('brands.index')}}"><i class="fa fa-th-list"></i>Brands</a></li>
 
         </ul>
         <!-- /.sidebar-menu -->

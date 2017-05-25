@@ -13,6 +13,8 @@ class Product extends Model
         'category_id',
         'title',
         'description',
+        'brand_id',
+        'price',
         'stock',
         'is_active'
 
@@ -28,5 +30,9 @@ class Product extends Model
 
         return $this->belongsTo('App\Category');
 
+    }
+
+    public function brand(){
+        return $this->belongsTo('App\Brand');
     }
 }

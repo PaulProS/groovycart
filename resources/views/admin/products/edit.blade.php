@@ -29,7 +29,18 @@
                     {!! Form::textarea('description',null , ['class'=>'form-control', 'rows' => 2, 'required']) !!}
                 </div>
             </div>
-
+            <div class="form-group">
+                {!! Form::label('brand_id', 'Brand', ['class' => 'col-sm-2 control-label']) !!}
+                <div class="col-sm-10">
+                    {!! Form::select('brand_id', $brands ,null , ['class'=>'form-control', 'required']) !!}
+                </div>
+            </div>
+            <div class="form-group">
+                {!! Form::label('price', 'Price', ['class' => 'col-sm-2 control-label']) !!}
+                <div class="col-sm-10">
+                    {!! Form::number('price',null , ['class'=>'form-control', 'required']) !!}
+                </div>
+            </div>
             <div class="form-group">
                 {!! Form::label('is_active', 'Status', ['class' => 'col-sm-2 control-label']) !!}
                 <div class="col-sm-10">

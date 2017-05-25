@@ -26,11 +26,14 @@
                     <th></th>
                     <th>Title</th>
                     <th>Category</th>
+                    <th>Brand</th>
                     <th>Description</th>
+                    <th>Stock</th>
+                    <th>Status</th>
+                    <th>Price</th>
                     <th>Created At</th>
                     <th>Last Updated</th>
-                    <th>Status</th>
-                    <th>Stock</th>
+
                 </tr>
                 @foreach($products as $product)
 
@@ -39,14 +42,14 @@
                         <td><img height="25" src="{{$product->photo ? $product->photo->photo : "http://placehold.it/400X400"}}" alt=""></td>
                         <td>{{$product->title}}</td>
                         <td>{{$product->category ? $product->category->name : "Uncategorised"}}</td>
+                        <td>{{$product->brand ? $product->brand->name : ''}}</td>
                         <td>{{$product->description}}</td>
+                        <td>{{$product->stock}}</td>
+                        <td><span class="{{$product->is_active == 1 ? 'label label-success' : 'label label-warning'}}">{{$product->is_active == 1 ? 'Active' : 'Not Active'}}</span></td>
+                        <td>{{$product->price}}</td>
                         <td>{{ Carbon\Carbon::parse($product->created_at)->format('d-m-Y') }}</td>
                         <td>{{ Carbon\Carbon::parse($product->updated_at)->format('d-m-Y') }}</td>
-                        <td><span class="{{$product->is_active == 1 ? 'label label-success' : 'label label-warning'}}">{{$product->is_active == 1 ? 'Active' : 'Not Active'}}</span></td>
-                        <td>{{$product->stock}}</td>
-
                         <td><a class="btn btn-block btn-primary btn-xs" href="{{route('products.edit', $product->id)}}">Edit</a></td>
-
                         <td>
                             {!! Form::open(['method' => 'DELETE', 'action' => ['AdminProductsController@destroy', $product->id]]) !!}
                             {!! Form::submit('Delete', ['class' => 'btn btn-block btn-danger btn-xs']) !!}

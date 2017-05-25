@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Brand;
 use App\Category;
 use App\Photo;
 use App\Product;
@@ -32,8 +33,8 @@ class AdminProductsController extends Controller
     {
         //
         $categories = Category::pluck('name', 'id');
-
-        return view('admin.products.create', compact('categories'));
+        $brands = Brand::pluck('name', 'id');
+        return view('admin.products.create', compact('categories', 'brands'));
 
     }
 
@@ -85,10 +86,10 @@ class AdminProductsController extends Controller
     {
         //
         $product = Product::findOrFail($id);
-
         $categories = Category::pluck('name', 'id')->all();
+        $brands = Brand::pluck('name', 'id');
 
-        return view('admin.products.edit', compact('product', 'categories'));
+        return view('admin.products.edit', compact('product', 'categories', 'brands'));
 
     }
 

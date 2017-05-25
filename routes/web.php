@@ -20,18 +20,13 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-
     $parentCategories = Category::where('parent_id', '=', null)->get();
-
     return view('index', compact('parentCategories'));
 });
 
 Route::get('/about', function(){
-
     $parentCategories = Category::where('parent_id', '=', null)->get();
-
     return view('about', compact('parentCategories'));
-
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -40,13 +35,10 @@ Route::get('/store/{id}', 'ProductsController@category')->name('store');
 Route::get('/product/{id}', 'ProductsController@viewProduct')->name('product');
 
 Route::group(['middleware' => 'admin'], function (){
-
     Route::resource('admin/users', 'AdminUserController');
-
     Route::resource('admin/products', 'AdminProductsController');
-
     Route::resource('admin/categories', 'AdminCategoriesController');
-
+    Route::resource('admin/brands', 'AdminBrandsController');
 });
 
 Auth::routes();
