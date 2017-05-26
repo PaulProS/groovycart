@@ -22,7 +22,8 @@
                         <li><a href="">
                                 <div id="slider-range"></div>
                                 <input type="text" id="amount" style="border: 0" />
-                            </a></li>
+                            </a>
+                        </li>
                     </ul>
                     <script type='text/javascript'>//<![CDATA[
                         $(window).load(function(){

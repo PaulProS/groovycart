@@ -31,8 +31,6 @@ class HomeController extends Controller
             }
         }
 
-        $parentCategories = Category::where('parent_id', '=', null)->get();
-
-        return view('home', compact('parentCategories'));
+        return view('home');
     }
 }

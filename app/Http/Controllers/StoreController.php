@@ -26,22 +26,19 @@ class StoreController extends Controller
         $mainCat = Category::findOrFail($catIds[0]);
 
         $products = Product::whereIn('category_id', $catIds)->get();
-        $parentCategories = Category::where('parent_id', '=', null)->get();
-        return view('store', compact('products','parentCategories', 'mainCat'));
+        return view('store', compact('products', 'mainCat'));
     }
 
 
     public function viewProduct($id){
 
         $product = Product::findOrFail($id);
-        $parentCategories = Category::where('parent_id', '=', null)->get();
-        return view('single', compact('product','parentCategories'));
+        return view('single', compact('product'));
     }
 
     public function getSearch(){
         $keyword = Input::get('keyword');
         $products = Product::where('title', 'LIKE', '%'.$keyword.'%')->get();
-        $parentCategories = Category::where('parent_id', '=', null)->get();
-        return view('search',  compact('products', 'parentCategories', 'keyword'));
+        return view('search',  compact('products', 'keyword'));
     }
 }
