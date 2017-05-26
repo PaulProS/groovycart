@@ -49,5 +49,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 @include('layouts.bestStore.footer')
 
+<!-- zooming-effect -->
+<script src="{{asset("/js/imagezoom.js")}}"></script>
+<!-- //zooming-effect -->
+
 </body>
 </html>

@@ -203,9 +203,9 @@
                        @foreach($products as $product)
                         <div class="new-collections-grid1 products-right-grid1 animated wow slideInUp" data-wow-delay=".5s">
                             <div class="new-collections-grid1-image">
-                                <a href="single.html" class="product-image"><img src="{{asset("/images/19.jpg")}}" alt=" " class="img-responsive"></a>
+                                <a href="{{route('product', $product->id)}}" class="product-image"><img src="{{asset("/images/19.jpg")}}" alt=" " class="img-responsive"></a>
                                 <div class="new-collections-grid1-image-pos products-right-grids-pos">
-                                    <a href="single.html">Quick View</a>
+                                    <a href="{{route('product', $product->id)}}">Quick View</a>
                                 </div>
                                 <div class="new-collections-grid1-right products-right-grids-pos-right">
                                     <div class="rating">
@@ -228,7 +228,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <h4><a href="single.html">{{$product->title}}</a></h4>
+                            <h4><a href="{{route('product', $product->id)}}">{{$product->title}}</a></h4>
                             <p>{{$product->description}}</p>
                             <div class="simpleCart_shelfItem products-right-grid1-add-cart">
                                 <p><i>${{$product->price}}</i> <span class="item_price">${{$product->price - 10}}</span><a class="item_add" href="#">add to cart </a></p>
