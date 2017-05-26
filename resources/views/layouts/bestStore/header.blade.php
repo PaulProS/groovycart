@@ -35,7 +35,7 @@
                             </li>
                         @else
                             <li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="{{route('login')}}">Login</a></li>
-                            <li><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href="register.html">Register</a></li>
+                            <li><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href="{{route('register')}}">Register</a></li>
 
                         @endif
                     @endif

@@ -37,7 +37,7 @@
                                     <td>{{$user->id}}</td>
                                     <td><img height="25" src="{{$user->photo ? $user->photo->photo : "http://placehold.it/400X400"}}" alt=""></td>
                                     <td>{{title_case($user->name)}}</td>
-                                    <td>{{title_case($user->role->name)}}</td>
+                                    <td>{{title_case($user->role ? $user->role->name : "No Role Assigned")}}</td>
                                     <td>{{$user->email}}</td>
                                     <td>{{ Carbon\Carbon::parse($user->created_at)->format('d-m-Y') }}</td>
                                     <td>{{ Carbon\Carbon::parse($user->updated_at)->format('d-m-Y') }}</td>
