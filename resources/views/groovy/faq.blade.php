@@ -138,5 +138,5 @@
     </div>
     <!-- //FAQs -->
 
-    @include('newsletter')
+    @include('groovy.newsletter')
 @stop

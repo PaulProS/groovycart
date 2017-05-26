@@ -77,5 +77,5 @@
     </div>
     <!-- //Contact -->
 
-    @include('newsletter')
+    @include('groovy.newsletter')
 @stop

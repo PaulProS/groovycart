@@ -197,5 +197,5 @@
     <div id="map"></div>
     <!-- //Map -->
 
-    @include('newsletter')
+    @include('groovy.newsletter')
 @stop

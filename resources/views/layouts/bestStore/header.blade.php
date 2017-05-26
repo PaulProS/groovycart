@@ -53,7 +53,7 @@
         </div>
         <div class="logo-nav">
             <div class="logo-nav-left animated wow zoomIn" data-wow-delay=".5s">
-                <h1><a href="index.html">Best Store <span>Shop anywhere</span></a></h1>
+                <h1><a href="/">Best Store <span>Shop anywhere</span></a></h1>
             </div>
             <div class="logo-nav-left1">
                 <nav class="navbar navbar-default">
@@ -68,44 +68,38 @@
                     </div>
                     <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="index.html" class="act">Home</a></li>
+                            <li class="active"><a href="/" class="act">Home</a></li>
                             <!-- Mega Menu -->
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
                                 <ul class="dropdown-menu multi-column columns-3">
                                     <div class="row">
-                                        <div class="col-sm-4">
-                                            <ul class="multi-column-dropdown">
-                                                <h6>Men's Wear</h6>
-                                                <li><a href="products.html">Clothing</a></li>
-                                                <li><a href="products.html">Wallets</a></li>
-                                                <li><a href="products.html">Shoes</a></li>
-                                                <li><a href="products.html">Watches</a></li>
-                                                <li><a href="products.html">Accessories</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <ul class="multi-column-dropdown">
-                                                <h6>Women's Wear</h6>
-                                                <li><a href="products.html">Clothing</a></li>
-                                                <li><a href="products.html">Wallets,Bags</a></li>
-                                                <li><a href="products.html">Footwear</a></li>
-                                                <li><a href="products.html">Watches</a></li>
-                                                <li><a href="products.html">Accessories</a></li>
-                                                <li><a href="products.html">Jewellery</a></li>
-                                                <li><a href="products.html">Beauty & Grooming</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <ul class="multi-column-dropdown">
-                                                <h6>Kid's Wear</h6>
-                                                <li><a href="products.html">Kids Home Fashion</a></li>
-                                                <li><a href="products.html">Boy's Clothing</a></li>
-                                                <li><a href="products.html">Girl's Clothing</a></li>
-                                                <li><a href="products.html">Shoes</a></li>
-                                                <li><a href="products.html">Brand Stores</a></li>
-                                            </ul>
-                                        </div>
+                                        <?php $i = 0; ?>
+                                        @foreach($parentCategories as $parent)
+                                            <div class="col-sm-4">
+                                                <ul class="multi-column-dropdown">
+                                                    <h6><a href="">{{title_case($parent->name)}}'s Wear</a></h6>
+                                                    <?php $i++; ?>
+                                                    <li><a href="products.html">Clothing</a></li>
+                                                    <li><a href="products.html">Wallets</a></li>
+                                                    <li><a href="products.html">Shoes</a></li>
+                                                    <li><a href="products.html">Watches</a></li>
+                                                    <li><a href="products.html">Accessories</a></li>
+                                                    <li><a href="products.html">Clothing</a></li>
+                                                    <li><a href="products.html">Wallets,Bags</a></li>
+                                                    <li><a href="products.html">Footwear</a></li>
+                                                    <li><a href="products.html">Watches</a></li>
+                                                    <li><a href="products.html">Accessories</a></li>
+                                                    <li><a href="products.html">Jewellery</a></li>
+                                                    <li><a href="products.html">Beauty & Grooming</a></li>
+                                                    <li><a href="products.html">Kids Home Fashion</a></li>
+                                                    <li><a href="products.html">Boy's Clothing</a></li>
+                                                    <li><a href="products.html">Girl's Clothing</a></li>
+                                                    <li><a href="products.html">Shoes</a></li>
+                                                    <li><a href="products.html">Brand Stores</a></li>
+                                                </ul>
+                                            </div>
+                                        @endforeach
                                         <div class="clearfix"></div>
                                     </div>
                                 </ul>
@@ -148,7 +142,6 @@
                                     </div>
                                 </ul>
                             </li>
-                            <li><a href="short-codes.html">Short Codes</a></li>
                             <li><a href="mail.html">Mail Us</a></li>
                         </ul>
                     </div>

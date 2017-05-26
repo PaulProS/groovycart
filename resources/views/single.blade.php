@@ -149,7 +149,7 @@
     <!-- //Single-Product-View -->
 
     <!-- Newsletter -->
-    @include('newsletter')
+    @include('groovy.newsletter')
     <!-- //Newsletter -->
 
 

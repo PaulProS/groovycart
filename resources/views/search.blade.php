@@ -65,7 +65,7 @@
     <!-- //Men's-Product-Display -->
 
     <!-- Newsletter -->
-    @include('newsletter')
+    @include('groovy.newsletter')
     <!-- //Newsletter -->
 
 @endsection

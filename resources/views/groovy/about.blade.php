@@ -175,7 +175,7 @@
     <!-- //New-Fashions -->
 
     <!-- Newsletter -->
-    @include('newsletter')
+    @include('groovy.newsletter')
     <!-- //Newsletter -->
 
 
