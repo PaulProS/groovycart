@@ -78,25 +78,13 @@
                                         @foreach($parentCategories as $parent)
                                             <div class="col-sm-4">
                                                 <ul class="multi-column-dropdown">
-                                                    <h6><a href="">{{title_case($parent->name)}}'s Wear</a></h6>
+                                                    <h6><a href="{{route('store', $parent->id)}}">{{title_case($parent->name)}}'s Wear</a></h6>
                                                     <?php $i++; ?>
-                                                    <li><a href="products.html">Clothing</a></li>
-                                                    <li><a href="products.html">Wallets</a></li>
-                                                    <li><a href="products.html">Shoes</a></li>
-                                                    <li><a href="products.html">Watches</a></li>
-                                                    <li><a href="products.html">Accessories</a></li>
-                                                    <li><a href="products.html">Clothing</a></li>
-                                                    <li><a href="products.html">Wallets,Bags</a></li>
-                                                    <li><a href="products.html">Footwear</a></li>
-                                                    <li><a href="products.html">Watches</a></li>
-                                                    <li><a href="products.html">Accessories</a></li>
-                                                    <li><a href="products.html">Jewellery</a></li>
-                                                    <li><a href="products.html">Beauty & Grooming</a></li>
-                                                    <li><a href="products.html">Kids Home Fashion</a></li>
-                                                    <li><a href="products.html">Boy's Clothing</a></li>
-                                                    <li><a href="products.html">Girl's Clothing</a></li>
-                                                    <li><a href="products.html">Shoes</a></li>
-                                                    <li><a href="products.html">Brand Stores</a></li>
+                                                    <li><a href="#">Clothing</a></li>
+                                                    <li><a href="#">Wallets</a></li>
+                                                    <li><a href="#">Shoes</a></li>
+                                                    <li><a href="#">Watches</a></li>
+                                                    <li><a href="#">Accessories</a></li>
                                                 </ul>
                                             </div>
                                         @endforeach
@@ -111,31 +99,31 @@
                                         <div class="col-sm-4">
                                             <ul class="multi-column-dropdown">
                                                 <h6>Home Collection</h6>
-                                                <li><a href="furniture.html">Cookware</a></li>
-                                                <li><a href="furniture.html">Sofas</a></li>
-                                                <li><a href="furniture.html">Dining Tables</a></li>
-                                                <li><a href="furniture.html">Shoe Racks</a></li>
-                                                <li><a href="furniture.html">Home Decor</a></li>
+                                                <li><a href="#">Cookware</a></li>
+                                                <li><a href="#">Sofas</a></li>
+                                                <li><a href="#">Dining Tables</a></li>
+                                                <li><a href="#">Shoe Racks</a></li>
+                                                <li><a href="#">Home Decor</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-4">
                                             <ul class="multi-column-dropdown">
                                                 <h6>Office Collection</h6>
-                                                <li><a href="furniture.html">Carpets</a></li>
-                                                <li><a href="furniture.html">Tables</a></li>
-                                                <li><a href="furniture.html">Sofas</a></li>
-                                                <li><a href="furniture.html">Shoe Racks</a></li>
-                                                <li><a href="furniture.html">Sockets</a></li>
-                                                <li><a href="furniture.html">Electrical Machines</a></li>
+                                                <li><a href="#">Carpets</a></li>
+                                                <li><a href="#">Tables</a></li>
+                                                <li><a href="#">Sofas</a></li>
+                                                <li><a href="#">Shoe Racks</a></li>
+                                                <li><a href="#">Sockets</a></li>
+                                                <li><a href="#">Electrical Machines</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-4">
                                             <ul class="multi-column-dropdown">
                                                 <h6>Decorations</h6>
-                                                <li><a href="furniture.html">Toys</a></li>
-                                                <li><a href="furniture.html">Wall Clock</a></li>
-                                                <li><a href="furniture.html">Lighting</a></li>
-                                                <li><a href="furniture.html">Top Brands</a></li>
+                                                <li><a href="#">Toys</a></li>
+                                                <li><a href="#">Wall Clock</a></li>
+                                                <li><a href="#">Lighting</a></li>
+                                                <li><a href="#">Top Brands</a></li>
                                             </ul>
                                         </div>
                                         <div class="clearfix"></div>

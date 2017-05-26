@@ -18,7 +18,27 @@ class UsersTableSeeder extends Seeder
         $user->is_active = "1";
         $user->name = "admin";
         $user->email = "admin@admin.com";
-        $user->address = "Abc";
+        $user->address = "abc";
+        $user->password = Hash::make("123456");
+        $user->save();
+
+        $user = new User;
+        $user->role_id = "2";
+        $user->photo_id = "";
+        $user->is_active = "1";
+        $user->name = "user";
+        $user->email = "user@user.com";
+        $user->address = "abc";
+        $user->password = Hash::make("123456");
+        $user->save();
+
+        $user = new User;
+        $user->role_id = "3";
+        $user->photo_id = "";
+        $user->is_active = "1";
+        $user->name = "subscriber";
+        $user->email = "subscriber@subscriber.com";
+        $user->address = "abc";
         $user->password = Hash::make("123456");
         $user->save();
     }
