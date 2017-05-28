@@ -43,12 +43,13 @@ class StoreController extends Controller
         return view('search',  compact('products', 'keyword'));
     }
 
-    public function review(Request $request, $id){
+    public function review(Request $request, $prodId, $userId){
 
         $input = $request->all();
-        $input['product_id'] = $id;
+        $input['user_id'] = $userId;
+        $input['product_id'] = $prodId;
 
         Review::create($input);
-        return redirect(route('product', $id));
+        return redirect(route('product', $prodId));
     }
 }

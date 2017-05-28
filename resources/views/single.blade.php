@@ -216,9 +216,18 @@
                                     @endif
                                     <div class="add-review">
                                         <h4>add a review</h4>
-                                        {!! Form::open(['method'=>'get', 'action'=>['StoreController@review', $product->id]]) !!}
+
+                                        @if(Auth::guest())
+                                        <?php $userId = 0; ?>
+                                        @else
+                                            <?php $userId = Auth::user()->id ?>
+                                        @endif
+
+                                        {!! Form::open(['method'=>'get', 'action'=>['StoreController@review', $product->id, $userId]]) !!}
+                                        @if(Auth::guest())
                                             {!! Form::text('name', null, ['placeholder'=>'Name', 'required']) !!}
                                             {!! Form::email('email', null, ['placeholder'=>'Email', 'required']) !!}
+                                        @endif
                                             {!! Form::text('subject', null, ['placeholder'=>'Subject', 'required']) !!}
                                             {!! Form::textarea('message', null, ['placeholder'=>'Message', 'required', 'rows'=>3]) !!}
                                             {!! Form::submit('Add Review') !!}
