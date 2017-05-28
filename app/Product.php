@@ -35,4 +35,8 @@ class Product extends Model
     public function brand(){
         return $this->belongsTo('App\Brand');
     }
+
+    public function review(){
+        return $this->hasMany('App\Review');
+    }
 }

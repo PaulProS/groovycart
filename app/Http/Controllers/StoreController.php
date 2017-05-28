@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Product;
+use App\Review;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 
@@ -40,5 +41,14 @@ class StoreController extends Controller
         $keyword = Input::get('keyword');
         $products = Product::where('title', 'LIKE', '%'.$keyword.'%')->get();
         return view('search',  compact('products', 'keyword'));
+    }
+
+    public function review(Request $request, $id){
+
+        $input = $request->all();
+        $input['product_id'] = $id;
+
+        Review::create($input);
+        return redirect(route('product', $id));
     }
 }

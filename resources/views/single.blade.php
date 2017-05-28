@@ -195,45 +195,34 @@
                             </div>
                             <div role="tabpanel" class="tab-pane fade bootstrap-tab-text" id="profile" aria-labelledby="profile-tab">
                                 <div class="bootstrap-tab-text-grids">
-                                    <div class="bootstrap-tab-text-grid">
-                                        <div class="bootstrap-tab-text-grid-left">
-                                            <img src="{{asset("/images/4.png")}}" alt=" " class="img-responsive" />
-                                        </div>
-                                        <div class="bootstrap-tab-text-grid-right">
-                                            <ul>
-                                                <li><a href="#">Admin</a></li>
-                                                <li><a href="#"><span class="glyphicon glyphicon-share" aria-hidden="true"></span>Reply</a></li>
-                                            </ul>
-                                            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
-                                                suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem
-                                                vel eum iure reprehenderit.</p>
-                                        </div>
-                                        <div class="clearfix"> </div>
-                                    </div>
-                                    <div class="bootstrap-tab-text-grid">
-                                        <div class="bootstrap-tab-text-grid-left">
-                                            <img src="{{asset("/images/5.png")}}" alt=" " class="img-responsive" />
-                                        </div>
-                                        <div class="bootstrap-tab-text-grid-right">
-                                            <ul>
-                                                <li><a href="#">Admin</a></li>
-                                                <li><a href="#"><span class="glyphicon glyphicon-share" aria-hidden="true"></span>Reply</a></li>
-                                            </ul>
-                                            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
-                                                suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem
-                                                vel eum iure reprehenderit.</p>
-                                        </div>
-                                        <div class="clearfix"> </div>
-                                    </div>
+                                    @if($reviews = $product->review)
+                                        @foreach($reviews as $review)
+                                            <div class="bootstrap-tab-text-grid">
+                                                <div class="bootstrap-tab-text-grid-left">
+                                                    <img src="{{asset("/images/4.png")}}" alt=" " class="img-responsive" />
+                                                </div>
+                                                <div class="bootstrap-tab-text-grid-right">
+                                                    <ul>
+                                                        <li><a href="#">{{$review->subject}}</a></li>
+                                                        <li><a href="#"><span class="glyphicon glyphicon-share" aria-hidden="true"></span>Reply</a></li>
+                                                    </ul>
+                                                    <p>{{$review->message}}</p>
+                                                </div>
+                                                <div class="clearfix"> </div>
+                                            </div>
+                                            <div class="clearfix"> </div>
+
+                                        @endforeach
+                                    @endif
                                     <div class="add-review">
                                         <h4>add a review</h4>
-                                        <form>
-                                            <input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
-                                            <input type="email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
-                                            <input type="text" value="Subject" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject';}" required="">
-                                            <textarea type="text"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
-                                            <input type="submit" value="Send" >
-                                        </form>
+                                        {!! Form::open(['method'=>'get', 'action'=>['StoreController@review', $product->id]]) !!}
+                                            {!! Form::text('name', null, ['placeholder'=>'Name', 'required']) !!}
+                                            {!! Form::email('email', null, ['placeholder'=>'Email', 'required']) !!}
+                                            {!! Form::text('subject', null, ['placeholder'=>'Subject', 'required']) !!}
+                                            {!! Form::textarea('message', null, ['placeholder'=>'Message', 'required', 'rows'=>3]) !!}
+                                            {!! Form::submit('Add Review') !!}
+                                        {!! Form::close() !!}
                                     </div>
                                 </div>
                             </div>
