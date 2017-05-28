@@ -117,7 +117,7 @@
                                     </div>
                                 </ul>
                             </li>
-                            <li><a href="mail.html">Mail Us</a></li>
+                            <li><a href="/mail">Mail Us</a></li>
                         </ul>
                     </div>
                 </nav>

@@ -29,20 +29,10 @@ Route::get('/about', function(){
     return view('about', compact('parentCategories'));
 });
 
-Route::get('/locations', function(){
-    $parentCategories = Category::where('parent_id', '=', null)->get();
-    return view('locations', compact('parentCategories'));
+Route::get('/mail', function(){
+    return view('mail');
 });
 
-Route::get('/faq', function(){
-    $parentCategories = Category::where('parent_id', '=', null)->get();
-    return view('faq', compact('parentCategories'));
-});
-
-Route::get('/contact', function(){
-    $parentCategories = Category::where('parent_id', '=', null)->get();
-    return view('contact', compact('parentCategories'));
-});
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin', 'HomeController@index')->name('admin');
