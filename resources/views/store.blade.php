@@ -6,61 +6,47 @@
     <div class="breadcrumbs">
         <div class="container">
             <ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
-                <li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+                <li><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
                 <li class="active">Products</li>
             </ol>
         </div>
     </div>
+    <!-- //breadcrumbs -->
+
     <div class="products">
         <div class="container">
             <div class="col-md-4 products-left">
                 <div class="filter-price animated wow slideInUp" data-wow-delay=".5s">
                     <h3>Filter By Price</h3>
-                    <ul class="dropdown-menu1">
-                        <li><a href="">
-                                <div id="slider-range"></div>
-                                <input type="text" id="amount" style="border: 0" />
-                            </a></li>
-                    </ul>
-                    <script type='text/javascript'>//<![CDATA[
-                        $(window).load(function(){
-                            $( "#slider-range" ).slider({
-                                range: true,
-                                min: 0,
-                                max: 100000,
-                                values: [ 20000, 80000 ],
-                                slide: function( event, ui ) {  $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-                                }
-                            });
-                            $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + $( "#slider-range" ).slider( "values", 1 ) );
-
-
-                        });//]]>
-                    </script>
-                    <script type="text/javascript" src="{{asset("/js/jquery-ui.min.js")}}"></script>
-                    <!---->
+                    {!! Form::open(['method'=>'get', 'action'=>'StoreController@filter', 'class'=>'form-group']) !!}
+                    {!! Form::label('price', 'Min') !!}
+                    {!! Form::text('minPrice', null, ['class'=>'form-control']) !!}
+                    {!! Form::label('price', 'Max') !!}
+                    {!! Form::text('maxPrice', null, ['class'=>'form-control']) !!}
+                    {!! Form::submit('Filter', ['class'=>'form-control']) !!}
+                    {!! Form::close() !!}
                 </div>
                 <div class="categories animated wow slideInUp" data-wow-delay=".5s">
                     <h3>Categories</h3>
                     <ul class="cate">
-                        <li><a href="products.html">Best Selling</a> <span>(15)</span></li>
-                        <li><a href="products.html">Man</a> <span>(16)</span></li>
+                        <li><a href="">Best Selling</a> <span>(15)</span></li>
+                        <li><a href="">Man</a> <span>(16)</span></li>
                         <ul>
-                            <li><a href="products.html">Accessories</a> <span>(2)</span></li>
-                            <li><a href="products.html">Coats & Jackets</a> <span>(5)</span></li>
-                            <li><a href="products.html">Jeans</a> <span>(1)</span></li>
-                            <li><a href="products.html">New Arrivals</a> <span>(0)</span></li>
-                            <li><a href="products.html">Suits</a> <span>(1)</span></li>
-                            <li><a href="products.html">Casual Shirts</a> <span>(0)</span></li>
+                            <li><a href="">Accessories</a> <span>(2)</span></li>
+                            <li><a href="">Coats & Jackets</a> <span>(5)</span></li>
+                            <li><a href="">Jeans</a> <span>(1)</span></li>
+                            <li><a href="">New Arrivals</a> <span>(0)</span></li>
+                            <li><a href="">Suits</a> <span>(1)</span></li>
+                            <li><a href="">Casual Shirts</a> <span>(0)</span></li>
                         </ul>
-                        <li><a href="products.html">Sales</a> <span>(15)</span></li>
-                        <li><a href="products.html">Woman</a> <span>(15)</span></li>
+                        <li><a href="">Sales</a> <span>(15)</span></li>
+                        <li><a href="">Woman</a> <span>(15)</span></li>
                         <ul>
-                            <li><a href="products.html">Accessories</a> <span>(2)</span></li>
-                            <li><a href="products.html">New Arrivals</a> <span>(0)</span></li>
-                            <li><a href="products.html">Dresses</a> <span>(1)</span></li>
-                            <li><a href="products.html">Casual Shirts</a> <span>(0)</span></li>
-                            <li><a href="products.html">Shorts</a> <span>(4)</span></li>
+                            <li><a href="">Accessories</a> <span>(2)</span></li>
+                            <li><a href="">New Arrivals</a> <span>(0)</span></li>
+                            <li><a href="">Dresses</a> <span>(1)</span></li>
+                            <li><a href="">Casual Shirts</a> <span>(0)</span></li>
+                            >Shorts</a> <span>(4)</span></li>
                         </ul>
                     </ul>
                 </div>
@@ -69,10 +55,10 @@
                     <div class="new-products-grids">
                         <div class="new-products-grid">
                             <div class="new-products-grid-left">
-                                <a href="single.html"><img src="{{asset("/images/6.jpg")}}" alt=" " class="img-responsive" /></a>
+                                <a href=""><img src="{{asset("/images/6.jpg")}}" alt=" " class="img-responsive" /></a>
                             </div>
                             <div class="new-products-grid-right">
-                                <h4><a href="single.html">occaecat cupidatat</a></h4>
+                                <h4><a href="">occaecat cupidatat</a></h4>
                                 <div class="rating">
                                     <div class="rating-left">
                                         <img src="{{asset("/images/2.png")}}" alt=" " class="img-responsive">
@@ -99,10 +85,10 @@
                         </div>
                         <div class="new-products-grid">
                             <div class="new-products-grid-left">
-                                <a href="single.html"><img src="{{asset("/images/26.jpg")}}" alt=" " class="img-responsive" /></a>
+                                <a href=""><img src="{{asset("/images/26.jpg")}}" alt=" " class="img-responsive" /></a>
                             </div>
                             <div class="new-products-grid-right">
-                                <h4><a href="single.html">eum fugiat quo</a></h4>
+                                <h4><a href="">eum fugiat quo</a></h4>
                                 <div class="rating">
                                     <div class="rating-left">
                                         <img src="{{asset("/images/2.png")}}" alt=" " class="img-responsive">
@@ -129,10 +115,10 @@
                         </div>
                         <div class="new-products-grid">
                             <div class="new-products-grid-left">
-                                <a href="single.html"><img src="{{asset("/images/11.jpg")}}" alt=" " class="img-responsive" /></a>
+                                <a href=""><img src="{{asset("/images/11.jpg")}}" alt=" " class="img-responsive" /></a>
                             </div>
                             <div class="new-products-grid-right">
-                                <h4><a href="single.html">officia deserunt</a></h4>
+                                <h4><a href="">officia deserunt</a></h4>
                                 <div class="rating">
                                     <div class="rating-left">
                                         <img src="{{asset("/images/2.png")}}" alt=" " class="img-responsive">
@@ -160,7 +146,7 @@
                     </div>
                 </div>
                 <div class="men-position animated wow slideInUp" data-wow-delay=".5s">
-                    <a href="single.html"><img src="{{asset("/images/27.jpg")}}" alt=" " class="img-responsive" /></a>
+                    <a href=""><img src="{{asset("/images/27.jpg")}}" alt=" " class="img-responsive" /></a>
                     <div class="men-position-pos">
                         <h4>Summer collection</h4>
                         <h5><span>55%</span> Flat Discount</h5>
@@ -262,7 +248,6 @@
             <div class="clearfix"> </div>
         </div>
     </div>
-    <!-- //breadcrumbs -->
 
 @stop
 

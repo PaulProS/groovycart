@@ -187,7 +187,7 @@
                         </div>
                         <div class="clearfix"> </div>
                     </div>
-                    <h3>Search Results For : {{$keyword}}</h3>
+                    <h3>Filtered Results Are : </h3>
                 </div>
                 <div class="products-right-grids-bottom">
                     <div class="col-md-4 products-right-grids-bottom-grid">

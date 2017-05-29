@@ -7,6 +7,7 @@ use App\Product;
 use App\Review;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Validation\Rules\In;
 
 class StoreController extends Controller
 {
@@ -52,4 +53,13 @@ class StoreController extends Controller
         Review::create($input);
         return redirect(route('product', $prodId));
     }
+
+    public function filter(){
+        $minPrice = Input::get('minPrice');
+        $maxPrice = Input::get('maxPrice');
+
+        $products = Product::whereBetween('price', [$minPrice, $maxPrice])->get();
+        return view('filter', compact('products'));
+    }
+
 }

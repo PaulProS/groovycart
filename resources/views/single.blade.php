@@ -405,6 +405,10 @@
     </div>
     <!-- //single-related-products -->
 
+    <!-- zooming-effect -->
+    <script src="{{asset("/js/imagezoom.js")}}"></script>
+    <!-- //zooming-effect -->
+
 @stop
 
 

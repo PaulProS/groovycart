@@ -39,6 +39,8 @@ Route::get('/store/{id}', 'StoreController@category')->name('store');
 Route::get('/product/{id}', 'StoreController@viewProduct')->name('product');
 Route::get('/search', 'StoreController@getSearch')->name('search');
 Route::get('/review/{prodId}/{userId}', 'StoreController@review')->name('review');
+Route::get('/filter', 'StoreController@filter')->name('filter');
+
 
 Route::group(['middleware' => 'admin'], function (){
     Route::resource('admin/users', 'AdminUserController');
