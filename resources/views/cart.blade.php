@@ -30,7 +30,8 @@
                         <th>Remove</th>
                     </tr>
                     </thead>
-                    <tr class="rem1">
+                    @foreach($products as $product)
+                        <tr class="rem1">
                         <td class="invert">1</td>
                         <td class="invert-image"><a href="single.html"><img src="images/22.jpg" alt=" " class="img-responsive" /></a></td>
                         <td class="invert">
@@ -42,9 +43,9 @@
                                 </div>
                             </div>
                         </td>
-                        <td class="invert">Black Shoe</td>
+                        <td class="invert">{{$product['item']['title']}}</td>
                         <td class="invert">$5.00</td>
-                        <td class="invert">$290.00</td>
+                        <td class="invert">${{$product['item']['price']}}</td>
                         <td class="invert">
                             <div class="rem">
                                 <div class="close1"> </div>
@@ -59,6 +60,7 @@
                             </script>
                         </td>
                     </tr>
+                    @endforeach
 
                     <!--quantity-->
                     <script>

@@ -71,6 +71,14 @@ class StoreController extends Controller
         $cart->add($product, $product->id);
 
         $request->session()->put('cart', $cart);
-        return redirect(route('checkout'));
+
+        return redirect(route('cart'));
+    }
+
+    public function getCart(){
+        $oldCart = session()->get('cart');
+        $cart = new Cart($oldCart);
+        $products = $cart->items;
+        return view('cart', compact('products'));
     }
 }
