@@ -148,7 +148,7 @@
                             <img src="{{asset("/images/bag.png")}}" alt="" />
                         </h3>
                     </a>
-                    <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+                    <p><a href="{{route('emptyCart')}}" class="simpleCart_empty">Empty Cart</a></p>
                     <div class="clearfix"> </div>
                 </div>
             </div>

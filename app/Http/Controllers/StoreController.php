@@ -81,4 +81,9 @@ class StoreController extends Controller
         $products = $cart->items;
         return view('cart', compact('products'));
     }
+
+    public function emptycart(){
+        session()->forget('cart');
+        return redirect('cart');
+    }
 }

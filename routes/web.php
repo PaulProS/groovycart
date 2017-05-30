@@ -36,7 +36,7 @@ Route::get('/review/{prodId}/{userId}', 'StoreController@review')->name('review'
 Route::get('/filter', 'StoreController@filter')->name('filter');
 Route::get('/add-to-cart/{id}', 'StoreController@addToCart')->name('addCart');
 Route::get('/cart', 'StoreController@getCart')->name('cart');
-
+Route::get('/emptyCart', 'StoreController@emptyCart')->name('emptyCart');
 
 Route::group(['middleware' => 'admin'], function (){
     Route::resource('admin/users', 'AdminUserController');
