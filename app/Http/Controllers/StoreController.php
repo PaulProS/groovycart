@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Cart;
 use App\Category;
 use App\Product;
 use App\Review;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Validation\Rules\In;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 class StoreController extends Controller
 {
@@ -62,4 +64,13 @@ class StoreController extends Controller
         return view('filter', compact('products'));
     }
 
+    public function addToCart(Request $request, $id){
+        $product = Product::findOrFail($id);
+        $oldCart = session()->has('cart') ? session()->get('cart') : null;
+        $cart = new Cart($oldCart);
+        $cart->add($product, $product->id);
+
+        $request->session()->put('cart', $cart);
+        return redirect(route('checkout'));
+    }
 }

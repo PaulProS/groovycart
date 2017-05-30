@@ -23,7 +23,7 @@
                     {!! Form::text('minPrice', null, ['class'=>'form-control']) !!}
                     {!! Form::label('price', 'Max') !!}
                     {!! Form::text('maxPrice', null, ['class'=>'form-control']) !!}
-                    {!! Form::submit('Filter', ['class'=>'form-control']) !!}
+                    {!! Form::submit('Filter', ['class'=>'form-control btn btn-warning']) !!}
                     {!! Form::close() !!}
                 </div>
                 <div class="categories animated wow slideInUp" data-wow-delay=".5s">
@@ -217,7 +217,11 @@
                             <h4><a href="{{route('product', $product->id)}}">{{$product->title}}</a></h4>
                             <p>{{$product->description}}</p>
                             <div class="simpleCart_shelfItem products-right-grid1-add-cart">
-                                <p><i>${{$product->price}}</i> <span class="item_price">${{$product->price - 10}}</span><a class="item_add" href="#">add to cart </a></p>
+                                <p><i>${{$product->price}}</i> <span class="item_price">${{$product->price - 10}}</span>
+                                    {!! Form::open(['method'=>'get', 'action' => ['StoreController@addToCart', $product->id]]) !!}
+                                    {!! Form::submit('Add To Cart', ['class' => 'btn btn-warning'])!!}
+                                    {!! Form::close() !!}
+                                </p>
                             </div>
                         </div>
                         @endforeach

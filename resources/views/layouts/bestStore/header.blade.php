@@ -142,9 +142,9 @@
             </div>
             <div class="header-right">
                 <div class="cart box_1">
-                    <a href="checkout.html">
+                    <a href="{{route('checkout')}}">
                         <h3> <div class="total">
-                                <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
+                                <span>${{Session::has('cart') ? Session::get('cart')->totalPrice : 0}}</span><span>({{Session::has('cart') ? Session::get('cart')->totalQty : 0}} Items)</span></div>
                             <img src="{{asset("/images/bag.png")}}" alt="" />
                         </h3>
                     </a>

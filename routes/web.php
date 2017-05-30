@@ -20,18 +20,16 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    $parentCategories = Category::where('parent_id', '=', null)->get();
-    return view('index', compact('parentCategories'));
-});
-
-Route::get('/about', function(){
-    $parentCategories = Category::where('parent_id', '=', null)->get();
-    return view('about', compact('parentCategories'));
+    return view('index');
 });
 
 Route::get('/mail', function(){
     return view('mail');
 });
+
+Route::get('/checkout', function(){
+    return view('checkout');
+})->name('checkout');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin', 'HomeController@index')->name('admin');
@@ -40,7 +38,7 @@ Route::get('/product/{id}', 'StoreController@viewProduct')->name('product');
 Route::get('/search', 'StoreController@getSearch')->name('search');
 Route::get('/review/{prodId}/{userId}', 'StoreController@review')->name('review');
 Route::get('/filter', 'StoreController@filter')->name('filter');
-
+Route::get('/add-to-cart/{id}', 'StoreController@addToCart')->name('addCart');
 
 Route::group(['middleware' => 'admin'], function (){
     Route::resource('admin/users', 'AdminUserController');
