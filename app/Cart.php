@@ -30,4 +30,5 @@ class Cart
         $this->totalQty++;
         $this->totalPrice += $item->price;
     }
+
 }

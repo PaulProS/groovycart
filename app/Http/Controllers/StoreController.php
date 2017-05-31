@@ -72,7 +72,14 @@ class StoreController extends Controller
 
         $request->session()->put('cart', $cart);
 
-        return redirect(route('cart'));
+        return redirect()->back();
+    }
+
+    public function deleteCartItem($id){
+        $product = Product::findOrFail($id);
+        $cart = session('cart');
+        unset($cart->items[$id]);
+        return redirect()->back();
     }
 
     public function getCart(){
@@ -82,8 +89,8 @@ class StoreController extends Controller
         return view('cart', compact('products'));
     }
 
-    public function emptycart(){
+    public function emptyCart(){
         session()->forget('cart');
-        return redirect('cart');
+        return redirect()->back();
     }
 }

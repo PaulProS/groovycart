@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('index');
 
 Route::get('/mail', function(){
     return view('mail');
@@ -29,6 +29,7 @@ Route::get('/mail', function(){
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin', 'HomeController@index')->name('admin');
+
 Route::get('/store/{id}', 'StoreController@category')->name('store');
 Route::get('/product/{id}', 'StoreController@viewProduct')->name('product');
 Route::get('/search', 'StoreController@getSearch')->name('search');
@@ -37,6 +38,7 @@ Route::get('/filter', 'StoreController@filter')->name('filter');
 Route::get('/add-to-cart/{id}', 'StoreController@addToCart')->name('addCart');
 Route::get('/cart', 'StoreController@getCart')->name('cart');
 Route::get('/emptyCart', 'StoreController@emptyCart')->name('emptyCart');
+Route::get('/deleteCartItem/{id}', 'StoreController@deleteCartItem')->name('deleteCartItem');
 
 Route::group(['middleware' => 'admin'], function (){
     Route::resource('admin/users', 'AdminUserController');
