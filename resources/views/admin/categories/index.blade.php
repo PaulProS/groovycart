@@ -89,6 +89,7 @@
                             <table class="table table-hover">
                                 <tr>
                                     <th>ID</th>
+                                    <th>Photo</th>
                                     <th>Name</th>
                                     <th>Parent</th>
                                     <th>Created At</th>
@@ -98,6 +99,7 @@
 
                                     <tr>
                                         <td>{{$category->id}}</td>
+                                        <td><img height="25" src="{{$category->photo ? $category->photo->photo : ""}}" alt=""></td>
                                         <td>{{$category->name}}</td>
                                         <td>{{$category->parent ? $category->parent->name : ""}}</td>
                                         <td>{{ Carbon\Carbon::parse($category->created_at)->format('d-m-Y') }}</td>

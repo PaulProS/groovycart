@@ -14,12 +14,15 @@ class CategoriesTableSeeder extends Seeder
     {
         $category = new Category;
         $category->name = "men";
+        $category['photo_id'] = 31;
         $category->save();
         $category = new Category;
         $category->name = "women";
+        $category['photo_id'] = 32;
         $category->save();
         $category = new Category;
         $category->name = "kid";
+        $category['photo_id'] = 33;
         $category->save();
 
         $category = new Category;
