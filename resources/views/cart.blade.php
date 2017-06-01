@@ -49,8 +49,8 @@
                         @foreach($products as $product)
                             <?php $val++ ?>
                             <tr class="rem{{$val}}">
-                                <td class="invert">1</td>
-                                <td class="invert-image"><a href="single.html"><img src="{{$product['item']['photo'] ? $product['item']['photo'] : "http://placehold.it/40X40"}}" alt=" " class="img-responsive" /></a></td>
+                                <td class="invert">{{$val}}</td>
+                                <td class="invert-image"><a href="single.html"><img src="{{$product['item']['photo']->photo ? $product['item']['photo']->photo : "http://placehold.it/40X40"}}" alt=" " class="img-responsive" /></a></td>
                                 <td class="invert">
                                     <div class="quantity">
                                         <div class="quantity-select">

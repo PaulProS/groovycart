@@ -175,7 +175,7 @@
                         <div class="clearfix"> </div>
                     </div>
                     <div class="products-right-grids-position animated wow slideInRight" data-wow-delay=".5s">
-                        <img src="{{asset("/images/18.jpg")}}" alt=" " class="img-responsive" />
+                        <img src="{{asset("/images/7.jpg")}}" alt=" " class="img-responsive" />
                         <div class="products-right-grids-position1">
                             <h4>2016 New Collection</h4>
                             <p>Temporibus autem quibusdam et aut officiis debitis aut rerum
@@ -189,7 +189,7 @@
                         <div class="col-md-4 products-right-grids-bottom-grid">
                             <div class="new-collections-grid1 products-right-grid1 animated wow slideInUp" data-wow-delay=".5s">
                                 <div class="new-collections-grid1-image">
-                                    <a href="{{route('product', $product->id)}}" class="product-image"><img src="{{asset("/images/19.jpg")}}" alt=" " class="img-responsive"></a>
+                                    <a href="{{route('product', $product->id)}}" class="product-image"><img src="{{$product->photo ? $product->photo->photo : "http://www.placehold.it/50X50"}}" alt=" " class="img-responsive"></a>
                                     <div class="new-collections-grid1-image-pos products-right-grids-pos">
                                         <a href="{{route('product', $product->id)}}">Quick View</a>
                                     </div>
