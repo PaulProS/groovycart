@@ -27,10 +27,9 @@ class StoreController extends Controller
             }
         }
 
-        $mainCat = Category::findOrFail($catIds[0]);
-
         $products = Product::whereIn('category_id', $catIds)->get();
-        return view('store', compact('products', 'mainCat'));
+        $newProducts = Product::whereIn('category_id', $catIds)->orderBy('created_at', 'desc')->take(2)->get();
+        return view('store', compact('products', 'newProducts'));
     }
 
 

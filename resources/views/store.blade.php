@@ -53,96 +53,42 @@
                 <div class="new-products animated wow slideInUp" data-wow-delay=".5s">
                     <h3>New Products</h3>
                     <div class="new-products-grids">
-                        <div class="new-products-grid">
-                            <div class="new-products-grid-left">
-                                <a href=""><img src="{{asset("/images/6.jpg")}}" alt=" " class="img-responsive" /></a>
-                            </div>
-                            <div class="new-products-grid-right">
-                                <h4><a href="">occaecat cupidatat</a></h4>
-                                <div class="rating">
-                                    <div class="rating-left">
-                                        <img src="{{asset("/images/2.png")}}" alt=" " class="img-responsive">
-                                    </div>
-                                    <div class="rating-left">
-                                        <img src="{{asset("/images/2.png")}}" alt=" " class="img-responsive">
-                                    </div>
-                                    <div class="rating-left">
-                                        <img src="{{asset("/images/2.png")}}" alt=" " class="img-responsive">
-                                    </div>
-                                    <div class="rating-left">
-                                        <img src="{{asset("/images/1.png")}}" alt=" " class="img-responsive">
-                                    </div>
-                                    <div class="rating-left">
-                                        <img src="{{asset("/images/1.png")}}" alt=" " class="img-responsive">
-                                    </div>
-                                    <div class="clearfix"> </div>
+                        @foreach($newProducts as $newArrival)
+                            <div class="new-products-grid">
+                                <div class="new-products-grid-left">
+                                    <a href=""><img src="{{$newArrival->photo ? $newArrival->photo->photo : "http://placehold.it/50X50"}}" alt=" " class="img-responsive" /></a>
                                 </div>
-                                <div class="simpleCart_shelfItem new-products-grid-right-add-cart">
-                                    <p> <span class="item_price">$180</span><a class="item_add" href="#">add to cart </a></p>
+                                <div class="new-products-grid-right">
+                                    <h4><a href="">{{$newArrival->title}}</a></h4>
+                                    <div class="rating">
+                                        <div class="rating-left">
+                                            <img src="{{asset("/images/2.png")}}" alt=" " class="img-responsive">
+                                        </div>
+                                        <div class="rating-left">
+                                            <img src="{{asset("/images/2.png")}}" alt=" " class="img-responsive">
+                                        </div>
+                                        <div class="rating-left">
+                                            <img src="{{asset("/images/2.png")}}" alt=" " class="img-responsive">
+                                        </div>
+                                        <div class="rating-left">
+                                            <img src="{{asset("/images/1.png")}}" alt=" " class="img-responsive">
+                                        </div>
+                                        <div class="rating-left">
+                                            <img src="{{asset("/images/1.png")}}" alt=" " class="img-responsive">
+                                        </div>
+                                        <div class="clearfix"> </div>
+                                    </div>
+                                    <div class="simpleCart_shelfItem new-products-grid-right-add-cart">
+                                        <p><i>${{$newArrival->price}}</i>
+                                            {!! Form::open(['method'=>'get', 'action' => ['StoreController@addToCart', $newArrival->id]]) !!}
+                                            {!! Form::submit('Add To Cart', ['class' => 'btn btn-warning'])!!}
+                                            {!! Form::close() !!}
+                                        </p>
+                                    </div>
                                 </div>
+                                <div class="clearfix"> </div>
                             </div>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <div class="new-products-grid">
-                            <div class="new-products-grid-left">
-                                <a href=""><img src="{{asset("/images/26.jpg")}}" alt=" " class="img-responsive" /></a>
-                            </div>
-                            <div class="new-products-grid-right">
-                                <h4><a href="">eum fugiat quo</a></h4>
-                                <div class="rating">
-                                    <div class="rating-left">
-                                        <img src="{{asset("/images/2.png")}}" alt=" " class="img-responsive">
-                                    </div>
-                                    <div class="rating-left">
-                                        <img src="{{asset("/images/2.png")}}" alt=" " class="img-responsive">
-                                    </div>
-                                    <div class="rating-left">
-                                        <img src="{{asset("/images/2.png")}}" alt=" " class="img-responsive">
-                                    </div>
-                                    <div class="rating-left">
-                                        <img src="{{asset("/images/1.png")}}" alt=" " class="img-responsive">
-                                    </div>
-                                    <div class="rating-left">
-                                        <img src="{{asset("/images/1.png")}}" alt=" " class="img-responsive">
-                                    </div>
-                                    <div class="clearfix"> </div>
-                                </div>
-                                <div class="simpleCart_shelfItem new-products-grid-right-add-cart">
-                                    <p> <span class="item_price">$250</span><a class="item_add" href="#">add to cart </a></p>
-                                </div>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <div class="new-products-grid">
-                            <div class="new-products-grid-left">
-                                <a href=""><img src="{{asset("/images/11.jpg")}}" alt=" " class="img-responsive" /></a>
-                            </div>
-                            <div class="new-products-grid-right">
-                                <h4><a href="">officia deserunt</a></h4>
-                                <div class="rating">
-                                    <div class="rating-left">
-                                        <img src="{{asset("/images/2.png")}}" alt=" " class="img-responsive">
-                                    </div>
-                                    <div class="rating-left">
-                                        <img src="{{asset("/images/2.png")}}" alt=" " class="img-responsive">
-                                    </div>
-                                    <div class="rating-left">
-                                        <img src="{{asset("/images/2.png")}}" alt=" " class="img-responsive">
-                                    </div>
-                                    <div class="rating-left">
-                                        <img src="{{asset("/images/1.png")}}" alt=" " class="img-responsive">
-                                    </div>
-                                    <div class="rating-left">
-                                        <img src="{{asset("/images/1.png")}}" alt=" " class="img-responsive">
-                                    </div>
-                                    <div class="clearfix"> </div>
-                                </div>
-                                <div class="simpleCart_shelfItem new-products-grid-right-add-cart">
-                                    <p> <span class="item_price">$259</span><a class="item_add" href="#">add to cart </a></p>
-                                </div>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="men-position animated wow slideInUp" data-wow-delay=".5s">
