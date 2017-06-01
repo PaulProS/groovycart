@@ -103,7 +103,7 @@
             <div class="col-md-3 new-collections-grid">
                 <div class="new-collections-grid1 animated wow slideInUp" data-wow-delay=".5s">
                     <div class="new-collections-grid1-image">
-                        <a href="single.html" class="product-image"><img src="images/7.jpg" alt=" " class="img-responsive" /></a>
+                        <a href="single.html" class="product-image"><img src="images/18.jpg" alt=" " class="img-responsive" /></a>
                         <div class="new-collections-grid1-image-pos">
                             <a href="single.html">Quick View</a>
                         </div>

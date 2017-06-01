@@ -39,5 +39,32 @@ class PhotosTableSeeder extends Seeder
         $photo = new Photo;
         $photo['photo'] = '26.jpg';
         $photo->save();
+        $photo = new Photo;
+        $photo['photo'] = '35.jpg';
+        $photo->save();
+        $photo = new Photo;
+        $photo['photo'] = '36.jpg';
+        $photo->save();
+        $photo = new Photo;
+        $photo['photo'] = '37.jpg';
+        $photo->save();
+        $photo = new Photo;
+        $photo['photo'] = '38.jpg';
+        $photo->save();
+        $photo = new Photo;
+        $photo['photo'] = '39.jpg';
+        $photo->save();
+        $photo = new Photo;
+        $photo['photo'] = '40.jpg';
+        $photo->save();
+        $photo = new Photo;
+        $photo['photo'] = '41.jpg';
+        $photo->save();
+        $photo = new Photo;
+        $photo['photo'] = '42.jpg';
+        $photo->save();
+        $photo = new Photo;
+        $photo['photo'] = '43.jpg';
+        $photo->save();
     }
 }
