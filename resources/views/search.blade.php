@@ -190,11 +190,11 @@
                     <h3>Search Results For : {{$keyword}}</h3>
                 </div>
                 <div class="products-right-grids-bottom">
-                    <div class="col-md-4 products-right-grids-bottom-grid">
-                        @foreach($products as $product)
-                            <div class="new-collections-grid1 products-right-grid1 animated wow slideInUp" data-wow-delay=".5s">
+                    @foreach($products as $product)
+                        <div class="products-right-grids-bottom-grid">
+                            <div class="col-md-4 new-collections-grid1 products-right-grid1 animated wow slideInUp" data-wow-delay=".5s">
                                 <div class="new-collections-grid1-image">
-                                    <a href="{{route('product', $product->id)}}" class="product-image"><img src="{{asset("/images/19.jpg")}}" alt=" " class="img-responsive"></a>
+                                    <a href="{{route('product', $product->id)}}" class="product-image"><img src="{{$product->photo ? $product->photo->photo : "http://placehold.it/100X100"}}" alt=" " class="img-responsive"></a>
                                     <div class="new-collections-grid1-image-pos products-right-grids-pos">
                                         <a href="{{route('product', $product->id)}}">Quick View</a>
                                     </div>
@@ -225,8 +225,9 @@
                                     <p><i>${{$product->price}}</i> <span class="item_price">${{$product->price - 10}}</span><a class="item_add" href="#">add to cart </a></p>
                                 </div>
                             </div>
-                        @endforeach
-                    </div>
+                        </div>
+                    @endforeach
+
 
                     <div class="clearfix"> </div>
                 </div>

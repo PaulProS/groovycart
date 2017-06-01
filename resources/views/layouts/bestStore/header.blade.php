@@ -5,13 +5,13 @@
         <div class="header-grid">
             <div class="header-grid-left animated wow slideInLeft" data-wow-delay=".5s">
                 <ul>
-                    <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">@example.com</a></li>
-                    <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 892</li>
+                    <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:sales@beststore.com">sales@beststore.com</a></li>
+                    <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+91 987 525 4477</li>
                     @if (Route::has('login'))
                         @if (Auth::check())
                             @if(Auth::user()->role)
                                 @if(Auth::user()->role->name == "administrator")
-                                    <li><a href="{{route('admin')}}">Dashboard</a></li>
+                                    <li><a href="{{route('admin')}}">View Dashboard</a></li>
                                 @endif
                             @endif
                             <li class="dropdown">
@@ -43,10 +43,10 @@
             </div>
             <div class="header-grid-right animated wow slideInRight" data-wow-delay=".5s">
                 <ul class="social-icons">
-                    <li><a href="#" class="facebook"></a></li>
-                    <li><a href="#" class="twitter"></a></li>
-                    <li><a href="#" class="g"></a></li>
-                    <li><a href="#" class="instagram"></a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank" class="facebook"></a></li>
+                    <li><a href="https://twitter.com/" target="_blank" class="twitter"></a></li>
+                    <li><a href="https://plus.google.com" target="_blank" class="g"></a></li>
+                    <li><a href="https://www.instagram.com" target="_blank" class="instagram"></a></li>
                 </ul>
             </div>
             <div class="clearfix"> </div>

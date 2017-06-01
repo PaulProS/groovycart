@@ -14,7 +14,7 @@ class UsersTableSeeder extends Seeder
     {
         $user = new User;
         $user->role_id = "1";
-        $user->photo_id = "";
+        $user->photo_id = 19;
         $user->is_active = "1";
         $user->name = "admin";
         $user->email = "admin@admin.com";
@@ -24,7 +24,7 @@ class UsersTableSeeder extends Seeder
 
         $user = new User;
         $user->role_id = "2";
-        $user->photo_id = "";
+        $user->photo_id = 20;
         $user->is_active = "1";
         $user->name = "user";
         $user->email = "user@user.com";
@@ -34,7 +34,7 @@ class UsersTableSeeder extends Seeder
 
         $user = new User;
         $user->role_id = "3";
-        $user->photo_id = "";
+        $user->photo_id = 21;
         $user->is_active = "1";
         $user->name = "subscriber";
         $user->email = "subscriber@subscriber.com";
