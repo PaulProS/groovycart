@@ -78,6 +78,7 @@ class StoreController extends Controller
     public function deleteCartItem($id){
         $product = Product::findOrFail($id);
         $cart = session('cart');
+        $cart->removeItem($id);
         unset($cart->items[$id]);
         return redirect()->back();
     }
