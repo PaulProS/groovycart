@@ -156,8 +156,11 @@
                         <div class="clearfix"> </div>
                     </div>
                     <div class="occasion-cart">
-                        <a class="item_add" href="#">add to cart </a>
-                    </div>
+                        <p>
+                            {!! Form::open(['method'=>'get', 'action' => ['StoreController@addToCart', $product->id]]) !!}
+                            {!! Form::submit('Add To Cart', ['class' => 'btn btn-warning'])!!}
+                            {!! Form::close() !!}
+                        </p>                    </div>
                     <div class="social">
                         <div class="social-left">
                             <p>Share On :</p>
