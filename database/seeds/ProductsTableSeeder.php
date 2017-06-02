@@ -20,7 +20,7 @@ class ProductsTableSeeder extends Seeder
         $product->price = "99.99";
         $product->brand_id = null;
         $product->rating = 5;
-        $product->stock = null;
+        $product->stock = 5;
         $product->is_active =1;
         $product->save();
         $product = new Product;
@@ -31,7 +31,7 @@ class ProductsTableSeeder extends Seeder
         $product->price = "99.99";
         $product->brand_id = null;
         $product->rating = 5;
-        $product->stock = null;
+        $product->stock = 5;
         $product->is_active =1;
         $product->save();
         $product = new Product;
@@ -42,7 +42,7 @@ class ProductsTableSeeder extends Seeder
         $product->price = "99.99";
         $product->brand_id = null;
         $product->rating = 5;
-        $product->stock = null;
+        $product->stock = 5;
         $product->is_active =1;
         $product->save();
         $product = new Product;
@@ -53,7 +53,7 @@ class ProductsTableSeeder extends Seeder
         $product->price = "99.99";
         $product->brand_id = null;
         $product->rating = 5;
-        $product->stock = null;
+        $product->stock = 5;
         $product->is_active =1;
         $product->save();
         $product = new Product;
@@ -64,7 +64,7 @@ class ProductsTableSeeder extends Seeder
         $product->price = "99.99";
         $product->brand_id = null;
         $product->rating = 5;
-        $product->stock = null;
+        $product->stock = 5;
         $product->is_active =1;
         $product->save();
         $product = new Product;
@@ -75,7 +75,7 @@ class ProductsTableSeeder extends Seeder
         $product->price = "99.99";
         $product->brand_id = null;
         $product->rating = 5;
-        $product->stock = null;
+        $product->stock = 5;
         $product->is_active =1;
         $product->save();
         $product = new Product;
@@ -86,7 +86,7 @@ class ProductsTableSeeder extends Seeder
         $product->price = "99.99";
         $product->brand_id = null;
         $product->rating = 5;
-        $product->stock = null;
+        $product->stock = 5;
         $product->is_active =1;
         $product->save();
         $product = new Product;
@@ -97,7 +97,7 @@ class ProductsTableSeeder extends Seeder
         $product->price = "99.99";
         $product->brand_id = null;
         $product->rating = 5;
-        $product->stock = null;
+        $product->stock = 5;
         $product->is_active =1;
         $product->save();
         $product = new Product;
@@ -108,7 +108,7 @@ class ProductsTableSeeder extends Seeder
         $product->price = "99.99";
         $product->brand_id = null;
         $product->rating = 5;
-        $product->stock = null;
+        $product->stock = 5;
         $product->is_active =1;
         $product->save();
 
@@ -120,7 +120,7 @@ class ProductsTableSeeder extends Seeder
         $product->price = "99.99";
         $product->brand_id = null;
         $product->rating = 5;
-        $product->stock = null;
+        $product->stock = 5;
         $product->is_active =1;
         $product->save();
         $product = new Product;
@@ -131,7 +131,7 @@ class ProductsTableSeeder extends Seeder
         $product->price = "99.99";
         $product->brand_id = null;
         $product->rating = 5;
-        $product->stock = null;
+        $product->stock = 5;
         $product->is_active =1;
         $product->save();
         $product = new Product;
@@ -142,7 +142,7 @@ class ProductsTableSeeder extends Seeder
         $product->price = "99.99";
         $product->brand_id = null;
         $product->rating = 5;
-        $product->stock = null;
+        $product->stock = 5;
         $product->is_active =1;
         $product->save();
         $product = new Product;
@@ -153,7 +153,7 @@ class ProductsTableSeeder extends Seeder
         $product->price = "99.99";
         $product->brand_id = null;
         $product->rating = 5;
-        $product->stock = null;
+        $product->stock = 5;
         $product->is_active =1;
         $product->save();
         $product = new Product;
@@ -164,7 +164,7 @@ class ProductsTableSeeder extends Seeder
         $product->price = "99.99";
         $product->brand_id = null;
         $product->rating = 5;
-        $product->stock = null;
+        $product->stock = 5;
         $product->is_active =1;
         $product->save();
         $product = new Product;
@@ -175,7 +175,7 @@ class ProductsTableSeeder extends Seeder
         $product->price = "99.99";
         $product->brand_id = null;
         $product->rating = 5;
-        $product->stock = null;
+        $product->stock = 5;
         $product->is_active =1;
         $product->save();
         $product = new Product;
@@ -186,7 +186,7 @@ class ProductsTableSeeder extends Seeder
         $product->price = "99.99";
         $product->brand_id = null;
         $product->rating = 5;
-        $product->stock = null;
+        $product->stock = 5;
         $product->is_active =1;
         $product->save();
         $product = new Product;
@@ -197,7 +197,7 @@ class ProductsTableSeeder extends Seeder
         $product->price = "99.99";
         $product->brand_id = null;
         $product->rating = 5;
-        $product->stock = null;
+        $product->stock = 5;
         $product->is_active =1;
         $product->save();
         $product = new Product;
@@ -208,7 +208,7 @@ class ProductsTableSeeder extends Seeder
         $product->price = "99.99";
         $product->brand_id = null;
         $product->rating = 5;
-        $product->stock = null;
+        $product->stock = 5;
         $product->is_active =1;
         $product->save();
 
@@ -220,7 +220,7 @@ class ProductsTableSeeder extends Seeder
         $product->price = "99.99";
         $product->brand_id = null;
         $product->rating = 5;
-        $product->stock = null;
+        $product->stock = 5;
         $product->is_active =1;
         $product->save();
         $product = new Product;
@@ -231,7 +231,7 @@ class ProductsTableSeeder extends Seeder
         $product->price = "99.99";
         $product->brand_id = null;
         $product->rating = 5;
-        $product->stock = null;
+        $product->stock = 5;
         $product->is_active =1;
         $product->save();
         $product = new Product;
@@ -242,7 +242,7 @@ class ProductsTableSeeder extends Seeder
         $product->price = "99.99";
         $product->brand_id = null;
         $product->rating = 5;
-        $product->stock = null;
+        $product->stock = 5;
         $product->is_active =1;
         $product->save();
         $product = new Product;
@@ -253,7 +253,7 @@ class ProductsTableSeeder extends Seeder
         $product->price = "99.99";
         $product->brand_id = null;
         $product->rating = 5;
-        $product->stock = null;
+        $product->stock = 5;
         $product->is_active =1;
         $product->save();
         $product = new Product;
@@ -264,7 +264,7 @@ class ProductsTableSeeder extends Seeder
         $product->price = "99.99";
         $product->brand_id = null;
         $product->rating = 5;
-        $product->stock = null;
+        $product->stock = 5;
         $product->is_active =1;
         $product->save();
         $product = new Product;
@@ -275,7 +275,7 @@ class ProductsTableSeeder extends Seeder
         $product->price = "99.99";
         $product->brand_id = null;
         $product->rating = 5;
-        $product->stock = null;
+        $product->stock = 5;
         $product->is_active =1;
         $product->save();
         $product = new Product;
@@ -286,7 +286,7 @@ class ProductsTableSeeder extends Seeder
         $product->price = "99.99";
         $product->brand_id = null;
         $product->rating = 5;
-        $product->stock = null;
+        $product->stock = 5;
         $product->is_active =1;
         $product->save();
         $product = new Product;
@@ -297,7 +297,7 @@ class ProductsTableSeeder extends Seeder
         $product->price = "99.99";
         $product->brand_id = null;
         $product->rating = 5;
-        $product->stock = null;
+        $product->stock = 5;
         $product->is_active =1;
         $product->save();
         $product = new Product;
@@ -308,7 +308,7 @@ class ProductsTableSeeder extends Seeder
         $product->price = "99.99";
         $product->brand_id = null;
         $product->rating = 5;
-        $product->stock = null;
+        $product->stock = 5;
         $product->is_active =1;
         $product->save();
 

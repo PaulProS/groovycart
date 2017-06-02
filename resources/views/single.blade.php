@@ -158,7 +158,11 @@
                     <div class="occasion-cart">
                         <p>
                             {!! Form::open(['method'=>'get', 'action' => ['StoreController@addToCart', $product->id]]) !!}
-                            {!! Form::submit('Add To Cart', ['class' => 'btn btn-warning'])!!}
+                            @if($product->stock <= 0)
+                                {!! Form::button('Out Of Stock', ['class' => 'btn btn-warning'])!!}
+                            @elseif($product->stock > 0)
+                                {!! Form::submit('Add To Cart', ['class' => 'btn btn-warning'])!!}
+                            @endif
                             {!! Form::close() !!}
                         </p>                    </div>
                     <div class="social">

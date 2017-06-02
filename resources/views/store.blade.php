@@ -40,10 +40,10 @@
                         @foreach($newProducts as $newArrival)
                             <div class="new-products-grid">
                                 <div class="new-products-grid-left">
-                                    <a href=""><img src="{{$newArrival->photo ? $newArrival->photo->photo : "http://placehold.it/50X50"}}" alt=" " class="img-responsive" /></a>
+                                    <a href="{{route('product', $newArrival->id)}}"><img src="{{$newArrival->photo ? $newArrival->photo->photo : "http://placehold.it/50X50"}}" alt=" " class="img-responsive" /></a>
                                 </div>
                                 <div class="new-products-grid-right">
-                                    <h4><a href="">{{$newArrival->title}}</a></h4>
+                                    <h4><a href="{{route('product', $newArrival->id)}}">{{$newArrival->title}}</a></h4>
                                     <div class="rating">
                                         <div class="rating-left">
                                             <img src="{{asset("/images/2.png")}}" alt=" " class="img-responsive">
@@ -65,7 +65,11 @@
                                     <div class="simpleCart_shelfItem new-products-grid-right-add-cart">
                                         <p><i>${{$newArrival->price}}</i>
                                             {!! Form::open(['method'=>'get', 'action' => ['StoreController@addToCart', $newArrival->id]]) !!}
-                                            {!! Form::submit('Add To Cart', ['class' => 'btn btn-warning'])!!}
+                                            @if($newArrival->stock <= 0)
+                                                {!! Form::button('Out Of Stock', ['class' => 'btn btn-warning'])!!}
+                                            @elseif($newArrival->stock > 0)
+                                                {!! Form::submit('Add To Cart', ['class' => 'btn btn-warning'])!!}
+                                            @endif
                                             {!! Form::close() !!}
                                         </p>
                                     </div>
@@ -146,9 +150,13 @@
                                 <h4><a href="{{route('product', $product->id)}}">{{$product->title}}</a></h4>
                                 <p>{{$product->description}}</p>
                                 <div class="simpleCart_shelfItem products-right-grid1-add-cart">
-                                    <p><i>${{$product->price}}</i> <span class="item_price">${{$product->price - 10}}</span>
+                                    <p><span class="item_price">${{$product->price}}</span>
                                         {!! Form::open(['method'=>'get', 'action' => ['StoreController@addToCart', $product->id]]) !!}
+                                        @if($product->stock <= 0)
+                                            {!! Form::button('Out Of Stock', ['class' => 'btn btn-warning'])!!}
+                                        @elseif($product->stock > 0)
                                         {!! Form::submit('Add To Cart', ['class' => 'btn btn-warning'])!!}
+                                        @endif
                                         {!! Form::close() !!}
                                     </p>
                                 </div>
