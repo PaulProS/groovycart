@@ -27,27 +27,11 @@
                     {!! Form::close() !!}
                 </div>
                 <div class="categories animated wow slideInUp" data-wow-delay=".5s">
-                    <h3>Categories</h3>
+                    <h3>Sub Categories</h3>
                     <ul class="cate">
-                        <li><a href="">Best Selling</a> <span>(15)</span></li>
-                        <li><a href="">Man</a> <span>(16)</span></li>
-                        <ul>
-                            <li><a href="">Accessories</a> <span>(2)</span></li>
-                            <li><a href="">Coats & Jackets</a> <span>(5)</span></li>
-                            <li><a href="">Jeans</a> <span>(1)</span></li>
-                            <li><a href="">New Arrivals</a> <span>(0)</span></li>
-                            <li><a href="">Suits</a> <span>(1)</span></li>
-                            <li><a href="">Casual Shirts</a> <span>(0)</span></li>
-                        </ul>
-                        <li><a href="">Sales</a> <span>(15)</span></li>
-                        <li><a href="">Woman</a> <span>(15)</span></li>
-                        <ul>
-                            <li><a href="">Accessories</a> <span>(2)</span></li>
-                            <li><a href="">New Arrivals</a> <span>(0)</span></li>
-                            <li><a href="">Dresses</a> <span>(1)</span></li>
-                            <li><a href="">Casual Shirts</a> <span>(0)</span></li>
-                            >Shorts</a> <span>(4)</span></li>
-                        </ul>
+                        @foreach($subCategories as $cat)
+                            <li><a href="{{route('store', $cat->id)}}">{{title_case($cat->name)}}</a></li>
+                        @endforeach
                     </ul>
                 </div>
                 <div class="new-products animated wow slideInUp" data-wow-delay=".5s">

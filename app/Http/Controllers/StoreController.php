@@ -16,7 +16,6 @@ class StoreController extends Controller
 
     public function category($id){
 
-
         global $catIds;
         $catIds[] = (int) $id;
 
@@ -27,12 +26,12 @@ class StoreController extends Controller
             }
         }
 
+        $subCategories = Category::whereIn('id', $catIds)->get();
         $category = Category::findOrFail($catIds[0]);
         $products = Product::whereIn('category_id', $catIds)->get();
         $newProducts = Product::whereIn('category_id', $catIds)->orderBy('created_at', 'desc')->take(2)->get();
-        return view('store', compact('products', 'newProducts', 'category'));
-    }
-
+        return view('store', compact('products', 'newProducts', 'category', 'subCategories'));
+    }   
 
     public function viewProduct($id){
 

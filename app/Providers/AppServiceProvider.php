@@ -20,7 +20,7 @@ class AppServiceProvider extends ServiceProvider
 
         view()->composer('layouts.bestStore.partials.menu', function($view)
         {
-            $view->with('parentCategories', Category::where('parent_id', '=', null)->get());
+            $view->with('Categories', Category::all());
         });
     }
 
