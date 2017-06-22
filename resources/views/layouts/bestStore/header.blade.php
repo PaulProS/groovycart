@@ -106,7 +106,7 @@
                 <div class="cart box_1">
                     <a href="{{route('cart')}}">
                         <h3> <div class="total">
-                                <span>Rs.{{Session::has('cart') ? Session::get('cart')->totalPrice : 0}}</span><span>({{Session::has('cart') ? Session::get('cart')->totalQty : 0}} Items)</span></div>
+                                <span id="totalCartPrice">Rs.{{Session::has('cart') ? Session::get('cart')->totalPrice : 0}}</span><span id="totalCartQty">({{Session::has('cart') ? Session::get('cart')->totalQty : 0}} Items)</span></div>
                             <img src="{{asset("/images/bag.png")}}" alt="" />
                         </h3>
                     </a>

@@ -76,7 +76,6 @@ class StoreController extends Controller
         $cart = session('cart');
         $cart->removeItem($id);
         unset($cart->items[$id]);
-        return redirect()->back();
     }
 
     public function getCart(){

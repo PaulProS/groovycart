@@ -73,6 +73,8 @@
                                                     success:function () {
                                                         $('.rem{{$product['item']['id']}}').fadeOut('slow', function(){
                                                             $('.rem{{$product['item']['id']}}').remove();
+                                                            $('#totalCartPrice').load(' #totalCartPrice');
+                                                            $('#totalCartQty').load(' #totalCartQty');
                                                         });
                                                     }
                                                 })

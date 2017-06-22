@@ -76,6 +76,8 @@
                                                     $.ajax({
                                                         url:"/add-to-cart/{{$newArrival->id}}",
                                                         success:function(){
+                                                            $('#totalCartPrice').load(' #totalCartPrice');
+                                                            $('#totalCartQty').load(' #totalCartQty');
                                                             alert("Product Added");
                                                         }
                                                     });
@@ -173,6 +175,8 @@
                                                 $.ajax({
                                                     url:"/add-to-cart/{{$product->id}}",
                                                     success:function(){
+                                                        $('#totalCartPrice').load(' #totalCartPrice');
+                                                        $('#totalCartQty').load(' #totalCartQty');
                                                         alert("Product Added");
                                                     }
                                                 });
