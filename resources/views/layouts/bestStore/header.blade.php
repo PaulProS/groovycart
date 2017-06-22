@@ -3,7 +3,7 @@
 <div class="header">
     <div class="container">
         <div class="header-grid">
-            <div class="header-grid-left animated wow slideInLeft" data-wow-delay=".5s">
+            <div class="header-grid-left">
                 <ul>
                     <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:sales@beststore.com">sales@beststore.com</a></li>
                     <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+91 987 525 4477</li>
@@ -41,7 +41,7 @@
                     @endif
                 </ul>
             </div>
-            <div class="header-grid-right animated wow slideInRight" data-wow-delay=".5s">
+            <div class="header-grid-right">
                 <ul class="social-icons">
                     <li><a href="https://www.facebook.com/" target="_blank" class="facebook"></a></li>
                     <li><a href="https://twitter.com/" target="_blank" class="twitter"></a></li>
@@ -52,7 +52,7 @@
             <div class="clearfix"> </div>
         </div>
         <div class="logo-nav">
-            <div class="logo-nav-left animated wow zoomIn" data-wow-delay=".5s">
+            <div class="logo-nav-left">
                 <h1><a href="/">Best Store <span>Shop anywhere</span></a></h1>
             </div>
             <div class="logo-nav-left1">
@@ -110,7 +110,21 @@
                             <img src="{{asset("/images/bag.png")}}" alt="" />
                         </h3>
                     </a>
-                    <p><a href="{{route('emptyCart')}}" class="simpleCart_empty">Clear Cart</a></p>
+                    <p><a href="#" class="simpleCart_empty">Clear Cart</a></p>
+                    <script>
+                        $(document).ready(function () {
+                            $('.simpleCart_empty').click(function () {
+                                $.ajax({
+                                    url:"/emptyCart",
+                                    success:function(){
+                                        $('#totalCartPrice').load(' #totalCartPrice');
+                                        $('#totalCartQty').load(' #totalCartQty');
+                                        $('.checkout').load(' .checkout');
+                                    }
+                                })
+                            });
+                        });
+                    </script>
                     <div class="clearfix"> </div>
                 </div>
             </div>

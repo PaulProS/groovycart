@@ -2,12 +2,12 @@
 <div class="footer">
     <div class="container">
         <div class="footer-grids">
-            <div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".5s">
+            <div class="col-md-3 footer-grid">
                 <h3>About Us</h3>
                 <p>Duis aute irure dolor in reprehenderit in voluptate velit esse.<span>Excepteur sint occaecat cupidatat
 						non proident, sunt in culpa qui officia deserunt mollit.</span></p>
             </div>
-            <div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".6s">
+            <div class="col-md-3 footer-grid">
                 <h3>Contact Info</h3>
                 <ul>
                     <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>1234k Avenue, 4th block, <span>New York City.</span></li>
@@ -15,7 +15,7 @@
                     <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 567</li>
                 </ul>
             </div>
-            <div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".7s">
+            <div class="col-md-3 footer-grid">
                 <h3>Flickr Posts</h3>
                 <div class="footer-grid-left">
                     <a href="single.html"><img src="{{asset("/images/13.jpg")}}" alt=" " class="img-responsive" /></a>
@@ -55,7 +55,7 @@
                 </div>
                 <div class="clearfix"> </div>
             </div>
-            <div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".8s">
+            <div class="col-md-3 footer-grid">
                 <h3>Blog Posts</h3>
                 <div class="footer-grid-sub-grids">
                     <div class="footer-grid-sub-grid-left">
@@ -80,10 +80,10 @@
             </div>
             <div class="clearfix"> </div>
         </div>
-        <div class="footer-logo animated wow slideInUp" data-wow-delay=".5s">
-            <h2><a href="index.html">Best Store <span>shop anywhere</span></a></h2>
+        <div class="footer-logo">
+            <h2><a href="/">Best Store <span>shop anywhere</span></a></h2>
         </div>
-        <div class="copy-right animated wow slideInUp" data-wow-delay=".5s">
+        <div class="copy-right">
             <p>&copy 2016 Best Store. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
         </div>
     </div>

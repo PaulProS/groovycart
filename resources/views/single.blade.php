@@ -5,7 +5,7 @@
     <!-- breadcrumbs -->
     <div class="breadcrumbs">
         <div class="container">
-            <ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+            <ol class="breadcrumb breadcrumb1">
                 <li><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
                 <li class="active">Single Page</li>
             </ol>
@@ -16,7 +16,7 @@
     <div class="single">
         <div class="container">
             <div class="col-md-4 products-left">
-                <div class="filter-price animated wow slideInUp" data-wow-delay=".5s">
+                <div class="filter-price">
                     <h3>Filter By Price</h3>
                     <ul class="dropdown-menu1">
                         <li><a href="">
@@ -43,7 +43,7 @@
                     <script type="text/javascript" src="{{asset("/js/jquery-ui.min.js")}}"></script>
                     <!---->
                 </div>
-                <div class="categories animated wow slideInUp" data-wow-delay=".5s">
+                <div class="categories">
                     <h3>Categories</h3>
                     <ul class="cate">
                         <li><a href="products.html">Best Selling</a> <span>(15)</span></li>

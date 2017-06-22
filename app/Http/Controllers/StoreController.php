@@ -87,6 +87,5 @@ class StoreController extends Controller
 
     public function emptyCart(){
         session()->forget('cart');
-        return redirect()->back();
     }
 }
