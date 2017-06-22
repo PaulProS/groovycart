@@ -70,15 +70,7 @@
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="/" class="act">Home</a></li>
                             <!-- Mega Menu -->
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories<b class="caret"></b></a>
-                                <ul class="dropdown-menu multi-column columns-3">
-                                    <div class="row">
-                                        @include('layouts.bestStore.partials.menu')
-                                        <div class="clearfix"></div>
-                                    </div>
-                                </ul>
-                            </li>
+                                @include('layouts.bestStore.partials.menu')
                             <li><a href="/mail">Mail Us</a></li>
                         </ul>
                     </div>

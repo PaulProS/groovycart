@@ -16,7 +16,7 @@
     <div class="products">
         <div class="container">
             <div class="col-md-4 products-left">
-                <div class="filter-price animated wow slideInUp" data-wow-delay=".5s">
+                <div class="filter-price">
                     <h3>Filter By Price</h3>
                     {!! Form::open(['method'=>'get', 'action'=>'StoreController@filter', 'class'=>'form-group']) !!}
                     {!! Form::label('price', 'Min') !!}
@@ -26,7 +26,7 @@
                     {!! Form::submit('Filter', ['class'=>'form-control btn btn-warning']) !!}
                     {!! Form::close() !!}
                 </div>
-                <div class="categories animated wow slideInUp" data-wow-delay=".5s">
+                <div class="categories">
                     <h3>Sub Categories</h3>
                     <ul class="cate">
                         @foreach($subCategories as $cat)
@@ -101,7 +101,7 @@
             </div>
             <div class="col-md-8 products-right">
                 <div class="products-right-grid">
-                    <div class="products-right-grids animated wow slideInRight" data-wow-delay=".5s">
+                    <div class="products-right-grids">
                         <div class="sorting">
                             <select id="country" onchange="change_country(this.value)" class="frm-field required sect">
                                 <option value="null">Default sorting</option>
@@ -120,7 +120,7 @@
                         </div>
                         <div class="clearfix"> </div>
                     </div>
-                    <div class="products-right-grids-position animated wow slideInRight" data-wow-delay=".5s">
+                    <div class="products-right-grids-position animated wow slideInUp" data-wow-delay=".5s">
                         <img src="{{$category->photo ? $category->photo->photo : ""}}" alt=" " class="img-responsive" />
                         <div class="products-right-grids-position1">
                             <h4>2017 New Collection</h4>
@@ -189,7 +189,7 @@
                     @endforeach
                     <div class="clearfix"></div>
                 </div>
-                <nav class="numbering animated wow slideInRight" data-wow-delay=".5s">
+                <nav class="numbering animated wow slideInUp" data-wow-delay=".5s">
                     <ul class="pagination paging">
                         <li>
                             <a href="#" aria-label="Previous">

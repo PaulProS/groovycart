@@ -94,40 +94,6 @@
                         <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
                             eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
                     </div>
-                    <div class="color-quality">
-                        <div class="color-quality-left">
-                            <h5>Color : </h5>
-                            <ul>
-                                <li><a href="#"><span></span>Red</a></li>
-                                <li><a href="#" class="brown"><span></span>Yellow</a></li>
-                                <li><a href="#" class="purple"><span></span>Purple</a></li>
-                                <li><a href="#" class="gray"><span></span>Violet</a></li>
-                            </ul>
-                        </div>
-                        <div class="color-quality-right">
-                            <h5>Quality :</h5>
-                            <select id="country1" onchange="change_country(this.value)" class="frm-field required sect">
-                                <option value="null">5 Qty</option>
-                                <option value="null">6 Qty</option>
-                                <option value="null">7 Qty</option>
-                                <option value="null">10 Qty</option>
-                            </select>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class="occasional">
-                        <h5>Occasion :</h5>
-                        <div class="colr ert">
-                            <label class="radio"><input type="radio" name="radio" checked=""><i></i>Casual Wear</label>
-                        </div>
-                        <div class="colr">
-                            <label class="radio"><input type="radio" name="radio"><i></i>Party Wear</label>
-                        </div>
-                        <div class="colr">
-                            <label class="radio"><input type="radio" name="radio"><i></i>Formal Wear</label>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
                     <div class="occasion-cart">
                         <p>
                             @if($product->stock <= 0)
