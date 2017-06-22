@@ -45,12 +45,9 @@
                             <th>Remove</th>
                         </tr>
                         </thead>
-                        <?php $val = 0 ?>
                         @foreach($products as $product)
-                            <?php $val++ ?>
-                            <tr class="rem{{$val}}">
-                                <td class="invert">{{$val
-                                }}</td>
+                            <tr class="rem{{$product['item']['id']}}">
+                                <td class="invert">{{$product['item']['id']}}</td>
                                 <td class="invert-image"><a href="{{route('product', $product['item']['id'])}}"><img src="{{$product['item']['photo']->photo ? $product['item']['photo']->photo : "http://placehold.it/40X40"}}" alt=" " class="img-responsive" /></a></td>
                                 <td class="invert">
                                     <div class="quantity">
@@ -65,16 +62,23 @@
                                 <td class="invert">${{$product['item']['price'] * $product['qty']}}</td>
                                 <td class="invert">
                                     <div class="rem">
-                                        <a href="{{route('deleteCartItem', $product['item']['id'])}}" class="btn btn-danger">X</a>
+                                        {{Form::submit('X', ['class' => 'btn btn-danger', 'id' => 'close'.$product['item']['id']])}}
+                                        {{--<a href="{{route('deleteCartItem', $product['item']['id'])}}" class="btn btn-danger">X</a>--}}
                                     </div>
-                                    {{--<script>$(document).ready(function(c) {--}}
-                                            {{--$('.close{{$val}}').on('click', function(c){--}}
-                                                {{--$('.rem{{$val}}').fadeOut('slow', function(c){--}}
-                                                    {{--$('.rem{{$val}}').remove();--}}
-                                                {{--});--}}
-                                            {{--});--}}
-                                        {{--});--}}
-                                    {{--</script>--}}
+                                    <script>
+                                        $(document).ready(function() {
+                                            $('#close{{$product['item']['id']}}').on('click', function(){
+                                                $.ajax({
+                                                    url: "/deleteCartItem/{{$product['item']['id']}}",
+                                                    success:function () {
+                                                        $('.rem{{$product['item']['id']}}').fadeOut('slow', function(){
+                                                            $('.rem{{$product['item']['id']}}').remove();
+                                                        });
+                                                    }
+                                                })
+                                            });
+                                        });
+                                    </script>
                                 </td>
                             </tr>
                     @endforeach

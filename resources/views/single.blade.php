@@ -6,7 +6,7 @@
     <div class="breadcrumbs">
         <div class="container">
             <ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
-                <li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+                <li><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
                 <li class="active">Single Page</li>
             </ol>
         </div>
@@ -74,14 +74,14 @@
                 <div class="col-md-5 single-right-left animated wow slideInUp" data-wow-delay=".5s">
                     <div class="flexslider">
                         <ul class="slides">
-                            <li data-thumb="{{asset("/images/si.jpg")}}">
-                                <div class="thumb-image"> <img src="{{asset("/images/si.jpg")}}" data-imagezoom="true" class="img-responsive"> </div>
+                            <li data-thumb="{{$product->photo->photo}}">
+                                <div class="thumb-image"> <img src="{{$product->photo->photo}}" data-imagezoom="true" class="img-responsive"> </div>
                             </li>
-                            <li data-thumb="{{asset("/images/si1.jpg")}}">
-                                <div class="thumb-image"> <img src="{{asset("/images/si1.jpg")}}" data-imagezoom="true" class="img-responsive"> </div>
+                            <li data-thumb="{{$product->photo->photo}}">
+                                <div class="thumb-image"> <img src="{{$product->photo->photo}}" data-imagezoom="true" class="img-responsive"> </div>
                             </li>
-                            <li data-thumb="{{asset("/images/si2.jpg")}}">
-                                <div class="thumb-image"> <img src="{{asset("/images/si2.jpg")}}" data-imagezoom="true" class="img-responsive"> </div>
+                            <li data-thumb="{{$product->photo->photo}}">
+                                <div class="thumb-image"> <img src="{{$product->photo->photo}}" data-imagezoom="true" class="img-responsive"> </div>
                             </li>
                         </ul>
                     </div>
@@ -169,7 +169,6 @@
                                     $.ajax({
                                         url:"/add-to-cart/{{$product->id}}",
                                         success:function(){
-
                                             alert("Product Added");
                                         }
                                     });
