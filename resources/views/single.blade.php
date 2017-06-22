@@ -101,7 +101,7 @@
                 </div>
                 <div class="col-md-7 single-right-left simpleCart_shelfItem animated wow slideInRight" data-wow-delay=".5s">
                     <h3>{{$product->title}}</h3>
-                    <h4><span class="item_price">${{$product->price}}</span></h4>
+                    <h4><span class="item_price">Rs.{{$product->price}}</span></h4>
                     <div class="rating1">
 						<span class="starRating">
 							<input id="rating5" type="radio" name="rating" value="5">
@@ -157,14 +157,26 @@
                     </div>
                     <div class="occasion-cart">
                         <p>
-                            {!! Form::open(['method'=>'get', 'action' => ['StoreController@addToCart', $product->id]]) !!}
                             @if($product->stock <= 0)
                                 {!! Form::button('Out Of Stock', ['class' => 'btn btn-warning'])!!}
                             @elseif($product->stock > 0)
-                                {!! Form::submit('Add To Cart', ['class' => 'btn btn-warning'])!!}
+                                {!! Form::submit('Add To Cart', ['class' => 'btn btn-warning', 'id' => 'addToCart'])!!}
                             @endif
-                            {!! Form::close() !!}
-                        </p>                    </div>
+                        </p>
+                        <script>
+                            $(document).ready(function () {
+                                $('#addToCart').click(function() {
+                                    $.ajax({
+                                        url:"/add-to-cart/{{$product->id}}",
+                                        success:function(){
+
+                                            alert("Product Added");
+                                        }
+                                    });
+                                });
+                            });
+                        </script>
+                    </div>
                     <div class="social">
                         <div class="social-left">
                             <p>Share On :</p>

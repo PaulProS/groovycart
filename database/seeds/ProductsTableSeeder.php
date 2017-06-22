@@ -17,7 +17,7 @@ class ProductsTableSeeder extends Seeder
         $product->category_id = 4;
         $product->title = "Rough Formal Shirt";
         $product->description = "This is a demo product";
-        $product->price = "99.99";
+        $product->price = "550";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -28,7 +28,7 @@ class ProductsTableSeeder extends Seeder
         $product->category_id = 4;
         $product->title = "Formal Shirt Plain";
         $product->description = "This is a demo product";
-        $product->price = "99.99";
+        $product->price = "550";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -39,7 +39,7 @@ class ProductsTableSeeder extends Seeder
         $product->category_id = 4;
         $product->title = "Formal Shirt Satin";
         $product->description = "This is a demo product";
-        $product->price = "99.99";
+        $product->price = "550";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -50,7 +50,7 @@ class ProductsTableSeeder extends Seeder
         $product->category_id = 6;
         $product->title = "Snickers";
         $product->description = "This is a demo product";
-        $product->price = "99.99";
+        $product->price = "550";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -61,7 +61,7 @@ class ProductsTableSeeder extends Seeder
         $product->category_id = 6;
         $product->title = "Casual Shoes";
         $product->description = "This is a demo product";
-        $product->price = "99.99";
+        $product->price = "550";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -72,7 +72,7 @@ class ProductsTableSeeder extends Seeder
         $product->category_id = 6;
         $product->title = "Rough & Tough Shoes";
         $product->description = "This is a demo product";
-        $product->price = "99.99";
+        $product->price = "550";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -83,7 +83,7 @@ class ProductsTableSeeder extends Seeder
         $product->category_id = 4;
         $product->title = "Blazer Rough";
         $product->description = "This is a demo product";
-        $product->price = "99.99";
+        $product->price = "550";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -94,7 +94,7 @@ class ProductsTableSeeder extends Seeder
         $product->category_id = 4;
         $product->title = "Blazer Half Sleeve";
         $product->description = "This is a demo product";
-        $product->price = "99.99";
+        $product->price = "550";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -105,7 +105,7 @@ class ProductsTableSeeder extends Seeder
         $product->category_id = 4;
         $product->title = "Blazer Full Sleeve";
         $product->description = "This is a demo product";
-        $product->price = "99.99";
+        $product->price = "550";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -117,7 +117,7 @@ class ProductsTableSeeder extends Seeder
         $product->category_id = 9;
         $product->title = "Rough Formal Shirt";
         $product->description = "This is a demo product";
-        $product->price = "99.99";
+        $product->price = "550";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -128,7 +128,7 @@ class ProductsTableSeeder extends Seeder
         $product->category_id = 9;
         $product->title = "Formal Denim";
         $product->description = "This is a demo product";
-        $product->price = "99.99";
+        $product->price = "550";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -139,7 +139,7 @@ class ProductsTableSeeder extends Seeder
         $product->category_id = 9;
         $product->title = "Floral Shirt";
         $product->description = "This is a demo product";
-        $product->price = "99.99";
+        $product->price = "550";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -150,7 +150,7 @@ class ProductsTableSeeder extends Seeder
         $product->category_id = 10;
         $product->title = "Tote Handbag";
         $product->description = "This is a demo product";
-        $product->price = "99.99";
+        $product->price = "550";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -161,7 +161,7 @@ class ProductsTableSeeder extends Seeder
         $product->category_id = 10;
         $product->title = "Wallet Flory";
         $product->description = "This is a demo product";
-        $product->price = "99.99";
+        $product->price = "550";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -172,7 +172,7 @@ class ProductsTableSeeder extends Seeder
         $product->category_id = 10;
         $product->title = "Handbag Office";
         $product->description = "This is a demo product";
-        $product->price = "99.99";
+        $product->price = "550";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -183,7 +183,7 @@ class ProductsTableSeeder extends Seeder
         $product->category_id = 11;
         $product->title = "Fairy Shoes";
         $product->description = "This is a demo product";
-        $product->price = "99.99";
+        $product->price = "550";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -194,7 +194,7 @@ class ProductsTableSeeder extends Seeder
         $product->category_id = 11;
         $product->title = "Lace Boot Long";
         $product->description = "This is a demo product";
-        $product->price = "99.99";
+        $product->price = "550";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -205,7 +205,7 @@ class ProductsTableSeeder extends Seeder
         $product->category_id = 11;
         $product->title = "High Heel Boot";
         $product->description = "This is a demo product";
-        $product->price = "99.99";
+        $product->price = "550";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -217,7 +217,7 @@ class ProductsTableSeeder extends Seeder
         $product->category_id = 17;
         $product->title = "Fairy Frock";
         $product->description = "This is a demo product";
-        $product->price = "99.99";
+        $product->price = "550";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -228,7 +228,7 @@ class ProductsTableSeeder extends Seeder
         $product->category_id = 17;
         $product->title = "Cinderella Dress";
         $product->description = "This is a demo product";
-        $product->price = "99.99";
+        $product->price = "550";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -239,7 +239,7 @@ class ProductsTableSeeder extends Seeder
         $product->category_id = 17;
         $product->title = "Rosy Frock";
         $product->description = "This is a demo product";
-        $product->price = "99.99";
+        $product->price = "550";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -250,7 +250,7 @@ class ProductsTableSeeder extends Seeder
         $product->category_id = 18;
         $product->title = "Belly Shoes";
         $product->description = "This is a demo product";
-        $product->price = "99.99";
+        $product->price = "550";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -261,7 +261,7 @@ class ProductsTableSeeder extends Seeder
         $product->category_id = 18;
         $product->title = "Boot Fancy";
         $product->description = "This is a demo product";
-        $product->price = "99.99";
+        $product->price = "550";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -272,7 +272,7 @@ class ProductsTableSeeder extends Seeder
         $product->category_id = 18;
         $product->title = "Piggy Shoes";
         $product->description = "This is a demo product";
-        $product->price = "99.99";
+        $product->price = "550";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -283,7 +283,7 @@ class ProductsTableSeeder extends Seeder
         $product->category_id = 16;
         $product->title = "Shirt Funky";
         $product->description = "This is a demo product";
-        $product->price = "99.99";
+        $product->price = "550";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -294,7 +294,7 @@ class ProductsTableSeeder extends Seeder
         $product->category_id = 16;
         $product->title = "Iron Man Dress";
         $product->description = "This is a demo product";
-        $product->price = "99.99";
+        $product->price = "550";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -305,7 +305,7 @@ class ProductsTableSeeder extends Seeder
         $product->category_id = 16;
         $product->title = "Formal Shirt";
         $product->description = "This is a demo product";
-        $product->price = "99.99";
+        $product->price = "550";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;

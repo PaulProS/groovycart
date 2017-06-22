@@ -68,10 +68,7 @@ class StoreController extends Controller
         $oldCart = session()->has('cart') ? session()->get('cart') : null;
         $cart = new Cart($oldCart);
         $cart->add($product, $product->id);
-
         $request->session()->put('cart', $cart);
-
-        return redirect()->back();
     }
 
     public function deleteCartItem($id){

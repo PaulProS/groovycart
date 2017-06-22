@@ -63,15 +63,25 @@
                                         <div class="clearfix"> </div>
                                     </div>
                                     <div class="simpleCart_shelfItem new-products-grid-right-add-cart">
-                                        <p><i>${{$newArrival->price}}</i>
-                                            {!! Form::open(['method'=>'get', 'action' => ['StoreController@addToCart', $newArrival->id]]) !!}
+                                        <p>Rs.{{$newArrival->price}}
                                             @if($newArrival->stock <= 0)
                                                 {!! Form::button('Out Of Stock', ['class' => 'btn btn-warning'])!!}
                                             @elseif($newArrival->stock > 0)
-                                                {!! Form::submit('Add To Cart', ['class' => 'btn btn-warning'])!!}
+                                                {!! Form::submit('Add To Cart', ['class' => 'btn btn-warning', 'id' => 'addToCartNew'.$newArrival->id])!!}
                                             @endif
-                                            {!! Form::close() !!}
                                         </p>
+                                        <script>
+                                            $(document).ready(function () {
+                                                $('#addToCartNew{{$newArrival->id}}').click(function() {
+                                                    $.ajax({
+                                                        url:"/add-to-cart/{{$newArrival->id}}",
+                                                        success:function(){
+                                                            alert("Product Added");
+                                                        }
+                                                    });
+                                                });
+                                            });
+                                        </script>
                                     </div>
                                 </div>
                                 <div class="clearfix"> </div>
@@ -150,15 +160,25 @@
                                 <h4><a href="{{route('product', $product->id)}}">{{$product->title}}</a></h4>
                                 <p>{{$product->description}}</p>
                                 <div class="simpleCart_shelfItem products-right-grid1-add-cart">
-                                    <p><span class="item_price">${{$product->price}}</span>
-                                        {!! Form::open(['method'=>'get', 'action' => ['StoreController@addToCart', $product->id]]) !!}
+                                    <p><span class="item_price">Rs.{{$product->price}}</span>
                                         @if($product->stock <= 0)
                                             {!! Form::button('Out Of Stock', ['class' => 'btn btn-warning'])!!}
                                         @elseif($product->stock > 0)
-                                        {!! Form::submit('Add To Cart', ['class' => 'btn btn-warning'])!!}
+                                        {!! Form::submit('Add To Cart', ['class' => 'btn btn-warning', 'id' => 'addToCart'.$product->id])!!}
                                         @endif
-                                        {!! Form::close() !!}
                                     </p>
+                                    <script>
+                                        $(document).ready(function () {
+                                            $('#addToCart{{$product->id}}').click(function() {
+                                                $.ajax({
+                                                    url:"/add-to-cart/{{$product->id}}",
+                                                    success:function(){
+                                                        alert("Product Added");
+                                                    }
+                                                });
+                                            });
+                                        });
+                                    </script>
                                 </div>
                             </div>
                         </div>
