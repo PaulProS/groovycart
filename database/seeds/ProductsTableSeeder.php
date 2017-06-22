@@ -312,7 +312,5 @@ class ProductsTableSeeder extends Seeder
         $product->is_active =1;
         $product->save();
 
-
-
     }
 }

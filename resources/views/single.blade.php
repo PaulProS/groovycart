@@ -16,33 +16,6 @@
     <div class="single">
         <div class="container">
             <div class="col-md-4 products-left">
-                <div class="filter-price">
-                    <h3>Filter By Price</h3>
-                    <ul class="dropdown-menu1">
-                        <li><a href="">
-                                <div id="slider-range"></div>
-                                <input type="text" id="amount" style="border: 0" />
-                            </a>
-                        </li>
-                    </ul>
-                    <script type='text/javascript'>//<![CDATA[
-                        $(window).load(function(){
-                            $( "#slider-range" ).slider({
-                                range: true,
-                                min: 0,
-                                max: 100000,
-                                values: [ 10000, 60000 ],
-                                slide: function( event, ui ) {  $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-                                }
-                            });
-                            $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + $( "#slider-range" ).slider( "values", 1 ) );
-
-
-                        });//]]>
-                    </script>
-                    <script type="text/javascript" src="{{asset("/js/jquery-ui.min.js")}}"></script>
-                    <!---->
-                </div>
                 <div class="categories">
                     <h3>Categories</h3>
                     <ul class="cate">
@@ -198,7 +171,7 @@
                     <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
                         <ul id="myTab" class="nav nav-tabs" role="tablist">
                             <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Description</a></li>
-                            <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">Reviews(2)</a></li>
+                            <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">Reviews({{count($product->review)}})</a></li>
                             <li role="presentation" class="dropdown">
                                 <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents">Information <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
@@ -219,12 +192,11 @@
                                         @foreach($reviews as $review)
                                             <div class="bootstrap-tab-text-grid">
                                                 <div class="bootstrap-tab-text-grid-left">
-                                                    <img src="{{asset("/images/4.png")}}" alt=" " class="img-responsive" />
+                                                    <img src="{{$review->user_id ? $review->user->photo->photo : '/images/anouser.png'}}" alt=" " class="img-responsive" />
                                                 </div>
                                                 <div class="bootstrap-tab-text-grid-right">
                                                     <ul>
                                                         <li><a href="#">{{$review->subject}}</a></li>
-                                                        <li><a href="#"><span class="glyphicon glyphicon-share" aria-hidden="true"></span>Reply</a></li>
                                                     </ul>
                                                     <p>{{$review->message}}</p>
                                                 </div>
@@ -248,8 +220,8 @@
                                             {!! Form::text('name', null, ['placeholder'=>'Name', 'required']) !!}
                                             {!! Form::email('email', null, ['placeholder'=>'Email', 'required']) !!}
                                         @endif
-                                            {!! Form::text('subject', null, ['placeholder'=>'Subject', 'required']) !!}
-                                            {!! Form::textarea('message', null, ['placeholder'=>'Message', 'required', 'rows'=>3]) !!}
+                                            {!! Form::text('subject', null, ['placeholder'=>'Subject', 'required', 'minlength' => 10]) !!}
+                                            {!! Form::textarea('message', null, ['placeholder'=>'Message', 'required', 'rows'=>3, 'minlength' => 50]) !!}
                                             {!! Form::submit('Add Review') !!}
                                         {!! Form::close() !!}
                                     </div>
