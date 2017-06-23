@@ -69,6 +69,7 @@
                                                             $('#totalCartPrice').load(' #totalCartPrice');
                                                             $('#totalCartQty').load(' #totalCartQty');
                                                             $('#billingValue').load(' #billingValue');
+                                                            $('.item-price{{$i}}').load (' .item-price{{$i}}');
                                                             $('.inCart{{$i}}').load(' .inCart{{$i}}');
                                                         }
                                                     });
@@ -81,6 +82,7 @@
                                                             $('#totalCartPrice').load(' #totalCartPrice');
                                                             $('#totalCartQty').load(' #totalCartQty');
                                                             $('#billingValue').load(' #billingValue');
+                                                            $('.item-price{{$i}}').load (' .item-price{{$i}}');
                                                             $('.inCart{{$i}}').load(' .inCart{{$i}}');
                                                         }
                                                     });
@@ -92,7 +94,7 @@
                                     </div>
                                 </td>
                                 <td class="invert">{{$product['item']['title']}}</td>
-                                <td class="invert">${{$product['item']['price'] * $product['qty']}}</td>
+                                <td class="invert item-price{{$i}}">${{$product['item']['price'] * $product['qty']}}</td>
                                 <td class="invert">
                                     <div class="rem">
                                         {{Form::submit('X', ['class' => 'btn btn-danger', 'id' => 'close'.$i])}}

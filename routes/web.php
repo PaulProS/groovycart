@@ -21,6 +21,7 @@ Route::get('/', function () {
 
 Route::get('mail', 'PagesController@getEmailForm');
 Route::post('sendEmail', 'PagesController@sendEmail');
+Route::post('subscribeMail', 'PagesController@subscribeMail');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin', 'HomeController@index')->name('admin');
 Route::get('/store/{id}', 'StoreController@category')->name('store');

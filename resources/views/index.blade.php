@@ -1,6 +1,11 @@
 @extends('layouts.bestStore.bstore')
 @section('content')
 <!-- banner -->
+@if (session('status'))
+    <div class="alert alert-success">
+        {{ session('status') }}
+    </div>
+@endif
 <div class="banner">
     <div class="container">
         <div class="banner-info animated wow zoomIn" data-wow-delay=".5s">
@@ -412,11 +417,11 @@
         <div class="newsletter animated wow slideInUp" data-wow-delay=".5s">
             <h3>Newsletter</h3>
             <p>Join us now to get all news and special offers.</p>
-            <form>
-                <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-                <input type="email" value="Enter your email address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your email address';}" required="">
-                <input type="submit" value="Join Us" >
-            </form>
+            {!! Form::open(['url' => 'subscribeMail', 'method' => 'POST']) !!}
+            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+            {!! Form::email('email', null, ['placeholder' => 'Enter your email address', 'required']) !!}
+            {!! Form::submit('Join Us') !!}
+            {!! Form::close() !!}
         </div>
     </div>
 </div>
