@@ -11,43 +11,18 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-
 use App\Category;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Http\Request;
 
 Route::get('/', function () {
     return view('index');
 })->name('index');
 
-Route::get('mail', function(){
-    return view('mail');
-});
-
-Route::post('sendEmail', function(Request $request){
-    $data = array(
-
-        'name' => $request->name,
-        'email' => $request->email,
-        'subject' => $request->subject,
-        'messageBody' => $request->message
-
-    );
-    Mail::send('emails.contact', $data, function ($message) use ($data){
-        $message->from($data['email']);
-        $message->to('iamlearning13@gmail.com');
-        $message->subject($data['subject']);
-    });
-});
-
+Route::get('mail', 'PagesController@getEmailForm');
+Route::post('sendEmail', 'PagesController@sendEmail');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin', 'HomeController@index')->name('admin');
-
 Route::get('/store/{id}', 'StoreController@category')->name('store');
 Route::get('/product/{id}', 'StoreController@viewProduct')->name('product');
 Route::get('/search', 'StoreController@getSearch')->name('search');
