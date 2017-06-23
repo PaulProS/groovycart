@@ -120,7 +120,7 @@
                         </div>
                         <div class="clearfix"> </div>
                     </div>
-                    <div class="products-right-grids-position animated wow slideInUp" data-wow-delay=".5s">
+                    <div class="products-right-grids-position">
                         <img src="{{$category->photo ? $category->photo->photo : ""}}" alt=" " class="img-responsive" />
                         <div class="products-right-grids-position1">
                             <h4>2017 New Collection</h4>

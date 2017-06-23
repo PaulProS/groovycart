@@ -12,7 +12,7 @@
     <div class="breadcrumbs">
         <div class="container">
             <ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
-                <li><a href="/home"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+                <li><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
                 <li class="active">Mail Us</li>
             </ol>
         </div>
@@ -30,17 +30,17 @@
                     {!! Form::text('name', null, ['placeholder' => 'Name', 'required']) !!}
                     {!! Form::email('email', null, ['placeholder' => 'Email', 'required']) !!}
                     {!! Form::text('subject', null, ['placeholder' => 'Subject', 'required']) !!}
-                    {!! Form::textarea('message', null, ['placeholder' => 'Message...', 'required']) !!}
+                    {!! Form::textarea('message', null, ['placeholder' => 'Message...', 'required', 'rows' => 5]) !!}
                     {!! Form::submit('Send') !!}
                     {!! Form::close() !!}
                 </div>
                 <div class="col-md-4 mail-grid-right animated wow slideInRight" data-wow-delay=".5s">
                     <div class="mail-grid-right1">
                         <img src="{{asset("/images/3.png")}}" alt=" " class="img-responsive" />
-                        <h4>Rita Williumson <span>Manager</span></h4>
+                        <h4>Mr Paul<span>Manager</span></h4>
                         <ul class="phone-mail">
-                            <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>Phone: +1234 567 893</li>
-                            <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>Email: <a href="mailto:info@example.com">info@example.com</a></li>
+                            <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>Phone: +91 9999 999 999</li>
+                            <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>Email: <a href="mailto:iamlearning13@gmail.com">iamlearning13@gmail.com</a></li>
                         </ul>
                         <ul class="social-icons">
                             <li><a href="https://www.facebook.com/" target="_blank" class="facebook"></a></li>
