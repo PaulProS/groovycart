@@ -36,4 +36,21 @@ class Cart
         $this->totalPrice -= $this->items[$id]['price'];
         unset($this->items[$id]);
     }
+
+    public function decreaseQuantity($id){
+        if ($this->items[$id]['qty'] > 1){
+            $this->items[$id]['qty'] -= 1;
+            $this->totalQty -= 1;
+            $this->totalPrice -= $this->items[$id]['price'];
+        }
+    }
+
+    public function increaseQuantity($id, $product){
+        if($this->items[$id]['qty'] < $product['stock']){
+            $this->items[$id]['qty'] += 1;
+            $this->totalQty += 1;
+            $this->totalPrice += $this->items[$id]['price'];
+        }
+
+    }
 }

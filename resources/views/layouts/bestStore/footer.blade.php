@@ -4,15 +4,14 @@
         <div class="footer-grids">
             <div class="col-md-3 footer-grid">
                 <h3>About Us</h3>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse.<span>Excepteur sint occaecat cupidatat
-						non proident, sunt in culpa qui officia deserunt mollit.</span></p>
+                <p>Best store sells premium quality products. We are providing a wide variety of men's women's and kid's collection from various top level brands.</span></p>
             </div>
             <div class="col-md-3 footer-grid">
                 <h3>Contact Info</h3>
                 <ul>
                     <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>1234k Avenue, 4th block, <span>New York City.</span></li>
-                    <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">info@example.com</a></li>
-                    <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 567</li>
+                    <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:iamlearning13@gmail.com">iamlearning13@gmail.com</a></li>
+                    <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+91 9999 999 999</li>
                 </ul>
             </div>
             <div class="col-md-3 footer-grid">
@@ -35,24 +34,6 @@
                 <div class="footer-grid-left">
                     <a href="single.html"><img src="{{asset("/images/14.jpg")}}" alt=" " class="img-responsive" /></a>
                 </div>
-                <div class="footer-grid-left">
-                    <a href="single.html"><img src="{{asset("/images/15.jpg")}}" alt=" " class="img-responsive" /></a>
-                </div>
-                <div class="footer-grid-left">
-                    <a href="single.html"><img src="{{asset("/images/16.jpg")}}" alt=" " class="img-responsive" /></a>
-                </div>
-                <div class="footer-grid-left">
-                    <a href="single.html"><img src="{{asset("/images/13.jpg")}}" alt=" " class="img-responsive" /></a>
-                </div>
-                <div class="footer-grid-left">
-                    <a href="single.html"><img src="{{asset("/images/14.jpg")}}" alt=" " class="img-responsive" /></a>
-                </div>
-                <div class="footer-grid-left">
-                    <a href="single.html"><img src="{{asset("/images/15.jpg")}}" alt=" " class="img-responsive" /></a>
-                </div>
-                <div class="footer-grid-left">
-                    <a href="single.html"><img src="{{asset("/images/16.jpg")}}" alt=" " class="img-responsive" /></a>
-                </div>
                 <div class="clearfix"> </div>
             </div>
             <div class="col-md-3 footer-grid">
@@ -63,16 +44,6 @@
                     </div>
                     <div class="footer-grid-sub-grid-right">
                         <h4><a href="single.html">culpa qui officia deserunt</a></h4>
-                        <p>Posted On 25/3/2016</p>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-                <div class="footer-grid-sub-grids">
-                    <div class="footer-grid-sub-grid-left">
-                        <a href="single.html"><img src="{{asset("/images/10.jpg")}}" alt=" " class="img-responsive" /></a>
-                    </div>
-                    <div class="footer-grid-sub-grid-right">
-                        <h4><a href="single.html">Quis autem vel eum iure</a></h4>
                         <p>Posted On 25/3/2016</p>
                     </div>
                     <div class="clearfix"> </div>

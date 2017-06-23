@@ -34,7 +34,6 @@ class StoreController extends Controller
     }   
 
     public function viewProduct($id){
-
         $product = Product::findOrFail($id);
         return view('single', compact('product'));
     }
@@ -46,11 +45,9 @@ class StoreController extends Controller
     }
 
     public function review(Request $request, $prodId, $userId){
-
         $input = $request->all();
         $input['user_id'] = $userId;
         $input['product_id'] = $prodId;
-
         Review::create($input);
         return redirect(route('product', $prodId));
     }
@@ -58,7 +55,6 @@ class StoreController extends Controller
     public function filter(){
         $minPrice = Input::get('minPrice');
         $maxPrice = Input::get('maxPrice');
-
         $products = Product::whereBetween('price', [$minPrice, $maxPrice])->get();
         return view('filter', compact('products'));
     }
@@ -71,8 +67,22 @@ class StoreController extends Controller
         $request->session()->put('cart', $cart);
     }
 
-    public function deleteCartItem($id){
+    public function decreaseByOne(Request $request, $id){
+        $oldCart = session('cart');
+        $oldCart->decreaseQuantity($id);
+        $cart = new Cart($oldCart);
+        $request->session()->put('cart', $cart);
+    }
+
+    public function increaseByOne(Request $request, $id){
         $product = Product::findOrFail($id);
+        $oldCart = session('cart');
+        $oldCart->increaseQuantity($id, $product);
+        $cart = new Cart($oldCart);
+        $request->session()->put('cart', $cart);
+    }
+
+    public function deleteCartItem($id){
         $cart = session('cart');
         $cart->removeItem($id);
         unset($cart->items[$id]);
@@ -88,4 +98,5 @@ class StoreController extends Controller
     public function emptyCart(){
         session()->forget('cart');
     }
+
 }

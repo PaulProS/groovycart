@@ -32,6 +32,8 @@ Route::get('/add-to-cart/{id}', 'StoreController@addToCart')->name('addCart');
 Route::get('/cart', 'StoreController@getCart')->name('cart');
 Route::get('/emptyCart', 'StoreController@emptyCart')->name('emptyCart');
 Route::get('/deleteCartItem/{id}', 'StoreController@deleteCartItem')->name('deleteCartItem');
+Route::get('decreaseByOne/{id}', 'StoreController@decreaseByOne');
+Route::get('increaseByOne/{id}', 'StoreController@increaseByOne');
 
 Route::group(['middleware' => 'admin'], function (){
     Route::resource('admin/users', 'AdminUserController');

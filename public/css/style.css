@@ -1369,7 +1369,7 @@ input#amount {
 .men-position-pos h4{
 	text-transform:uppercase;
 	font-size:2em;
-	color:#fff;
+	color:#212121;
 	margin:0;
 	padding-bottom:1em;
 	position:relative;
@@ -1385,7 +1385,7 @@ input#amount {
 }
 .men-position-pos h5{
 	margin:1em 0 0;
-	color:#fff;
+	color:#212121;
 	text-transform:uppercase;
 	font-size:2em;
 	text-align: center;
@@ -1788,10 +1788,22 @@ ul.wmuSliderPagination {
 	margin:0;
 }
 .description p{
-	font-size:14px;
-	color:#999;
-	line-height:1.8em;
-	margin:0.5em 0 0;
+    font-size:14px;
+    color:#999;
+    line-height:1.8em;
+    margin:0.5em 0 0;
+}
+.description p.stock-left{
+    font-size:14px;
+    color:#000000;
+    line-height:1.8em;
+    margin:0.5em 0 0;
+}
+.description label.order-stock{
+    font-size:14px;
+    color:#000000;
+    line-height:1.8em;
+    margin:0.5em 0 0;
 }
 .color-quality-left{
 	float:left;

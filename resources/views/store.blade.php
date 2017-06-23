@@ -63,7 +63,7 @@
                                         <div class="clearfix"> </div>
                                     </div>
                                     <div class="simpleCart_shelfItem new-products-grid-right-add-cart">
-                                        <p>Rs.{{$newArrival->price}}
+                                        <p>Rs.{{$newArrival->price}}<span></span>
                                             @if($newArrival->stock <= 0)
                                                 {!! Form::button('Out Of Stock', ['class' => 'btn btn-warning'])!!}
                                             @elseif($newArrival->stock > 0)
@@ -160,9 +160,8 @@
                                     </div>
                                 </div>
                                 <h4><a href="{{route('product', $product->id)}}">{{$product->title}}</a></h4>
-                                <p>{{$product->description}}</p>
                                 <div class="simpleCart_shelfItem products-right-grid1-add-cart">
-                                    <p><span class="item_price">Rs.{{$product->price}}</span>
+                                    <p><span class="item_price">Rs.{{$product->price}}</span><span></span>
                                         @if($product->stock <= 0)
                                             {!! Form::button('Out Of Stock', ['class' => 'btn btn-warning'])!!}
                                         @elseif($product->stock > 0)

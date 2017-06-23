@@ -33,7 +33,7 @@
         <!-- checkout -->
         <div class="checkout">
             <div class="container">
-                <div class="checkout-right animated wow slideInUp" data-wow-delay=".5s">
+                <div class="checkout-right">
                     <table class="timetable_sub">
                         <thead>
                         <tr>
@@ -54,10 +54,41 @@
                                 <td class="invert">
                                     <div class="quantity">
                                         <div class="quantity-select">
-                                            <div class="entry value-minus">&nbsp;</div>
-                                            <div class="entry value"><span>{{$product['qty']}}</span></div>
-                                            <div class="entry value-plus active">&nbsp;</div>
+                                            <div class="entry value-minus minus{{$i}}">&nbsp;</div>
+                                            <div class="entry value inCart{{$i}}"><span>{{$product['qty']}}</span></div>
+                                            <div class="entry value-plus plus{{$i}}">&nbsp;</div>
                                         </div>
+                                        <!--quantity-->
+                                        <script>
+                                            $(document).ready(function () {
+
+                                                $('.plus{{$i}}').on('click', function () {
+                                                    $.ajax({
+                                                        url: "increaseByOne/{{$product['item']['id']}}",
+                                                        success:function () {
+                                                            $('#totalCartPrice').load(' #totalCartPrice');
+                                                            $('#totalCartQty').load(' #totalCartQty');
+                                                            $('#billingValue').load(' #billingValue');
+                                                            $('.inCart{{$i}}').load(' .inCart{{$i}}');
+                                                        }
+                                                    });
+                                                });
+
+                                                $('.minus{{$i}}').on('click', function () {
+                                                    $.ajax({
+                                                        url: "decreaseByOne/{{$product['item']['id']}}",
+                                                        success:function () {
+                                                            $('#totalCartPrice').load(' #totalCartPrice');
+                                                            $('#totalCartQty').load(' #totalCartQty');
+                                                            $('#billingValue').load(' #billingValue');
+                                                            $('.inCart{{$i}}').load(' .inCart{{$i}}');
+                                                        }
+                                                    });
+                                                });
+
+                                            });
+                                        </script>
+                                        <!--quantity-->
                                     </div>
                                 </td>
                                 <td class="invert">{{$product['item']['title']}}</td>
@@ -77,43 +108,27 @@
                                                             $('.rem{{$i}}').remove();
                                                             $('#totalCartPrice').load(' #totalCartPrice');
                                                             $('#totalCartQty').load(' #totalCartQty');
-                                                            $('#discount').load(' #discount');
                                                             $('#billingValue').load(' #billingValue');
                                                         });
                                                     }
-                                                })
+                                                });
                                             });
                                         });
                                     </script>
                                 </td>
                             </tr>
                     @endforeach
-
-                    <!--quantity-->
-                        <script>
-                            $('.value-plus').on('click', function(){
-                                var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)+1;
-                                divUpd.text(newVal);
-                            });
-
-                            $('.value-minus').on('click', function(){
-                                var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)-1;
-                                if(newVal>=1) divUpd.text(newVal);
-                            });
-                        </script>
-                        <!--quantity-->
                     </table>
                 </div>
                 <div class="checkout-left">
                     <div class="checkout-left-basket">
-                        <h4>Continue to basket</h4>
+                        <h4>Proceed To Pay</h4>
                         <ul>
-                            <li>Service Charges @ 15% <i>-</i> <span id="discount">${{(session()->get('cart')->totalPrice)*15/100}}</span></li>
-                            <li>Total <i>-</i> <span id="billingValue">${{session()->get('cart')->totalPrice + (session()->get('cart')->totalPrice)*15/100}}</span></li>
+                            <li>Total Payable Amount : <span id="billingValue">${{session()->get('cart')->totalPrice}}</span></li>
                         </ul>
                     </div>
                     <div class="checkout-right-basket animated wow slideInRight" data-wow-delay=".5s">
-                        <a href=""><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Continue Shopping</a>
+                        <a href=""><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Shop More Products</a>
                     </div>
                     <div class="clearfix"> </div>
                 </div>
