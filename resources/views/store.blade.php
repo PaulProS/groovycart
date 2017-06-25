@@ -188,7 +188,7 @@
                     @endforeach
                     <div class="clearfix"></div>
                 </div>
-                <nav class="numbering animated wow slideInUp" data-wow-delay=".5s">
+                <nav class="numbering">
                     <ul class="pagination paging">
                         <li>
                             <a href="#" aria-label="Previous">

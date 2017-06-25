@@ -71,6 +71,7 @@
                                                             $('#billingValue').load(' #billingValue');
                                                             $('.item-price{{$i}}').load (' .item-price{{$i}}');
                                                             $('.inCart{{$i}}').load(' .inCart{{$i}}');
+                                                            {{--$('.rem{{$i}}').load(' .rem{{$i}}');--}}
                                                         }
                                                     });
                                                 });
@@ -84,6 +85,7 @@
                                                             $('#billingValue').load(' #billingValue');
                                                             $('.item-price{{$i}}').load (' .item-price{{$i}}');
                                                             $('.inCart{{$i}}').load(' .inCart{{$i}}');
+                                                            {{--$('.rem{{$i}}').load(' .rem{{$i}}');--}}
                                                         }
                                                     });
                                                 });
@@ -111,6 +113,7 @@
                                                             $('#totalCartPrice').load(' #totalCartPrice');
                                                             $('#totalCartQty').load(' #totalCartQty');
                                                             $('#billingValue').load(' #billingValue');
+//                                                            $('.timetable_sub').load(' .timetable_sub');
                                                         });
                                                     }
                                                 });
