@@ -65,12 +65,16 @@
                                                 $('.plus{{$i}}').on('click', function () {
                                                     $.ajax({
                                                         url: "increaseByOne/{{$product['item']['id']}}",
-                                                        success:function () {
-                                                            $('#totalCartPrice').load(' #totalCartPrice');
-                                                            $('#totalCartQty').load(' #totalCartQty');
-                                                            $('#billingValue').load(' #billingValue');
-                                                            $('.item-price{{$i}}').load (' .item-price{{$i}}');
-                                                            $('.inCart{{$i}}').load(' .inCart{{$i}}');
+                                                        success:function (responseJson) {
+                                                            responseJson = JSON.parse(responseJson);  // converting string response to jason
+                                                            cartItem = responseJson.items["{{$product['item']['id']}}"]; // responseJason.items["2"]
+                                                            
+                                                            $('.inCart{{$i}} > span').text(cartItem.qty);
+                                                            $('#billingValue').text('$'+ responseJson.totalPrice);
+
+                                                            {{--$('#totalCartPrice').load(' #totalCartPrice');--}}
+                                                            {{--$('#totalCartQty').load(' #totalCartQty');--}}
+                                                            {{--$('.item-price{{$i}}').load (' .item-price{{$i}}');--}}
                                                             {{--$('.rem{{$i}}').load(' .rem{{$i}}');--}}
                                                         }
                                                     });

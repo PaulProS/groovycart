@@ -80,6 +80,8 @@ class StoreController extends Controller
         $oldCart->increaseQuantity($id, $product);
         $cart = new Cart($oldCart);
         $request->session()->put('cart', $cart);
+        echo json_encode(session()->get('cart'));
+
     }
 
     public function deleteCartItem($id){
