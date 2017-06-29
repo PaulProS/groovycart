@@ -68,14 +68,11 @@
                                                         success:function (responseJson) {
                                                             responseJson = JSON.parse(responseJson);  // converting string response to jason
                                                             cartItem = responseJson.items["{{$product['item']['id']}}"]; // responseJason.items["2"]
-                                                            
                                                             $('.inCart{{$i}} > span').text(cartItem.qty);
-                                                            $('#billingValue').text('$'+ responseJson.totalPrice);
-
-                                                            {{--$('#totalCartPrice').load(' #totalCartPrice');--}}
-                                                            {{--$('#totalCartQty').load(' #totalCartQty');--}}
-                                                            {{--$('.item-price{{$i}}').load (' .item-price{{$i}}');--}}
-                                                            {{--$('.rem{{$i}}').load(' .rem{{$i}}');--}}
+                                                            $('#billingValue').text(responseJson.totalPrice);
+                                                            $('.item-price{{$i}}').text(cartItem.price * cartItem.qty);
+                                                            $('#totalCartPrice').text(responseJson.totalPrice);
+                                                            $('#totalCartQty').text(responseJson.totalQty);
                                                         }
                                                     });
                                                 });
@@ -83,13 +80,14 @@
                                                 $('.minus{{$i}}').on('click', function () {
                                                     $.ajax({
                                                         url: "decreaseByOne/{{$product['item']['id']}}",
-                                                        success:function () {
-                                                            $('#totalCartPrice').load(' #totalCartPrice');
-                                                            $('#totalCartQty').load(' #totalCartQty');
-                                                            $('#billingValue').load(' #billingValue');
-                                                            $('.item-price{{$i}}').load (' .item-price{{$i}}');
-                                                            $('.inCart{{$i}}').load(' .inCart{{$i}}');
-                                                            {{--$('.rem{{$i}}').load(' .rem{{$i}}');--}}
+                                                        success:function (responseJson) {
+                                                            responseJson = JSON.parse(responseJson); //Converting string response to json
+                                                            cartItem = responseJson.items["{{$product['item']['id']}}"]; //responseJson.items["2"];
+                                                            $('.inCart{{$i}} > span').text(cartItem.qty);
+                                                            $('#billingValue').text(responseJson.totalPrice);
+                                                            $('.item-price{{$i}}').text(cartItem.price * cartItem.qty);
+                                                            $('#totalCartPrice').text(responseJson.totalPrice);
+                                                            $('#totalCartQty').text(responseJson.totalQty);
                                                         }
                                                     });
                                                 });
@@ -100,7 +98,7 @@
                                     </div>
                                 </td>
                                 <td class="invert">{{$product['item']['title']}}</td>
-                                <td class="invert item-price{{$i}}">${{$product['item']['price'] * $product['qty']}}</td>
+                                <td class="invert item-price{{$i}}">{{$product['item']['price'] * $product['qty']}}</td>
                                 <td class="invert">
                                     <div class="rem">
                                         {{Form::submit('X', ['class' => 'btn btn-danger', 'id' => 'close'.$i])}}
@@ -133,7 +131,7 @@
                     <div class="checkout-left-basket">
                         <h4>Proceed To Pay</h4>
                         <ul>
-                            <li>Total Payable Amount : <span id="billingValue">${{session()->get('cart')->totalPrice}}</span></li>
+                            <li>Total Payable Amount : <span id="billingValue">{{session()->get('cart')->totalPrice}}</span></li>
                         </ul>
                     </div>
                     <div class="checkout-right-basket animated wow slideInRight" data-wow-delay=".5s">

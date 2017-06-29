@@ -72,6 +72,7 @@ class StoreController extends Controller
         $oldCart->decreaseQuantity($id);
         $cart = new Cart($oldCart);
         $request->session()->put('cart', $cart);
+        return json_encode(session()->get('cart'));
     }
 
     public function increaseByOne(Request $request, $id){
@@ -80,8 +81,7 @@ class StoreController extends Controller
         $oldCart->increaseQuantity($id, $product);
         $cart = new Cart($oldCart);
         $request->session()->put('cart', $cart);
-        echo json_encode(session()->get('cart'));
-
+        return json_encode(session()->get('cart'));
     }
 
     public function deleteCartItem($id){
