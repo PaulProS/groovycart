@@ -65,6 +65,7 @@ class StoreController extends Controller
         $cart = new Cart($oldCart);
         $cart->add($product, $product->id);
         $request->session()->put('cart', $cart);
+        return json_encode(session()->get('cart'));
     }
 
     public function decreaseByOne(Request $request, $id){

@@ -96,6 +96,9 @@
                         {!! Form::label('Quantity : ', null, ['class' => 'order-stock']) !!}
                         {!! Form::text('Qty', 1, ['class' => 'order-stock']) !!}
                     </div>
+                    <div class="addAlert alert alert-success collapse">
+                        Product Added
+                    </div>
                     <div class="occasion-cart">
                         <p>
                             @if($product->stock <= 0)
@@ -112,7 +115,10 @@
                                         success:function(){
                                             $('#totalCartPrice').load(' #totalCartPrice');
                                             $('#totalCartQty').load(' #totalCartQty');
-                                            alert("Product Added");
+                                            $('.addAlert').show('fade');
+                                            setTimeout(function () {
+                                               $('.addAlert').hide('fade');
+                                            }, 3000);
                                         }
                                     });
                                 });

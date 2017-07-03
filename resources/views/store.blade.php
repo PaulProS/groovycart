@@ -62,6 +62,9 @@
                                         </div>
                                         <div class="clearfix"> </div>
                                     </div>
+                                    <div class="addAlertN{{$newArrival->id}} alert alert-success collapse">
+                                        Product Added
+                                    </div>
                                     <div class="simpleCart_shelfItem new-products-grid-right-add-cart">
                                         <p>Rs.{{$newArrival->price}}<span></span>
                                             @if($newArrival->stock <= 0)
@@ -78,7 +81,10 @@
                                                         success:function(){
                                                             $('#totalCartPrice').load(' #totalCartPrice');
                                                             $('#totalCartQty').load(' #totalCartQty');
-                                                            alert("Product Added");
+                                                            $('.addAlertN{{$newArrival->id}}').show('fade');
+                                                            setTimeout(function () {
+                                                                $('.addAlertN{{$newArrival->id}}').hide('fade');
+                                                            }, 3000);
                                                         }
                                                     });
                                                 });
@@ -159,6 +165,9 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="addAlert{{$product->id}} alert alert-success collapse">
+                                    Product Added
+                                </div>
                                 <h4><a href="{{route('product', $product->id)}}">{{$product->title}}</a></h4>
                                 <div class="simpleCart_shelfItem products-right-grid1-add-cart">
                                     <p><span class="item_price">Rs.{{$product->price}}</span><span></span>
@@ -173,10 +182,14 @@
                                             $('#addToCart{{$product->id}}').click(function() {
                                                 $.ajax({
                                                     url:"/add-to-cart/{{$product->id}}",
-                                                    success:function(){
-                                                        $('#totalCartPrice').load(' #totalCartPrice');
-                                                        $('#totalCartQty').load(' #totalCartQty');
-                                                        alert("Product Added");
+                                                    success:function(responseJson){
+                                                        responseJson = JSON.parse(responseJson); //Converting string output to JSON format
+                                                        $('#totalCartPrice').text(responseJson.totalPrice);
+                                                        $('#totalCartQty').text(responseJson.totalQty);
+                                                        $('.addAlert{{$product->id}}').show('fade');
+                                                        setTimeout(function () {
+                                                            $('.addAlert{{$product->id}}').hide('fade');
+                                                        }, 3000);
                                                     }
                                                 });
                                             });
