@@ -15,10 +15,7 @@ use App\Category;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('index');
-})->name('index');
-
+Route::get('/', 'PagesController@index')->name('index');
 Route::get('mail', 'PagesController@getEmailForm');
 Route::post('sendEmail', 'PagesController@sendEmail');
 Route::post('subscribeMail', 'PagesController@subscribeMail');

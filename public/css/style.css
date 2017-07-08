@@ -679,6 +679,7 @@ p.est{
     text-transform: uppercase;
     display: block;
     text-decoration: none;
+    text-align: center;
 }
 .new-collections-grid1 h4 a:hover{
 	color:#D8703F;
@@ -724,6 +725,7 @@ p.est{
     text-transform: capitalize;
     color: #000;
     font-size:1.2em !important;
+    text-align: center;
 }
 .new-collections {
     background: #F7F7F9;

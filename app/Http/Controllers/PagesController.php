@@ -2,11 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class PagesController extends Controller
 {
+
+    public function index(){
+        $newCollection = $newProducts = Product::orderBy('created_at', 'desc')->take(4)->get();
+        return view('index', compact('newCollection'));
+    }
+
+    //Function to send email from Mail Us Page
     public function sendEmail(Request $request){
         $data = array(
             'name' => $request->name,
@@ -22,6 +30,7 @@ class PagesController extends Controller
         return redirect('mail')->with('status', 'Your Details Are Submitted');
     }
 
+    //Function to send email from Newsletter SignUp from index/homepage
     public function subscribeMail(Request $request){
         $data = array(
           'email' => $request->email
