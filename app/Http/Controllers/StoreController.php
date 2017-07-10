@@ -28,7 +28,7 @@ class StoreController extends Controller
 
         $subCategories = Category::whereIn('id', $catIds)->get();
         $category = Category::findOrFail($catIds[0]);
-        $products = Product::whereIn('category_id', $catIds)->get();
+        $products = Product::whereIn('category_id', $catIds)->paginate(9);
         $newProducts = Product::whereIn('category_id', $catIds)->orderBy('created_at', 'desc')->take(2)->get();
         return view('store', compact('products', 'newProducts', 'category', 'subCategories'));
     }   

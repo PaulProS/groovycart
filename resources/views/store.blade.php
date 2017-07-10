@@ -139,7 +139,7 @@
                 <div class="products-right-grids-bottom">
                    @foreach($products as $product)
                         <div class="col-md-4 products-right-grids-bottom-grid">
-                            <div class="new-collections-grid1 products-right-grid1 animated wow slideInUp" data-wow-delay=".5s">
+                            <div class="new-collections-grid1 products-right-grid1">
                                 <div class="new-collections-grid1-image">
                                     <a href="{{route('product', $product->id)}}" class="product-image"><img src="{{$product->photo ? $product->photo->photo : "http://www.placehold.it/50X50"}}" alt=" " class="img-responsive"></a>
                                     <div class="new-collections-grid1-image-pos products-right-grids-pos">
@@ -201,25 +201,7 @@
                     @endforeach
                     <div class="clearfix"></div>
                 </div>
-                <nav class="numbering">
-                    <ul class="pagination paging">
-                        <li>
-                            <a href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <li class="active"><a href="#">1<span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li>
-                            <a href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                {{$products->links()}}
             </div>
             <div class="clearfix"> </div>
         </div>
