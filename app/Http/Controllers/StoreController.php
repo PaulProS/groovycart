@@ -14,7 +14,7 @@ use Symfony\Component\HttpFoundation\Session\Session;
 class StoreController extends Controller
 {
 
-    public function category($id){
+    public function store(Request $request, $id){
 
         global $catIds;
         $catIds[] = (int) $id;
@@ -22,7 +22,7 @@ class StoreController extends Controller
         if(count(Category::where('parent_id', $id)->get())){
             $cats = Category::where('parent_id', $id)->get();
             foreach ($cats as $child){
-                $this->category($child->id);
+                $this->store($request, $child->id);
             }
         }
 
@@ -30,6 +30,11 @@ class StoreController extends Controller
         $category = Category::findOrFail($catIds[0]);
         $products = Product::whereIn('category_id', $catIds)->paginate(9);
         $newProducts = Product::whereIn('category_id', $catIds)->orderBy('created_at', 'desc')->take(2)->get();
+
+        if ($request->ajax()) {
+            return view('partials.products', ['products' => $products], compact('products', 'newProducts', 'category', 'subCategories'))->render();
+        }
+
         return view('store', compact('products', 'newProducts', 'category', 'subCategories'));
     }   
 
@@ -56,7 +61,7 @@ class StoreController extends Controller
         $minPrice = Input::get('minPrice');
         $maxPrice = Input::get('maxPrice');
         $products = Product::whereBetween('price', [$minPrice, $maxPrice])->get();
-        return view('filter', compact('products'));
+        return json_encode($products);
     }
 
     public function addToCart(Request $request, $id){
@@ -89,6 +94,7 @@ class StoreController extends Controller
         $cart = session('cart');
         $cart->removeItem($id);
         unset($cart->items[$id]);
+        return json_encode(session()->get('cart'));
     }
 
     public function getCart(){

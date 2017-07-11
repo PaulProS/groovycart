@@ -61,7 +61,6 @@
                                         <!--quantity-->
                                         <script>
                                             $(document).ready(function () {
-
                                                 $('.plus{{$i}}').on('click', function () {
                                                     $.ajax({
                                                         url: "increaseByOne/{{$product['item']['id']}}",
@@ -102,21 +101,20 @@
                                 <td class="invert">
                                     <div class="rem">
                                         {{Form::submit('X', ['class' => 'btn btn-danger', 'id' => 'close'.$i])}}
-                                        {{--<a href="{{route('deleteCartItem', $product['item']['id'])}}" class="btn btn-danger">X</a>--}}
                                     </div>
                                     <script>
                                         $(document).ready(function() {
                                             $('#close{{$i}}').on('click', function(){
                                                 $.ajax({
                                                     url: "/deleteCartItem/{{$product['item']['id']}}",
-                                                    success:function () {
+                                                    success:function (responseJson) {
+                                                        responseJson = JSON.parse(responseJson); //Converting string response to json
                                                         $('.rem{{$i}}').fadeOut('slow', function(){
                                                             $('.rem{{$i}}').remove();
-                                                            $('#totalCartPrice').load(' #totalCartPrice');
-                                                            $('#totalCartQty').load(' #totalCartQty');
-                                                            $('#billingValue').load(' #billingValue');
-//                                                            $('.timetable_sub').load(' .timetable_sub');
-                                                        });
+                                                            $('#totalCartPrice').text(responseJson.totalPrice);
+                                                            $('#totalCartQty').text(responseJson.totalQty);
+                                                            $('#billingValue').text(responseJson.totalPrice);
+                                                      });
                                                     }
                                                 });
                                             });

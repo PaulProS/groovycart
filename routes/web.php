@@ -21,7 +21,7 @@ Route::post('sendEmail', 'PagesController@sendEmail');
 Route::post('subscribeMail', 'PagesController@subscribeMail');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin', 'HomeController@index')->name('admin');
-Route::get('/store/{id}', 'StoreController@category')->name('store');
+Route::get('/store/{id}', 'StoreController@store')->name('store');
 Route::get('/product/{id}', 'StoreController@viewProduct')->name('product');
 Route::get('/search', 'StoreController@getSearch')->name('search');
 Route::get('/review/{prodId}/{userId}', 'StoreController@review')->name('review');
