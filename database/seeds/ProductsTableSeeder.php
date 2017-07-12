@@ -75,7 +75,7 @@ class ProductsTableSeeder extends Seeder
         $product = new Product;
         $product->photo_id = 6;
         $product->category_id = 6;
-        $product->title = "Rough & Tough Shoes";
+        $product->title = "Rough Tough Shoes";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->price = "500";
@@ -171,7 +171,7 @@ class ProductsTableSeeder extends Seeder
         $product = new Product;
         $product->photo_id = 38;
         $product->category_id = 5;
-        $product->title = "Black Leather Wallet";
+        $product->title = "Blk Leather Wallet";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->price = "500";
@@ -231,7 +231,7 @@ class ProductsTableSeeder extends Seeder
         $product = new Product;
         $product->photo_id = 43;
         $product->category_id = 4;
-        $product->title = "Premium Maroon Trouser";
+        $product->title = "Maroon Trouser";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->price = "500";
@@ -243,7 +243,7 @@ class ProductsTableSeeder extends Seeder
         $product = new Product;
         $product->photo_id = 44;
         $product->category_id = 4;
-        $product->title = "Premium Formal Trouser";
+        $product->title = "Formal Trouser";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->price = "500";
@@ -255,7 +255,7 @@ class ProductsTableSeeder extends Seeder
         $product = new Product;
         $product->photo_id = 45;
         $product->category_id = 4;
-        $product->title = "Premium Formal Trouser";
+        $product->title = "Formal Trouser";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->price = "500";
