@@ -36,9 +36,11 @@ Route::get('increaseByOne/{id}', 'StoreController@increaseByOne');
 Route::group(['middleware' => 'admin'], function (){
     Route::resource('admin/users', 'AdminUserController');
     Route::resource('admin/products', 'AdminProductsController');
+    Route::get('featured', 'AdminProductsController@setFeatured');
     Route::resource('admin/categories', 'AdminCategoriesController');
     Route::resource('admin/brands', 'AdminBrandsController');
-    Route::get('featured', 'AdminProductsController@setFeatured');
+    Route::resource('admin/reviews', 'AdminReviewController');
+    Route::get('approve/{id}', 'AdminReviewController@approve')->name('approve');
 });
 
 Auth::routes();

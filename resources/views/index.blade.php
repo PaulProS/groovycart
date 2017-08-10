@@ -175,6 +175,8 @@
     </div>
 </div>
 <!-- //collections -->
+@if($featured)
+
 <!-- new-timer -->
 <div class="timer">
     <div class="container">
@@ -243,6 +245,9 @@
     </div>
 </div>
 <!-- //new-timer -->
+
+@endif
+
 <!-- collections-bottom -->
 <div class="collections-bottom">
     <div class="container">

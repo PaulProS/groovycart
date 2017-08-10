@@ -20,6 +20,7 @@ class CreateReviewsTable extends Migration
             $table->integer('rating')->nullable();
             $table->string('subject');
             $table->text('message');
+            $table->boolean('approved')->unsigned()->default(0);
             $table->timestamps();
         });
     }
