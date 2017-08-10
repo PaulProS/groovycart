@@ -38,6 +38,7 @@ Route::group(['middleware' => 'admin'], function (){
     Route::resource('admin/products', 'AdminProductsController');
     Route::resource('admin/categories', 'AdminCategoriesController');
     Route::resource('admin/brands', 'AdminBrandsController');
+    Route::get('featured', 'AdminProductsController@setFeatured');
 });
 
 Auth::routes();

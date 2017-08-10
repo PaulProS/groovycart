@@ -180,7 +180,7 @@
     <div class="container">
         <div class="timer-grids">
             <div class="col-md-8 timer-grid-left">
-                <h3><a href="products.html">sunt in culpa qui officia deserunt mollit</a></h3>
+                <h3><a href="products.html">{{$featured->title}}</a></h3>
                 <div class="rating">
                     <div class="rating-left">
                         <img src="images/2.png" alt=" " class="img-responsive" />
@@ -200,20 +200,39 @@
                     <div class="clearfix"> </div>
                 </div>
                 <div class="new-collections-grid1-left simpleCart_shelfItem timer-grid-left-price">
-                    <p><i>$580</i> <span class="item_price">$550</span></p>
-                    <h4>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
-                        nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit
-                        qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui
-                        dolorem eum fugiat quo voluptas nulla pariatur.</h4>
-                    <p><a class="item_add timer_add" href="#">add to cart </a></p>
+                    <p><span class="item_price">{{$featured->price}}</span></p>
+                    <h4>{{$featured->description}}</h4>
+                    @if($featured->stock <= 0)
+                        {!! Form::button('Out Of Stock', ['class' => 'btn btn-warning'])!!}
+                    @elseif($featured->stock > 0)
+                        {!! Form::submit('Add To Cart', ['class' => 'btn btn-warning', 'id' => 'addToCartNew'.$featured->id])!!}
+                    @endif
                 </div>
+                <script>
+                    $(document).ready(function () {
+                        $('#addToCartNew{{$featured->id}}').click(function() {
+                            $.ajax({
+                                url:"/add-to-cart/{{$featured->id}}",
+                                success:function(){
+                                    $('#totalCartPrice').load(' #totalCartPrice');
+                                    $('#totalCartQty').load(' #totalCartQty');
+                                    $('.addAlertN{{$featured->id}}').show('fade');
+                                    setTimeout(function () {
+                                        $('.addAlertN{{$featured->id}}').hide('fade');
+                                    }, 3000);
+                                    $('#addToCartNew{{$featured->id}}').hide();
+                                }
+                            });
+                        });
+                    });
+                </script>
                 <div id="counter"> </div>
                 <script src="{{asset("/js/jquery.countdown.js")}}"></script>
                 <script src="{{asset("/js/script.js")}}"></script>
             </div>
             <div class="col-md-4 timer-grid-right">
                 <div class="timer-grid-right1">
-                    <img src="images/17.jpg" alt=" " class="img-responsive" />
+                    <img src="{{$featured->photo->photo}}" alt=" " class="img-responsive" />
                     <div class="timer-grid-right-pos">
                         <h4>Special Offer</h4>
                     </div>

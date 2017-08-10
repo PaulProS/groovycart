@@ -11,7 +11,8 @@ class PagesController extends Controller
 
     public function index(){
         $newCollection = $newProducts = Product::orderBy('created_at', 'desc')->take(4)->get();
-        return view('index', compact('newCollection'));
+        $featured = Product::where('featured', 1)->first();
+        return view('index', compact('newCollection', 'featured'));
     }
 
     //Function to send email from Mail Us Page

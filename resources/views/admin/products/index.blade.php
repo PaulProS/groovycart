@@ -7,6 +7,12 @@
         <div class="box-header with-border">
             <a href="{{route('products.create')}}"><i class="fa fa-plus-square"></i>Create New Product</a>
 
+            {!! Form::open(['method' => 'get', 'action' => ['AdminProductsController@setFeatured']]) !!}
+            {!! Form::label('id', 'Featured') !!}
+            {!! Form::select('id',$fProducts, null) !!}
+            {!! Form::submit('Set Featured') !!}
+            {!! Form::close() !!}
+
             <div class="box-tools">
                 <div class="input-group input-group-sm" style="width: 150px;">
 

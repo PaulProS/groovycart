@@ -15,12 +15,31 @@ class AdminProductsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function setFeatured(){
+        $id = $_GET['id'];
+
+        $newProduct = Product::findOrFail($id);
+        $oldProduct = Product::where('featured', '1')->first();
+
+        if ($newProduct){
+            $newProduct->featured = 1;
+            $newProduct->save();
+        }
+
+        if ($oldProduct){
+            $oldProduct->featured = 0;
+            $oldProduct->save();
+        }
+
+        return redirect('admin/products');
+
+    }
     public function index()
     {
 
         $products = Product::all();
-
-        return view('admin.products.index', compact('products'));
+        $fProducts = Product::pluck('title', 'id');
+        return view('admin.products.index', compact('products', 'fProducts'));
 
     }
 

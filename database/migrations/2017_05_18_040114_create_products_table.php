@@ -25,6 +25,7 @@ class CreateProductsTable extends Migration
             $table->integer('rating')->unsigned()->nullable();
             $table->integer('stock')->unsigned()->nullable()->default(0);
             $table->boolean('is_active')->unsigned()->default(0);
+            $table->boolean('featured')->unsigned()->default(0);
             $table->timestamps();
         });
     }
