@@ -202,7 +202,7 @@
                     <div class="clearfix"> </div>
                 </div>
                 <div class="new-collections-grid1-left simpleCart_shelfItem timer-grid-left-price">
-                    <p><span class="item_price">{{$featured->price}}</span></p>
+                    <p>Rs. <span class="item_price">{{$featured->price}}</span></p>
                     <h4>{{$featured->description}}</h4>
                     @if($featured->stock <= 0)
                         {!! Form::button('Out Of Stock', ['class' => 'btn btn-warning'])!!}

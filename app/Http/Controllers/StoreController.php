@@ -38,17 +38,20 @@ class StoreController extends Controller
         return view('store', compact('products', 'newProducts', 'category', 'subCategories'));
     }   
 
+    //Viewing a single product details page
     public function viewProduct($id){
         $product = Product::findOrFail($id);
         return view('single', compact('product'));
     }
 
+    //Get products searched by a specific keyword
     public function getSearch(){
         $keyword = Input::get('keyword');
         $products = Product::where('title', 'LIKE', '%'.$keyword.'%')->get();
         return view('search',  compact('products', 'keyword'));
     }
 
+    //Adding new review
     public function review(Request $request, $prodId, $userId){
         $input = $request->all();
         $input['user_id'] = $userId;
@@ -57,6 +60,7 @@ class StoreController extends Controller
         return redirect(route('product', $prodId));
     }
 
+    //Filter product withing a specified price range
     public function filter(){
         $minPrice = Input::get('minPrice');
         $maxPrice = Input::get('maxPrice');
@@ -64,6 +68,15 @@ class StoreController extends Controller
         return json_encode($products);
     }
 
+    //Sorting products as specified (By Price, Rating)
+    public function sortProducts($id){
+        if($id == 1){
+            $products = Product::orderBy('price')->get();
+            return json_encode($products);
+        }
+    }
+
+    //Adding product in the cart
     public function addToCart(Request $request, $id){
         $product = Product::findOrFail($id);
         $oldCart = session()->has('cart') ? session()->get('cart') : null;

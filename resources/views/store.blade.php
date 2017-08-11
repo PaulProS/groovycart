@@ -16,6 +16,33 @@
     <div class="products">
         <div class="container">
             <div class="col-md-4 products-left">
+
+                <div class="filter-price animated wow slideInUp" data-wow-delay=".5s">
+                    <h3>Filter By Price</h3>
+                    <ul class="dropdown-menu1">
+                        <li><a href="">
+                                <div id="slider-range"></div>
+                                <input type="text" id="amount" style="border: 0" />
+                            </a></li>
+                    </ul>
+                    <script type='text/javascript'>//<![CDATA[
+                        $(window).load(function(){
+                            $("#slider-range").slider({
+                                range: true,
+                                min: 0,
+                                max: 100000,
+                                values: [ 100, 10000 ],
+                                slide: function( event, ui ) {  $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+                                }
+                            });
+                            $( "#amount" ).val( "$" + $("#slider-range").slider( "values", 0 ) + " - $" + $("#slider-range").slider( "values", 1 ) );
+
+                        });//]]>
+                    </script>
+                    <script type="text/javascript" src={{asset("/js/jquery-ui.min.js")}}></script>
+                    <!---->
+                </div>
+
                 <div class="filter-price">
                     <h3>Filter By Price</h3>
                     {!! Form::open(['method'=>'get', 'action'=>'StoreController@filter', 'class'=>'form-group']) !!}
@@ -109,21 +136,25 @@
                 <div class="products-right-grid">
                     <div class="products-right-grids">
                         <div class="sorting">
-                            <select id="country" onchange="change_country(this.value)" class="frm-field required sect">
+                            <select id="sortBy" onchange="change_sort(this.value)" class="frm-field required sect">
                                 <option value="null">Default sorting</option>
-                                <option value="null">Sort by popularity</option>
-                                <option value="null">Sort by average rating</option>
-                                <option value="null">Sort by price</option>
+                                <option value=1>Sort by price</option>
+                                <option value=2>Sort by average rating</option>
                             </select>
                         </div>
-                        <div class="sorting-left">
-                            <select id="country1" onchange="change_country(this.value)" class="frm-field required sect">
-                                <option value="null">Item on page 9</option>
-                                <option value="null">Item on page 18</option>
-                                <option value="null">Item on page 32</option>
-                                <option value="null">All</option>
-                            </select>
-                        </div>
+                        <script>
+                            function change_sort(sortBy){
+                                if(sortBy == 1){
+                                    $.ajax({
+                                        url: "/sort/1",
+                                        success:function(responseJson){
+                                            responseJson = JSON.parse(responseJson); //Converting string output to JSON format
+                                            console.log(responseJson);
+                                        }
+                                    });
+                                }
+                            }
+                        </script>
                         <div class="clearfix"> </div>
                     </div>
                     <div class="products-right-grids-position">
@@ -136,27 +167,22 @@
                         </div>
                     </div>
                 </div>
-                @include('partials.products')
 
+                @include('partials.products')
 
             </div>
             <div class="clearfix"></div>
         </div>
     </div>
 
-
-
     <script type="text/javascript">
-
         $(function() {
             $('body').on('click', '.pagination a', function(e) {
                 e.preventDefault();
-
                 var url = $(this).attr('href');
                 getProducts(url);
                 window.history.pushState("", "", url);
             });
-
             function getProducts(url) {
                 $.ajax({
                     url : url
@@ -167,6 +193,5 @@
                 });
             }
         });
-
     </script>
 @stop
