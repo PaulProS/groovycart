@@ -28,15 +28,29 @@ class StoreController extends Controller
 
         $subCategories = Category::whereIn('id', $catIds)->get();
         $category = Category::findOrFail($catIds[0]);
-        $products = Product::whereIn('category_id', $catIds)->paginate(9);
         $newProducts = Product::whereIn('category_id', $catIds)->orderBy('created_at', 'desc')->take(2)->get();
+        $products = Product::whereIn('category_id', $catIds)->paginate(9);
 
         if ($request->ajax()) {
+            $sortId = $request->input( 'sortId' );
+            if($sortId == 1){
+                $products = Product::orderBy('price', 'asc')->whereIn('category_id', $catIds)->paginate(9);
+            }
+            if($sortId == 2){
+                $products = Product::orderBy('price', 'desc')->whereIn('category_id', $catIds)->paginate(9);
+            }
             return view('partials.products', ['products' => $products], compact('products', 'newProducts', 'category', 'subCategories'))->render();
         }
-
         return view('store', compact('products', 'newProducts', 'category', 'subCategories'));
-    }   
+    }
+
+    //Filter product withing a specified price range
+    public function filter(){
+        $minPrice = Input::get('minPrice');
+        $maxPrice = Input::get('maxPrice');
+        $products = Product::whereBetween('price', [$minPrice, $maxPrice])->get();
+        return json_encode($products);
+    }
 
     //Viewing a single product details page
     public function viewProduct($id){
@@ -58,22 +72,6 @@ class StoreController extends Controller
         $input['product_id'] = $prodId;
         Review::create($input);
         return redirect(route('product', $prodId));
-    }
-
-    //Filter product withing a specified price range
-    public function filter(){
-        $minPrice = Input::get('minPrice');
-        $maxPrice = Input::get('maxPrice');
-        $products = Product::whereBetween('price', [$minPrice, $maxPrice])->get();
-        return json_encode($products);
-    }
-
-    //Sorting products as specified (By Price, Rating)
-    public function sortProducts($id){
-        if($id == 1){
-            $products = Product::orderBy('price')->get();
-            return json_encode($products);
-        }
     }
 
     //Adding product in the cart

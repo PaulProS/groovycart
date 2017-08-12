@@ -137,23 +137,30 @@
                     <div class="products-right-grids">
                         <div class="sorting">
                             <select id="sortBy" onchange="change_sort(this.value)" class="frm-field required sect">
-                                <option value="null">Default sorting</option>
-                                <option value=1>Sort by price</option>
-                                <option value=2>Sort by average rating</option>
+                                <option value=0>Default sorting</option>
+                                <option value=1>Price: Low To High</option>
+                                <option value=2>Price: High To Low</option>
                             </select>
                         </div>
                         <script>
-                            function change_sort(sortBy){
-                                if(sortBy == 1){
-                                    $.ajax({
-                                        url: "/sort/1",
-                                        success:function(responseJson){
-                                            responseJson = JSON.parse(responseJson); //Converting string output to JSON format
-                                            console.log(responseJson);
-                                        }
-                                    });
-                                }
+                            function change_sort(sortBy) {
+                                $.ajax({
+                                    url: "/store/{{$category->id}}",
+                                    data: { sortId: sortBy }
+                                }).done(function (data) {
+                                    $('.products-right-grids-bottom').html(data);
+                                }).fail(function () {
+                                    alert('Products could not be loaded.');
+                                });
                             }
+
+                            {{--function change_sort(sortBy){--}}
+                                    {{--$.ajax({--}}
+                                        {{--url: "/store/{{$category->id}}",--}}
+                                        {{--data: { sortId: sortBy },--}}
+                                        {{----}}
+                                    {{--});--}}
+                            {{--}--}}
                         </script>
                         <div class="clearfix"> </div>
                     </div>
