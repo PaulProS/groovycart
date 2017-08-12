@@ -57,14 +57,6 @@ class StoreController extends Controller
 
     }
 
-    //Filter product withing a specified price range
-    public function filter(){
-        $minPrice = Input::get('minPrice');
-        $maxPrice = Input::get('maxPrice');
-        $products = Product::whereBetween('price', [$minPrice, $maxPrice])->get();
-        return json_encode($products);
-    }
-
     //Viewing a single product details page
     public function viewProduct($id){
         $product = Product::findOrFail($id);

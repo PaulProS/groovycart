@@ -153,14 +153,6 @@
                                     alert('Products could not be loaded.');
                                 });
                             }
-
-                            {{--function change_sort(sortBy){--}}
-                                    {{--$.ajax({--}}
-                                        {{--url: "/store/{{$category->id}}",--}}
-                                        {{--data: { sortId: sortBy },--}}
-                                        {{----}}
-                                    {{--});--}}
-                            {{--}--}}
                         </script>
                         <div class="clearfix"> </div>
                     </div>

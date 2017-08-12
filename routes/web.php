@@ -25,15 +25,12 @@ Route::get('/store/{catId}', 'StoreController@store')->name('store');
 Route::get('/product/{productId}', 'StoreController@viewProduct')->name('product');
 Route::get('/search', 'StoreController@getSearch')->name('search');
 Route::get('/review/{productId}/{userId}', 'StoreController@review')->name('review');
-Route::get('/filter', 'StoreController@filter')->name('filter');
 Route::get('/add-to-cart/{productId}', 'StoreController@addToCart')->name('addCart');
 Route::get('/cart', 'StoreController@getCart')->name('cart');
 Route::get('/emptyCart', 'StoreController@emptyCart')->name('emptyCart');
 Route::get('/deleteCartItem/{id}', 'StoreController@deleteCartItem')->name('deleteCartItem');
 Route::get('decreaseByOne/{id}', 'StoreController@decreaseByOne');
 Route::get('increaseByOne/{id}', 'StoreController@increaseByOne');
-Route::get('sort/{id}', 'StoreController@sortProducts');
-
 
 Route::group(['middleware' => 'admin'], function (){
     Route::resource('admin/users', 'AdminUserController');
