@@ -29,7 +29,12 @@ class StoreController extends Controller
         $subCategories = Category::whereIn('id', $catIds)->get();
         $category = Category::findOrFail($catIds[0]);
         $newProducts = Product::whereIn('category_id', $catIds)->orderBy('created_at', 'desc')->take(2)->get();
-        $products = Product::whereIn('category_id', $catIds)->paginate(9);
+
+        $sortId = 0;
+        if($sortId == 0){
+            $products = Product::whereIn('category_id', $catIds)->paginate(9);
+        }
+
 
         if ($request->ajax()) {
             $sortId = $request->input( 'sortId' );
@@ -41,7 +46,15 @@ class StoreController extends Controller
             }
             return view('partials.products', ['products' => $products], compact('products', 'newProducts', 'category', 'subCategories'))->render();
         }
+
+        if (Input::get('minPrice') &&  Input::get('maxPrice')){
+            $minPrice = Input::get('minPrice');
+            $maxPrice = Input::get('maxPrice');
+            $products = Product::whereBetween('price', [$minPrice, $maxPrice])->whereIn('category_id', $catIds)->paginate(9);
+        }
+
         return view('store', compact('products', 'newProducts', 'category', 'subCategories'));
+
     }
 
     //Filter product withing a specified price range

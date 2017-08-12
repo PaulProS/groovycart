@@ -45,7 +45,7 @@
 
                 <div class="filter-price">
                     <h3>Filter By Price</h3>
-                    {!! Form::open(['method'=>'get', 'action'=>'StoreController@filter', 'class'=>'form-group']) !!}
+                    {!! Form::open(['method'=>'get', 'action'=>['StoreController@store', $category->id], 'class'=>'form-group']) !!}
                     {!! Form::label('price', 'Min') !!}
                     {!! Form::text('minPrice', null, ['class'=>'form-control']) !!}
                     {!! Form::label('price', 'Max') !!}
