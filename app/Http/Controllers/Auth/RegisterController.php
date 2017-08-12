@@ -74,6 +74,8 @@ class RegisterController extends Controller
 
         $thisUser = User::findOrFail($user->id);
         $this->sendTokenEmail($thisUser);
+
+        return $user;
     }
 
     public function sendTokenEmail($thisUser){

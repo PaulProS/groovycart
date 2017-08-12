@@ -15,6 +15,7 @@
                                 @endif
                             @endif
                             <li class="dropdown">
+
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ title_case(Auth::user()->name) }} <span class="caret"></span>
                                 </a>
@@ -33,6 +34,13 @@
                                     </li>
                                 </ul>
                             </li>
+
+                            <li>
+                                @if(!Auth::user()->is_active)
+                                    <a href="/" class="">Please verify your Email</a>
+                                @endif
+                            </li>
+
                         @else
                             <li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="{{route('login')}}">Login</a></li>
                             <li><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href="{{route('register')}}">Register</a></li>

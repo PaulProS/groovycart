@@ -145,7 +145,7 @@
                     <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
                         <ul id="myTab" class="nav nav-tabs" role="tablist">
                             <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Description</a></li>
-                            <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">Reviews({{count($product->review)}})</a></li>
+                            <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">Reviews({{count($product->review->where('approved', 1))}})</a></li>
                             <li role="presentation" class="dropdown">
                                 <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents">Information <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
@@ -161,7 +161,7 @@
                             </div>
                             <div role="tabpanel" class="tab-pane fade bootstrap-tab-text" id="profile" aria-labelledby="profile-tab">
                                 <div class="bootstrap-tab-text-grids">
-                                    @if($reviews = $product->review)
+                                    @if($reviews = $product->review->where('approved',1))
                                         @foreach($reviews as $review)
                                             <div class="bootstrap-tab-text-grid">
                                                 <div class="bootstrap-tab-text-grid-left">
