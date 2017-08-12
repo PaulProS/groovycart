@@ -18,11 +18,12 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Rough Formal Shirt";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "450";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
         $product->is_active =1;
+        $product->featured = 1;
         $product->save();
         $product = new Product;
         $product->photo_id = 2;
@@ -42,7 +43,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Formal Shirt Satin";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "800";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -54,7 +55,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Snickers";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "600";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -66,7 +67,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Casual Shoes";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "550";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -78,7 +79,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Rough Tough Shoes";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "1200";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -90,7 +91,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Blazer Rough";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "5000";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -102,7 +103,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Blazer Half Sleeve";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "4500";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -114,7 +115,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Blazer Full Sleeve";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "4000";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -126,7 +127,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Copper Metal Watch";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "3500";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -138,7 +139,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Silver Metal Watch";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "2500";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -150,7 +151,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Sports Watch";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "3600";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -162,7 +163,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Brown Leather Belt";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "600";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -174,7 +175,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Blk Leather Wallet";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "350";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -186,7 +187,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Stylish Blue Wallet";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "900";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -198,7 +199,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Black Leather Belt";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "800";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -210,7 +211,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Leather Wallet";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "400";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -222,7 +223,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Rusty Wallet";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "700";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -234,7 +235,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Maroon Trouser";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "750";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -246,7 +247,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Formal Trouser";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "800";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -255,10 +256,10 @@ class ProductsTableSeeder extends Seeder
         $product = new Product;
         $product->photo_id = 45;
         $product->category_id = 4;
-        $product->title = "Formal Trouser";
+        $product->title = "Plain Trouser";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "450";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -270,7 +271,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Black Leather Belt";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "640";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -282,7 +283,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Yellow Trouser";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "850";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -294,7 +295,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Premium Formal Tie";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "300";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -306,7 +307,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Satin Premium Tie";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "900";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -318,7 +319,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Satin Printed Tie";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "1200";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -330,7 +331,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Premium Dotted Tie";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "800";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -355,7 +356,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Formal Denim";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "1500";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -367,7 +368,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Floral Shirt";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "1200";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -379,7 +380,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Tote Handbag";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "3500";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -391,7 +392,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Wallet Flory";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "1100";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -403,7 +404,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Handbag Office";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "1300";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -415,7 +416,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Fairy Shoes";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "1200";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -427,7 +428,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Lace Boot Long";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "2000";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -439,7 +440,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "High Heel Boot";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "2500";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -452,7 +453,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Fairy Frock";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "1500";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -464,7 +465,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Cinderella Dress";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "2000";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -476,7 +477,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Rosy Frock";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "1300";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -488,7 +489,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Belly Shoes";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "400";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -500,7 +501,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Boot Fancy";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "600";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -512,7 +513,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Piggy Shoes";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "300";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -524,7 +525,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Shirt Funky";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "400";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -536,7 +537,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Iron Man Dress";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "4000";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;
@@ -548,7 +549,7 @@ class ProductsTableSeeder extends Seeder
         $product->title = "Formal Shirt";
         $product->description = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
         $product->brief = "This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice. This description is seeded, you can update it within DB or admin dashboard and can even delete the product from admin dashboard to add product of your choice";
-        $product->price = "500";
+        $product->price = "600";
         $product->brand_id = null;
         $product->rating = 5;
         $product->stock = 5;

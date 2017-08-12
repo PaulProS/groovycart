@@ -28,27 +28,49 @@ class StoreController extends Controller
 
         $subCategories = Category::whereIn('id', $catIds)->get();
         $category = Category::findOrFail($catIds[0]);
-        $products = Product::whereIn('category_id', $catIds)->paginate(9);
         $newProducts = Product::whereIn('category_id', $catIds)->orderBy('created_at', 'desc')->take(2)->get();
 
+        $sortId = 0;
+        if($sortId == 0){
+            $products = Product::whereIn('category_id', $catIds)->paginate(9);
+        }
+
+
         if ($request->ajax()) {
+            $sortId = $request->input( 'sortId' );
+            if($sortId == 1){
+                $products = Product::orderBy('price', 'asc')->whereIn('category_id', $catIds)->paginate(9);
+            }
+            if($sortId == 2){
+                $products = Product::orderBy('price', 'desc')->whereIn('category_id', $catIds)->paginate(9);
+            }
             return view('partials.products', ['products' => $products], compact('products', 'newProducts', 'category', 'subCategories'))->render();
         }
 
-        return view('store', compact('products', 'newProducts', 'category', 'subCategories'));
-    }   
+        if (Input::get('minPrice') &&  Input::get('maxPrice')){
+            $minPrice = Input::get('minPrice');
+            $maxPrice = Input::get('maxPrice');
+            $products = Product::whereBetween('price', [$minPrice, $maxPrice])->whereIn('category_id', $catIds)->paginate(9);
+        }
 
+        return view('store', compact('products', 'newProducts', 'category', 'subCategories'));
+
+    }
+
+    //Viewing a single product details page
     public function viewProduct($id){
         $product = Product::findOrFail($id);
         return view('single', compact('product'));
     }
 
+    //Get products searched by a specific keyword
     public function getSearch(){
         $keyword = Input::get('keyword');
         $products = Product::where('title', 'LIKE', '%'.$keyword.'%')->get();
         return view('search',  compact('products', 'keyword'));
     }
 
+    //Adding new review
     public function review(Request $request, $prodId, $userId){
         $input = $request->all();
         $input['user_id'] = $userId;
@@ -57,13 +79,7 @@ class StoreController extends Controller
         return redirect(route('product', $prodId));
     }
 
-    public function filter(){
-        $minPrice = Input::get('minPrice');
-        $maxPrice = Input::get('maxPrice');
-        $products = Product::whereBetween('price', [$minPrice, $maxPrice])->get();
-        return json_encode($products);
-    }
-
+    //Adding product in the cart
     public function addToCart(Request $request, $id){
         $product = Product::findOrFail($id);
         $oldCart = session()->has('cart') ? session()->get('cart') : null;
