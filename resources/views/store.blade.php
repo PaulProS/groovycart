@@ -136,24 +136,12 @@
                 <div class="products-right-grid">
                     <div class="products-right-grids">
                         <div class="sorting">
-                            <select id="sortBy" onchange="change_sort(this.value)" class="frm-field required sect">
+                            <select id="sortBy" class="frm-field required sect">
                                 <option value=0>Default sorting</option>
                                 <option value=1>Price: Low To High</option>
                                 <option value=2>Price: High To Low</option>
                             </select>
                         </div>
-                        <script>
-                            function change_sort(sortBy) {
-                                $.ajax({
-                                    url: "/store/{{$category->id}}",
-                                    data: { sortId: sortBy }
-                                }).done(function (data) {
-                                    $('.products-right-grids-bottom').html(data);
-                                }).fail(function () {
-                                    alert('Products could not be loaded.');
-                                });
-                            }
-                        </script>
                         <div class="clearfix"> </div>
                     </div>
                     <div class="products-right-grids-position">
@@ -180,17 +168,32 @@
                 e.preventDefault();
                 var url = $(this).attr('href');
                 getProducts(url);
-                window.history.pushState("", "", url);
+//                window.history.pushState("", "", url);
             });
+
+
+            $('#sortBy').change(function() {
+                getProducts();
+            });
+
             function getProducts(url) {
+
+                var sortBy = $('#sortBy').val();
+                if(url === undefined){
+                    url = "/store/{{$category->id}}";
+                }
+
                 $.ajax({
-                    url : url
+                    url : url,
+                    data: { 'sortId' : sortBy }
                 }).done(function (data) {
                     $('.products-right-grids-bottom').html(data);
                 }).fail(function () {
                     alert('Products could not be loaded.');
                 });
+
             }
+
         });
     </script>
 @stop
