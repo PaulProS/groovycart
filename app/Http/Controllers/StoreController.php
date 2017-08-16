@@ -108,4 +108,18 @@ class StoreController extends Controller
         session()->forget('cart');
     }
 
+    public function getCheckout(){
+        if(!session('cart')){
+            return redirect('cart');
+        }
+        $oldCart = session()->get('cart');
+        $cart = new Cart($oldCart);
+        $total = $cart->totalPrice;
+        return view('checkout', compact('total'));
+    }
+
+    public function postCheckout(){
+
+    }
+
 }

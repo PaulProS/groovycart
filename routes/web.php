@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PagesController@index')->name('index');
-Route::get('mail', 'PagesController@getEmailForm');
-Route::post('sendEmail', 'PagesController@sendEmail');
-Route::post('subscribeMail', 'PagesController@subscribeMail');
+Route::get('/mail', 'PagesController@getEmailForm');
+Route::post('/sendEmail', 'PagesController@sendEmail');
+Route::post('/subscribeMail', 'PagesController@subscribeMail');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin', 'HomeController@index')->name('admin');
 Route::get('/store/{id}', 'StoreController@store')->name('store');
@@ -30,8 +30,10 @@ Route::get('/add-to-cart/{id}', 'StoreController@addToCart')->name('addCart');
 Route::get('/cart', 'StoreController@getCart')->name('cart');
 Route::get('/emptyCart', 'StoreController@emptyCart')->name('emptyCart');
 Route::get('/deleteCartItem/{id}', 'StoreController@deleteCartItem')->name('deleteCartItem');
-Route::get('decreaseByOne/{id}', 'StoreController@decreaseByOne');
-Route::get('increaseByOne/{id}', 'StoreController@increaseByOne');
+Route::get('/decreaseByOne/{id}', 'StoreController@decreaseByOne');
+Route::get('/increaseByOne/{id}', 'StoreController@increaseByOne');
+Route::get('/checkout', 'StoreController@getCheckout')->name('checkout');
+Route::post('/checkout', 'StoreController@postCheckout')->name('checkout');
 
 Route::group(['middleware' => 'admin'], function (){
     Route::resource('admin/users', 'AdminUserController');
