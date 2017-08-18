@@ -127,11 +127,12 @@
                 </div>
                 <div class="checkout-left">
                     <div class="checkout-left-basket">
-                        <h4>Proceed To Pay</h4>
+                        <a href="{{route('checkout')}}"><h4>Proceed To Pay</h4></a>
                         <ul>
                             <li>Total Payable Amount : <span id="billingValue">{{session()->get('cart')->totalPrice}}</span></li>
                         </ul>
                     </div>
+
                     <div class="checkout-right-basket animated wow slideInRight" data-wow-delay=".5s">
                         <a href=""><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Shop More Products</a>
                     </div>

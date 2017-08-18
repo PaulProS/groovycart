@@ -9,6 +9,8 @@ use App\Review;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Validation\Rules\In;
+use Stripe\Charge;
+use Stripe\Stripe;
 use Symfony\Component\HttpFoundation\Session\Session;
 
 class StoreController extends Controller
@@ -122,6 +124,45 @@ class StoreController extends Controller
 
     public function emptyCart(){
         session()->forget('cart');
+    }
+
+    public function getCheckout(){
+        if(!session('cart')){
+            return redirect('cart');
+        }
+        $oldCart = session()->get('cart');
+        $cart = new Cart($oldCart);
+        $total = $cart->totalPrice;
+        return view('checkout', compact('total'));
+    }
+
+    public function postCheckout(Request $request){
+        if(!session('cart')){
+            return redirect('cart');
+        }
+
+        $oldCart = session()->get('cart');
+        $cart = new Cart($oldCart);
+
+        Stripe::setApiKey("sk_test_KyLOVHmGPoAnkJ0pTvGUlN7e");
+
+        // Token is created using Stripe.js or Checkout!
+        // Get the payment token ID submitted by the form:
+
+        // Charge the user's card:
+        try {
+            Charge::create(array(
+                "amount" => $cart->totalPrice * 100,
+                "currency" => "INR",
+                "description" => "Example charge",
+                "source" => $request->input('StripeToken')
+            ));
+        } catch (\Exception $e){
+            return redirect()->route('checkout')->with('error', $e->getMessage());
+        }
+
+        session()->forget('cart');
+        return redirect('/');
     }
 
 }
