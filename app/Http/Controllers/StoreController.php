@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Cart;
 use App\Category;
+use App\Order;
 use App\Product;
 use App\Review;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Validation\Rules\In;
 use Stripe\Charge;
@@ -151,18 +153,26 @@ class StoreController extends Controller
 
         // Charge the user's card:
         try {
-            Charge::create(array(
+            $charge = Charge::create(array(
                 "amount" => $cart->totalPrice * 100,
                 "currency" => "INR",
                 "description" => "Example charge",
                 "source" => $request->input('StripeToken')
             ));
+
+            $order = new Order();
+            $order->cart = serialize('$cart');
+            $order->address = $request->input('address');
+            $order->payment_id = $charge->id;
+
+            Auth::user()->order()->save($order);
+
         } catch (\Exception $e){
             return redirect()->route('checkout')->with('error', $e->getMessage());
         }
 
         session()->forget('cart');
-        return redirect('/');
+        return redirect('/')->with('orderMsg', 'Your order has been placed successfully');
     }
 
 }

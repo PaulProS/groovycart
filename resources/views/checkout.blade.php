@@ -17,6 +17,12 @@
                         </div>
                     </div>
                     <div class='form-row'>
+                        <div class='col-xs-12 form-group required'>
+                            <label class='control-label'>Address</label>
+                            <input name='address' class='form-control' size='4' type='text'>
+                        </div>
+                    </div>
+                    <div class='form-row'>
                         <div class='col-xs-12 form-group card required'>
                             <label class='control-label'>Card Number</label>
                             <input id='card-number' autocomplete='off' class='form-control card-number' size='20' type='text'>
