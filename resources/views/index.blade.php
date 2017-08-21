@@ -6,11 +6,6 @@
         {{ session('status') }}
     </div>
 @endif
-@if (session('orderMsg'))
-    <div class="alert alert-success">
-        {{ session('orderMsg') }}
-    </div>
-@endif
 <div class="banner">
     <div class="container">
         <div class="banner-info animated wow zoomIn" data-wow-delay=".5s">

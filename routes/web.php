@@ -33,10 +33,10 @@ Route::get('/deleteCartItem/{id}', 'StoreController@deleteCartItem')->name('dele
 Route::get('decreaseByOne/{id}', 'StoreController@decreaseByOne');
 Route::get('increaseByOne/{id}', 'StoreController@increaseByOne');
 Route::get('/verify/{email}/{token}', 'Auth\RegisterController@emailVerificationDone')->name('emailVerificationDone');
-
 Route::get('/decreaseByOne/{id}', 'StoreController@decreaseByOne');
 Route::get('/increaseByOne/{id}', 'StoreController@increaseByOne');
 Route::get('/checkout', 'StoreController@getCheckout')->name('checkout');
+Route::get('/orders', 'StoreController@order')->name('orders');
 Route::post('/checkout', 'StoreController@postCheckout')->name('checkout');
 
 Route::group(['middleware' => 'admin'], function (){

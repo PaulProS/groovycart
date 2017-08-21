@@ -132,6 +132,10 @@ class StoreController extends Controller
         if(!session('cart')){
             return redirect('cart');
         }
+
+        if(!Auth::user()){
+            return redirect(route('login'));
+        }
         $oldCart = session()->get('cart');
         $cart = new Cart($oldCart);
         $total = $cart->totalPrice;
@@ -161,7 +165,7 @@ class StoreController extends Controller
             ));
 
             $order = new Order();
-            $order->cart = serialize('$cart');
+            $order->cart = serialize($cart);
             $order->address = $request->input('address');
             $order->payment_id = $charge->id;
 
@@ -172,7 +176,16 @@ class StoreController extends Controller
         }
 
         session()->forget('cart');
-        return redirect('/')->with('orderMsg', 'Your order has been placed successfully');
+        return redirect(route('orders'))->with('orderMsg', 'Your order has been placed successfully');
+    }
+
+    public function order(){
+        $orders = Auth::user()->order;
+        $orders->transform(function ($order, $key){
+            $order->cart = unserialize($order->cart);
+            return $order;
+        });
+        return view('user.orders', compact('orders'));
     }
 
 }
