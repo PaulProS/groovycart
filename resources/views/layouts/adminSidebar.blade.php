@@ -40,6 +40,7 @@
             <li><a href="{{route('categories.index')}}"><i class="fa fa-th-list"></i>Categories</a></li>
             <li><a href="{{route('brands.index')}}"><i class="fa fa-th-list"></i>Brands</a></li>
             <li><a href="{{route('reviews.index')}}"><i class="fa fa-th-list"></i>Reviews</a></li>
+            <li><a href="{{route('orders.index')}}"><i class="fa fa-th-list"></i>Orders</a></li>
         </ul>
         <!-- /.sidebar-menu -->
     </section>

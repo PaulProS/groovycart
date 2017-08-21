@@ -14,12 +14,13 @@
             @foreach($orders as $order)
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <h5>Order ID : {{$order->id}}
                         <ul class="list-group">
+                            <li class="list-group-item"><strong>Order ID : {{$order->id}}</strong></li>
                             @foreach($order->cart->items as $item)
                                 <li class="list-group-item">
-                                <span class="badge">Rs {{$item['price']}}</span>
-                                {{$item['item']['title']}} | Qty :{{$item['qty']}}
+                                    <span class="badge">Processing</span>
+                                    <span class="badge">Rs {{$item['price']}}</span>
+                                    {{$item['item']['title']}} | Qty :{{$item['qty']}}
                                 </li>
                             @endforeach
                         </ul>
