@@ -18,7 +18,11 @@
                             <li class="list-group-item"><strong>Order ID : {{$order->id}}</strong></li>
                             @foreach($order->cart->items as $item)
                                 <li class="list-group-item">
-                                    <span class="badge">Processing</span>
+                                    <span class="badge">
+                                        @if($order->status == 0)
+                                            To Be Processed
+                                        @endif
+                                    </span>
                                     <span class="badge">Rs {{$item['price']}}</span>
                                     {{$item['item']['title']}} | Qty :{{$item['qty']}}
                                 </li>

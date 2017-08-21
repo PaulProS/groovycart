@@ -46,6 +46,7 @@ Route::group(['middleware' => 'admin'], function (){
     Route::resource('admin/categories', 'AdminCategoriesController');
     Route::resource('admin/brands', 'AdminBrandsController');
     Route::resource('admin/reviews', 'AdminReviewController');
+    Route::resource('admin/orders', 'AdminOrderController');
     Route::get('approve/{id}', 'AdminReviewController@approve')->name('approve');
 });
 

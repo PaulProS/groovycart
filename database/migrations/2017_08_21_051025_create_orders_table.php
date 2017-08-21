@@ -19,6 +19,7 @@ class CreateOrdersTable extends Migration
             $table->text('address');
             $table->text('cart');
             $table->string('payment_id');
+            $table->integer('status')->default(0)->unsigned();
             $table->timestamps();
         });
     }
