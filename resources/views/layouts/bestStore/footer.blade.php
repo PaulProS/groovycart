@@ -10,29 +10,29 @@
                 <h3>Contact Info</h3>
                 <ul>
                     <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>1234k Avenue, 4th block, <span>New York City.</span></li>
-                    <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:iamlearning13@gmail.com">iamlearning13@gmail.com</a></li>
-                    <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+91 9999 999 999</li>
+                    <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:anyemail@test.com">anyemail@test.com </a></li>
+                    <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+91 9876 543 210</li>
                 </ul>
             </div>
             <div class="col-md-3 footer-grid">
                 <h3>Flickr Posts</h3>
                 <div class="footer-grid-left">
-                    <a href="single.html"><img src="{{asset("/images/13.jpg")}}" alt=" " class="img-responsive" /></a>
+                    <a href="#"><img src="{{asset("/images/13.jpg")}}" alt=" " class="img-responsive" /></a>
                 </div>
                 <div class="footer-grid-left">
-                    <a href="single.html"><img src="{{asset("/images/14.jpg")}}" alt=" " class="img-responsive" /></a>
+                    <a href="#"><img src="{{asset("/images/14.jpg")}}" alt=" " class="img-responsive" /></a>
                 </div>
                 <div class="footer-grid-left">
-                    <a href="single.html"><img src="{{asset("/images/15.jpg")}}" alt=" " class="img-responsive" /></a>
+                    <a href="#"><img src="{{asset("/images/15.jpg")}}" alt=" " class="img-responsive" /></a>
                 </div>
                 <div class="footer-grid-left">
-                    <a href="single.html"><img src="{{asset("/images/16.jpg")}}" alt=" " class="img-responsive" /></a>
+                    <a href="#"><img src="{{asset("/images/16.jpg")}}" alt=" " class="img-responsive" /></a>
                 </div>
                 <div class="footer-grid-left">
-                    <a href="single.html"><img src="{{asset("/images/13.jpg")}}" alt=" " class="img-responsive" /></a>
+                    <a href="#"><img src="{{asset("/images/13.jpg")}}" alt=" " class="img-responsive" /></a>
                 </div>
                 <div class="footer-grid-left">
-                    <a href="single.html"><img src="{{asset("/images/14.jpg")}}" alt=" " class="img-responsive" /></a>
+                    <a href="#"><img src="{{asset("/images/14.jpg")}}" alt=" " class="img-responsive" /></a>
                 </div>
                 <div class="clearfix"> </div>
             </div>
@@ -40,10 +40,10 @@
                 <h3>Blog Posts</h3>
                 <div class="footer-grid-sub-grids">
                     <div class="footer-grid-sub-grid-left">
-                        <a href="single.html"><img src="{{asset("/images/9.jpg")}}" alt=" " class="img-responsive" /></a>
+                        <a href="#"><img src="{{asset("/images/9.jpg")}}" alt=" " class="img-responsive" /></a>
                     </div>
                     <div class="footer-grid-sub-grid-right">
-                        <h4><a href="single.html">culpa qui officia deserunt</a></h4>
+                        <h4><a href="#">culpa qui officia deserunt</a></h4>
                         <p>Posted On 25/3/2016</p>
                     </div>
                     <div class="clearfix"> </div>

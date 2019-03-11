@@ -5,8 +5,8 @@
         <div class="header-grid">
             <div class="header-grid-left">
                 <ul>
-                    <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:iamlearning13@gmail.com">iamlearning13@gmail.com</a></li>
-                    <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+91 9999 999 999</li>
+                    <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:anyemail@test.com">anyemail@test.com</a></li>
+                    <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+91 9876 543 210</li>
                     @if (Route::has('login'))
                         @if (Auth::check())
                             @if(Auth::user()->role)

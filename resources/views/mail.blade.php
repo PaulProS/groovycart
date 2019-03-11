@@ -37,10 +37,10 @@
                 <div class="col-md-4 mail-grid-right animated wow slideInRight" data-wow-delay=".5s">
                     <div class="mail-grid-right1">
                         <img src="{{asset("/images/3.png")}}" alt=" " class="img-responsive" />
-                        <h4>Mr Paul<span>Manager</span></h4>
+                        <h4>Mr Steve<span>Manager</span></h4>
                         <ul class="phone-mail">
-                            <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>Phone: +91 9999 999 999</li>
-                            <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>Email: <a href="mailto:iamlearning13@gmail.com">iamlearning13@gmail.com</a></li>
+                            <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>Phone: +91 9876  543 210</li>
+                            <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>Email: <a href="mailto:anyemail@test.com">anyemail@test.com</a></li>
                         </ul>
                         <ul class="social-icons">
                             <li><a href="https://www.facebook.com/" target="_blank" class="facebook"></a></li>

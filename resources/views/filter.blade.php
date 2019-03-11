@@ -68,10 +68,10 @@
                     <div class="new-products-grids">
                         <div class="new-products-grid">
                             <div class="new-products-grid-left">
-                                <a href="single.html"><img src="{{asset("/images/6.jpg")}}" alt=" " class="img-responsive" /></a>
+                                <a href="#"><img src="{{asset("/images/6.jpg")}}" alt=" " class="img-responsive" /></a>
                             </div>
                             <div class="new-products-grid-right">
-                                <h4><a href="single.html">occaecat cupidatat</a></h4>
+                                <h4><a href="#">occaecat cupidatat</a></h4>
                                 <div class="rating">
                                     <div class="rating-left">
                                         <img src="{{asset("/images/2.png")}}" alt=" " class="img-responsive">
@@ -98,10 +98,10 @@
                         </div>
                         <div class="new-products-grid">
                             <div class="new-products-grid-left">
-                                <a href="single.html"><img src="{{asset("/images/26.jpg")}}" alt=" " class="img-responsive" /></a>
+                                <a href="#"><img src="{{asset("/images/26.jpg")}}" alt=" " class="img-responsive" /></a>
                             </div>
                             <div class="new-products-grid-right">
-                                <h4><a href="single.html">eum fugiat quo</a></h4>
+                                <h4><a href="#">eum fugiat quo</a></h4>
                                 <div class="rating">
                                     <div class="rating-left">
                                         <img src="{{asset("/images/2.png")}}" alt=" " class="img-responsive">
@@ -128,10 +128,10 @@
                         </div>
                         <div class="new-products-grid">
                             <div class="new-products-grid-left">
-                                <a href="single.html"><img src="{{asset("/images/11.jpg")}}" alt=" " class="img-responsive" /></a>
+                                <a href="#"><img src="{{asset("/images/11.jpg")}}" alt=" " class="img-responsive" /></a>
                             </div>
                             <div class="new-products-grid-right">
-                                <h4><a href="single.html">officia deserunt</a></h4>
+                                <h4><a href="#">officia deserunt</a></h4>
                                 <div class="rating">
                                     <div class="rating-left">
                                         <img src="{{asset("/images/2.png")}}" alt=" " class="img-responsive">
@@ -159,7 +159,7 @@
                     </div>
                 </div>
                 <div class="men-position animated wow slideInUp" data-wow-delay=".5s">
-                    <a href="single.html"><img src="{{asset("/images/27.jpg")}}" alt=" " class="img-responsive" /></a>
+                    <a href="#"><img src="{{asset("/images/27.jpg")}}" alt=" " class="img-responsive" /></a>
                     <div class="men-position-pos">
                         <h4>Summer collection</h4>
                         <h5><span>55%</span> Flat Discount</h5>
